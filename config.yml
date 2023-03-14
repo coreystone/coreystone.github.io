@@ -1,4 +1,4 @@
-baseURL: "https://coreystone.github.io/"
+baseURL: "https://coreyst.one/"
 
 title: coreyst.one/
 paginate: 5
@@ -60,10 +60,10 @@ params:
       imageHeight: 120 # custom size
       buttons:
         - name: Contact
-          url: "http://localhost:1313/contact/"
+          url: "https://coreyst.one/contact/"
 
         - name: Resources
-          url: "http://localhost:1313/resources/"
+          url: "https://coreyst.one/resources/"
 
     # home-info mode
     homeInfoParams:
