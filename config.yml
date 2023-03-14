@@ -33,11 +33,12 @@ params:
     comments: false
     hidemeta: false
     hideSummary: false
-    showtoc: false
-    tocopen: false
+    ShowToc: true
+    TocOpen: true
+    TocSide: 'right'
 
     assets:
-        # disableFingerprinting: true
+        disableFingerprinting: true
         favicon: favicon.ico
         apple_touch_icon: apple-touch-icon.png
 
@@ -49,11 +50,11 @@ params:
     # profile-mode
     profileMode:
       enabled: true
-      title: "🌊 👋 I'm Corey..." # optional default will be site title
+      title: "🌊👋 I'm Corey..."
       subtitle: |
         A dude passionate about digital privacy and helping people reclaim theirs.
-        - Created [**Privacy Poodle**](https://github.com/coreystone), a tool that sends automated DSAR requests to data brokers
-        - Created [**Privacy Policy Directory**](https://github.com/coreystone/privacy-policy-directory-data) & [**Web Scraper**](https://github.com/coreystone/privacypolicy_scraper), to help users easily find where to submit data requests; it also analyzes and highlights company privacy practices
+        - Created [**Privacy Poodle**](https://github.com/coreystone), a tool that sends automated data requests to hand-picked data brokers that store and sell your personal information
+        - Created [**Privacy Policy Directory**](https://github.com/coreystone/ppd-data) & [**Web Scraper**](https://github.com/coreystone/privacy-policy-scraper), to help users easily find where to submit data requests; it also analyzes and highlights company privacy practices
       imageUrl: "/avatar.png"
       imageTitle: "" # optional
       imageWidth: 120 # custom size
@@ -78,10 +79,8 @@ params:
       - name: linkedin-simple
         url: "https://linkedin.com/in/coreyjs"
 
-
 menu:
   main:
-
     - name: Contact
       url: /contact/
       weight: 1

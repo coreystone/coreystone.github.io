@@ -1,9 +1,9 @@
 ---
 author: Corey Stone
-date: "2023-03-09T19:01:07-05:00"
+date: "2023-03-13T19:01:07-05:00"
 draft: false
 hidemeta: true
-showToc: false
+showToc: true
 title: Resources
 ---
 
@@ -32,7 +32,8 @@ Here is some media I've found to be very useful in my journey of trying to break
 		* [`Adveritising leaders roundtable`](https://www.youtube.com/watch?v=KLdveEn9l5w)
 		* [`Innovating DSAR fulfillment with Microsoft`](https://www.youtube.com/watch?v=Sh437mHzxlc)
 
+
 ## Podcasts
 * [**`Data Protection Breakfast Club`**](https://open.spotify.com/show/1gaFsMrqj7UjmJHnRAABMC) -- "a legal podcast that doesn't suck", featuring conversations with various GC's (general counsels), privacy and policy leaders
-* [**`Privacy Pros`**](https://www.youtube.com/playlist?list=PLRGvT8aMrZCmU_ASWqk8h5KdG9OVdTZe4) -- a career-focused podcast featuring privacy and legal professionals discussing how to break into and specialize in the privacy field
-* [**`Surveillance Report`**](https://www.youtube.com/c/SurveillanceReport) -- a weekly privacy and infosec podcast that covers breaking news stories on data breaches, companies, research, and politics, with a focus on how to secure and mitigate your [digital footprint](https://builtin.com/cybersecurity/digital-footprint)
+* [**`Privacy Pros`**](https://www.youtube.com/playlist?list=PLRGvT8aMrZCmU_ASWqk8h5KdG9OVdTZe4) -- a podcast focused on career-growth featuring privacy and legal professionals discussing how to break into and specialize in the privacy field
+* [**`Surveillance Report`**](https://www.youtube.com/c/SurveillanceReport) -- a weekly privacy and infosec podcast that covers breaking news stories on data breaches, companies, research, and politics; also explains how to mitigate your [digital footprint](https://builtin.com/cybersecurity/digital-footprint)
