@@ -1,0 +1,29 @@
+<a class="shortcode-youtube" href="https://www.youtube.com/watch?v={{ .Get "id" }}" title="Play Youtube video" target="_blank">
+    <img src="{{ .Get "image" }}" alt="Youtube video {{ .Get "id" }}" />
+</a>
+
+<style>
+.shortcode-youtube {
+    position: relative; display: inline-block;
+}
+.shortcode-youtube::before, .shortcode-youtube::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+} 
+.shortcode-youtube::before {
+    background: url(/youtube/youtube_button.svg) center center / auto 4rem no-repeat;
+}
+.shortcode-youtube:hover::before {
+    background: url(/youtube/youtube_button_hover.svg) center center / auto 4rem no-repeat;
+}
+.shortcode-youtube::after {
+    background: url(/youtube/youtube.svg) calc(100% - 1rem) calc(100% - 1rem) / auto 2rem no-repeat;
+}
+.shortcode-youtube img {
+    display: block;
+}
+</style>

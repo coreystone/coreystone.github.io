@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>News on Corey Stone</title>
+    <link>http://localhost:1313/tags/news/</link>
+    <description>Recent content in News on Corey Stone</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 30 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/news/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Federal privacy: ready, or not?</title>
+      <link>http://localhost:1313/posts/federal-privacy-law/</link>
+      <pubDate>Tue, 30 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/federal-privacy-law/</guid>
+      <description>Discussing the recent American Privacy Rights Act (APRA) and its failed predecessors.</description>
+      <content:encoded><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>A common gripe in the United States privacy space is the lack of a cohesive, unifying federal privacy law. At the time of writing, 16 states have taken it upon themselves to enact their own state-level privacy legislation and there are over 10 other states with some kind of legislation under review. Each year sees more states drafting and passing privacy legislation that they see fit for their residents.</p>
+<p><figure>
+    <img loading="lazy" src="/images/state-law-map.png"/> 
+</figure>
+
+<em>via <a href="https://medium.com/@Steiner254/insecure-direct-object-references-idor-16bf0b981b90">IAPP</a></em></p>
+<p>To make things more complicated&ndash; and in true American fashion&ndash; each state&rsquo;s privacy law(s) often have their own quirks that set them apart from the rest. This can includes how &ldquo;personal information&rdquo; is defined and what types of data and entities are in scope of the law and also what rights a consumer may have with respect to their data, for example. Understanding and accounting for these differences across each state is a real challenge for organizations just trying to be compliant.</p>
+<p>Consumers, understandably not abreast of the constant developments in state data protection and privacy laws,  stand to lose even more than the organizations processing their data because <a href="https://www.permission.io/blog/data-ownership-who-owns-data-and-why-it-matters">that data ultimately belongs to them</a>.</p>
+<p>Privacy-conscious residents of one state might find themselves confused trying to understand what rights they have compared to residents of other states, and, where there is an overlap, that confusion might turn to frustration upon finding out that, in some cases, the rights they are afforded may not be as strong or expansive as those of other states.</p>
+<p>If you ask a privacy professional what they think of this current state of affairs, they might call this a headache. Another might simply call it job security. What most will agree on, however, is that things can and need to be better: for the sake of consumers and organizations alike.</p>
+<h2 id="some-history">Some history</h2>
+<p>Currently, <a href="https://worldpopulationreview.com/country-rankings/data-privacy-laws-by-country">over 120 countries</a> (about 70% of nations worldwide) have effected some form of national data privacy legislation, <em>except the United States</em>.</p>
+<p>Well, it&rsquo;s not actually that simple. It is correct to say that the United States does not yet have a <em>comprehensive</em> federal data privacy law, but that doesn&rsquo;t paint the whole picture.</p>
+<p>In this context, a &ldquo;comprehensive&rdquo; law is one that defines and sets rules for the processing of personal information (by any company or entity), outlines penalties for violations, provides rights and liberties to data subjects, and institutes an authority to enforce the law. The golden standard is currently Europe&rsquo;s <a href="https://gdpr.eu/what-is-gdpr/">General Data Protectuion Regulation (GDPR)</a>, which provides across-the-board protection for personal data pertaining to EU citizens and residents, barring some exceptions.</p>
+<p>We Americans just do things a little differently here, from the high-fructose corn syrup to the imperial system, including a sector-based approach to national legislation, including privacy.</p>
+<p>Editor&rsquo;s note: <a href="https://worldpopulationreview.com/country-rankings/countries-that-use-imperial">after further research</a>, I have learned that Liberia and Myanmar officially use freedom units and some Commonwealth countries still use them in various cases.</p>
+<p>In the past, the US has tackled privacy concerns by focusing on a specific sector or industry (like healthcare or banking), rather than making sweeping (comprehensive) changes across industries.</p>
+<p>Below are some federal laws tangential to privacy:</p>
+<ul>
+<li>1974: <a href="https://www.justice.gov/opcl/privacy-act-1974">Privacy Act of 1974</a>
+<ul>
+<li>Established general <a href="https://www.techtarget.com/whatis/definition/Fair-Information-Practices-FIP">fair information practices (FIPs)</a> and restrictions to govern records containing personal information</li>
+</ul>
+</li>
+<li>1996: <a href="https://www.hhs.gov/hipaa/for-professionals/privacy/laws-regulations/index.html">Health Insurance Portability and Accountability Act (HIPAA)</a>
+<ul>
+<li>Defined <a href="https://www.hipaajournal.com/what-is-hipaa/">&ldquo;protected health information” (PHI)</a> to regulate the health insurance industry</li>
+</ul>
+</li>
+<li>1999: <a href="https://www.ftc.gov/business-guidance/privacy-security/gramm-leach-bliley-act">Gramm-Leach-Bliley Act (GLBA)</a>
+<ul>
+<li>Requires financial institutions to protect sensitive data and provide notice regarding information-sharing practices</li>
+</ul>
+</li>
+<li>2000: <a href="https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa">Children&rsquo;s Online Privacy Protection Act (COPPA)</a>
+<ul>
+<li>Regulates collection of personal information of children under the age of 13</li>
+</ul>
+</li>
+</ul>
+<p>So things are a little more complicated than it seems. But this is not to say that the US hasn&rsquo;t <em>tried</em> its hand at a comprehensive privacy law. In fact, 2022 saw the introduction of the <a href="https://www.congress.gov/bill/117th-congress/house-bill/8152">American Data Privacy and Protection Act (ADPPA)</a> which sought to establish a comprehensive framework for &ldquo;how companies, including nonprofits and common carriers, handle personal data, which includes information that identifies or is reasonably linkable to an individual.&rdquo; In July 2022, <a href="https://natlawreview.com/article/american-data-privacy-and-protection-act-are-we-finally-getting-federal-data-privacy">the draft</a> passed through the <a href="https://energycommerce.house.gov/">House Energy and Commerce Committee</a> with bipartisan support. ADPPA (<em>ad-puh?</em>) defined categories of personal and sensitive personal data that would be protected, afforded various privacy rights and opt-out choices to consumers (inlcuding <a href="https://amazelaw.com/private-right-of-action/">private right of actions</a>).</p>
+<p>The ADPPA was not without its critics, however, such as the <a href="https://www.eff.org/deeplinks/2022/07/americans-deserve-more-current-american-data-privacy-protection-act">Electronic Frontier Foundation (EFF)</a>, who warned that the bill would &ldquo;[diminish] the country&rsquo;s privacy landscape&rdquo; by undermining existing state protections provided to consumers and also set up loopholes for &ldquo;service providers&rdquo; that process personal information and contract with the government.</p>
+<p>There has not been any movement on the bill in the last two years, however, and after Congress adjourned in January 2023, the committee would need to re-introduce and vote on the bill to move it to the House floor.</p>
+<p><figure>
+    <img loading="lazy" src="/images/state-law-chart.png"/> 
+</figure>
+
+<em>via <a href="https://medium.com/@Steiner254/insecure-direct-object-references-idor-16bf0b981b90">IAPP</a></em></p>
+<h2 id="enter-apra">Enter APRA</h2>
+<p>In April 2024, the House Commitee on Energy and Commerce sought to avenge the ADPPA by unveiling a draft of <a href="https://www.commerce.senate.gov/2024/4/committee-chairs-cantwell-mcmorris-rodgers-unveil-historic-draft-comprehensive-data-privacy-legislation">the American Privacy Rights Act (APRA)</a>: a new bipartisan federal data privacy bill that provisions &ldquo;[national] data privacy rights and protections for Americans, eliminates the existing patchwork of state comprehensive data privacy laws and establishes robust enforcement mechanisms to hold violators accountable, including a private right of action for individuals.&rdquo;</p>
+<p>At first glance, APRA (<em>ap-ruh?</em>) seems to check all the boxes for a comprehensive privacy framework by strengthenening protections outlined in ADPPA and outlining new ones. Additionally, there is a clear impression of trying to &ldquo;get with the times&rdquo; here, as to adapt the law to developing trends and technologies that regulators have struggled to keep up with. For example, AI and <a href="https://towardsdatascience.com/what-is-algorithm-fairness-3182e161cf9f">algorithm fairness</a> are specific areas of concern, where new &ldquo;algorithm impact assessments&rdquo; would be required under certain circumstances. Other obligations for data brokers and &ldquo;high-impact social media companies&rdquo; would also seek to put a bigger onus on ad-tech and big tech companies to properly manage personal information for consumers at a national level.</p>
+<p>However, the fact that APRA is so similar to ADPPA seems to be its biggest weakness.</p>
+<h2 id="california-against-the-world">California against the world</h2>
+<p>In April, the <a href="https://cppa.ca.gov/about_us/">California Privacy Protection Agency (CPPA)</a> wrote to the Chairs of the House Energy &amp; Commerce Committee and the Innovation, Data, and Commerce Subcommittee (come on&hellip; there has to be an acronym or nickname for that, right?)  and <a href="https://cppa.ca.gov/announcements/2024/20240416.html">described how the current draft of APRA would &ldquo;weaken privacy protections for Californians.&rdquo;</a></p>
+<p><a href="https://ashkansoltani.org/">Ashkan Soltani</a>, the executive director of the CPPA, is an outspoken critic of APRA: &ldquo;The CPPA supports a federal law that sets the floor for these protections, but as drafted, APRA seeks to set the ceiling. This could freeze protections in place for decades.&rdquo;</p>
+<blockquote>
+<p>&ldquo;The CPPA supports a federal law that sets the floor for these protections, but as drafted, APRA seeks to set the ceiling. This could freeze protections in place for decades.&rdquo; -Ashkan Soltani, Executive Director, California Privacy Protection Agency</p>
+</blockquote>
+<p>Here are some of the grievances addressed by Soltani in that April letter:</p>
+<ul>
+<li>APRA would preempt the CPPA&rsquo;s authority and fully divest its responsibilities to the FTC</li>
+<li>APRA would prevent legislation around emerging technologies &ldquo;like artificial intelligence, including <a href="https://www.dwt.com/blogs/privacy--security-law-blog/2023/12/california-drafts-automated-decisionmaking-ai-rule">automated decisionmaking technology (ADMT)</a>&rdquo;</li>
+<li>APRA would weaken consumer protections against data brokers by repealing the <a href="https://www.latimes.com/politics/story/2023-09-14/california-bill-delete-online-personal-data">California Delete Act</a></li>
+<li>APRA does not categorize sexual orientation, union membership, and immigration status as sensitive covered data (unlike the CCPA)</li>
+</ul>
+<p>tl;dr: California argues that it already does everything that APRA wants do to, but better.</p>
+<h2 id="whats-next">What&rsquo;s next?</h2>
+<p>States like California, Virginia, Utah, and others with already established state-level privacy frameworks are going to be hesitant to welcome these changes, especially if they perceive APRA to provide inferior rights and protections for their residents. Additionally, APRA in its current state would preempt any existing state-level enforcement and transfer that authority to the FTC. Though the FTC has an extensive track record of <a href="https://www.ftc.gov/news-events/topics/protecting-consumer-privacy-security/privacy-security-enforcement">privacy and security enforcement</a>, some state institutions&ndash; such as the CPPA or state attorneys general&ndash; might prefer to be the ones protecting their constituents, especially if they think they can do it better than the FTC. <a href="https://www.newamerica.org/oti/in-the-news/cybersecurity-leaders-express-reserved-support-for-american-privacy-rights-act/">Similar sentiments have been expressed</a> with regards to the FTC being encharged to regulate service providers instead of the FCC.</p>
+<p>But what about the residents of those other twenty-some states that are <em>not</em> covered by any data privacy law? Are they to miss out so that residents of already covered states can enjoy their stronger rights?
+Should states like California &ldquo;take one for the team&rdquo; so that disenfranchised Americans in the rest of the country can enjoy a modicum of these rights?</p>
+<p>My opinion? NO: residents of states with existing privacy laws should not have their rights minimized in the name of &ldquo;the greater good&rdquo;. Civil rights are not a compromise.
+It is up to legislators to find a way to empower all Americans without undermining the work that states have already done to protect their constituents.</p>
+<p>We&rsquo;ll just have to see what the House thinks.</p>
+<p>At the end of the day, all of this is food for though as any talk is ultimately pre-mature. The bill is still in comittee, so it&rsquo;s likely there will be some changes before it gets sent to Congress. It should also be said that the 118th Congress is a Republican majority, so one has to think that it&rsquo;s going to be even more challenging to pass any federal regulations under such circumstances.</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

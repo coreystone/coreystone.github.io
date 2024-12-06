@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>GPC/DNT signal checker | Corey Stone</title>
+<meta name="keywords" content="">
+<meta name="description" content="A simple tool to check if sites using the OneTrust CMP respect GPC/DNT signals.">
+<meta name="author" content="Me">
+<link rel="canonical" href="http://localhost:1313/projects/gpc-dnt-checker/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.cd0c10bc3cbe679e2e41b40a4edfe5a6f5e2a27e696a2b7f0aa7e1b9874ad556.css" integrity="sha256-zQwQvDy&#43;Z54uQbQKTt/lpvXion5pait/CqfhuYdK1VY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/projects/gpc-dnt-checker/">
+
+<meta name="twitter:title" content="GPC/DNT signal checker | Corey Stone" />
+<meta name="twitter:description" content="A simple tool to check if sites using the OneTrust CMP respect GPC/DNT signals." />
+<meta property="og:title" content="GPC/DNT signal checker | Corey Stone" />
+<meta property="og:description" content="A simple tool to check if sites using the OneTrust CMP respect GPC/DNT signals." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/projects/gpc-dnt-checker/" />
+<meta property="article:section" content="projects" />
+  
+  
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Projects",
+      "item": "http://localhost:1313/projects/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "GPC/DNT signal checker",
+      "item": "http://localhost:1313/projects/gpc-dnt-checker/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "GPC/DNT signal checker | Corey Stone",
+  "name": "GPC\/DNT signal checker",
+  "description": "A simple tool to check if sites using the OneTrust CMP respect GPC/DNT signals.",
+  "keywords": [
+    
+  ],
+  "wordCount" : "1184",
+  "inLanguage": "en",
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Me"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/projects/gpc-dnt-checker/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Corey Stone",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/favicon.ico"
+    }
+  }
+}
+</script>
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary-bg: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list-page {
+                background: var(--theme);
+            }
+
+            .list-page:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list-page:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+
+</head>
+
+<body class=" type-projects kind-page layout-" id="top"><script data-no-instant>
+function switchTheme(theme) {
+  switch (theme) {
+    case 'light':
+      document.body.classList.remove('dark');
+      break;
+    case 'dark':
+      document.body.classList.add('dark');
+      break;
+    
+    default:
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+      }
+  }
+}
+
+function isDarkTheme() {
+  return document.body.className.includes("dark");
+}
+
+function getPrefTheme() {
+  return localStorage.getItem("pref-theme");
+}
+
+function setPrefTheme(theme) {
+  switchTheme(theme)
+  localStorage.setItem("pref-theme", theme);
+}
+
+const toggleThemeCallbacks = {}
+toggleThemeCallbacks['main'] = (isDark) => {
+  
+  if (isDark) {
+    setPrefTheme('light');
+  } else {
+    setPrefTheme('dark');
+  }
+}
+
+
+
+
+window.addEventListener('toggle-theme', function() {
+  
+  const isDark = isDarkTheme()
+  for (const key in toggleThemeCallbacks) {
+    toggleThemeCallbacks[key](isDark)
+  }
+});
+
+
+function toggleThemeListener() {
+  
+  window.dispatchEvent(new CustomEvent('toggle-theme'));
+}
+
+</script>
+<script>
+  
+  (function() {
+    const defaultTheme = 'auto';
+    const prefTheme = getPrefTheme();
+    const theme = prefTheme ? prefTheme : defaultTheme;
+
+    switchTheme(theme);
+  })();
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Corey Stone (Alt + H)">Corey Stone</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/about/" title="About Me"
+                >About Me
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Blog"
+                >Blog
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/projects/" title="Projects" class="active"
+                >Projects
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main post">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/projects/">Projects</a></div><h1 class="post-title">GPC/DNT signal checker</h1>
+    <div class="post-description">A simple tool to check if sites using the OneTrust CMP respect GPC/DNT signals.</div>
+    <div class="post-meta"><span class="meta-item">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 15"></polyline></svg>
+  <span>6 min</span></span>
+
+      
+      
+    </div>
+  </header> <div class="toc side right">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#about" aria-label="About">About</a></li>
+                <li>
+                    <a href="#how-it-works" aria-label="How it works">How it works</a></li>
+                <li>
+                    <a href="#limitations" aria-label="Limitations">Limitations</a></li>
+                <li>
+                    <a href="#related-projects" aria-label="Related projects">Related projects</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h2 id="about">About<a hidden class="anchor" aria-hidden="true" href="#about">¶</a></h2>
+<p>This project scrapes a website that has implemented the OneTrust and OneTrust&rsquo;s CookiePro <a href="https://www.onetrust.com/cookiepro/">consent management platform (CMP)</a> to identify if the site honors a Do Not Track or Global Privacy Control signals from a site visitor. It will also list all categories of cookies used by the site and each cookie within a category.</p>
+<p>A brief overview:</p>
+<ul>
+<li>
+<p><a href="https://globalprivacycontrol.org/">Global Privacy Control (GPC)</a> is a browser-level opt-out signal that communicates to a web server that the visitor does want the company to sell or share their personal information</p>
+<ul>
+<li>This is an officially recognized mechanism to submit an opt-out request under the <a href="https://www.oag.ca.gov/sites/all/files/agweb/pdfs/privacy/oal-sub-final-text-of-regs.pdf">CCPA §999.315</a></li>
+<li>It is also intended to &ldquo;convey a general request that data controllers limit the sale or sharing of the user’s personal data to other data controllers&rdquo; per <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32016R0679">Articles 7 &amp; 21 of the GDPR</a></li>
+</ul>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Do_Not_Track">Do Not Track (DNT)</a> is the neglected predecessor of GPC that everyone seems to be trying to forget about. Companies are not legally obligated to honor DNT and most explicitly state that they don&rsquo;t in their privacy policies.</p>
+</li>
+<li>
+<p>For a more in-depth comparison of the two, check out this <a href="https://www.clarip.com/data-privacy/what-is-global-privacy-control-and-why-does-it-matter/">article by Clarip</a>.</p>
+</li>
+</ul>
+<h2 id="how-it-works">How it works<a hidden class="anchor" aria-hidden="true" href="#how-it-works">¶</a></h2>
+<p>OneTrust offers cookie banners and preference centers that a site visitor can interact with to indicate their cookie consent preferences. It also offers companies the option to notify visitors when a GPC or DNT signal has been detected and will be honored, although, in my experience, this is not commonly used. Though OneTrust can respond to both GPC and DNT, it does not specify which signal it is responding to by default.</p>
+<p><figure>
+    <img loading="lazy" src="/images/cruise-pc.png"/> 
+</figure>
+
+<em>The <a href="https://getcruise.com/">Cruise</a> cookie preference center</em></p>
+<p>The OneTrust CMP is created by a JavaScript file called <code>otSDKStub.js</code> that is placed into the header of a site&rsquo;s HTML source code, which is what displays the cookie banner and/or preference center across the site. This file will be important later.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!doctype html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Website name<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.cookielaw.org/consent/xxxx-xxxx-xxxx-xxxx/OtAutoBlock.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.cookielaw.org/scripttemplates/otSDKStub.js&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span> <span class="na">data-domain-script</span><span class="o">=</span><span class="s">&#34;xxxx-xxxx-xxxx-xxxx-xxxx&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="kd">function</span> <span class="nx">OptanonWrapper</span><span class="p">()</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>Note: The <a href="https://www.cookielaw.org/">cookielaw.org</a> and <a href="https://cookiepedia.co.uk/eu-cookie-law">cookiepedia.co.uk</a> domains are owned by OneTrust.</p>
+<p>I fetch the website using the <code>requests</code> library and load the JSON from the page.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://www.chick-fil-a.com/&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</span></span></code></pre></div><p>Because that that JavaScript file is present at the top of the HTML &lt;head&gt; section, we can conveniently get what we need from the first grouping in our JSON object.</p>
+<p><code>DomainData</code> is a top-level group that stores all the info for the CMP implementation.
+Within it, we can see an array called <code>Groups</code> that contains each cookie category as it appears in the preference center, like &ldquo;Strictly Necessary Cookies&rdquo;, &ldquo;Analytics Cookies&rdquo;, and the rest.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;DomainData&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="err">...</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;Groups&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Order&#34;</span><span class="p">:</span> <span class="s2">&#34;1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;OptanonGroupId&#34;</span><span class="p">:</span> <span class="s2">&#34;C0001&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="err">...</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;GroupDescription&#34;</span><span class="p">:</span> <span class="s2">&#34;These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. These cookies do not store any personally identifiable information.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;GroupName&#34;</span><span class="p">:</span> <span class="s2">&#34;Strictly Necessary Cookies&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;FirstPartyCookies&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">          <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;id&#34;</span><span class="p">:</span> <span class="s2">&#34;3593911a-9bd2-4140-9d9c-a50fc68362bd&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Name&#34;</span><span class="p">:</span> <span class="s2">&#34;OptanonAlertBoxClosed&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Host&#34;</span><span class="p">:</span> <span class="s2">&#34;.example.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;IsSession&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Length&#34;</span><span class="p">:</span> <span class="s2">&#34;365&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;This cookie is set by websites using certain versions of the cookie law compliance solution from OneTrust.  It is set after visitors have seen a cookie information notice and in some cases only when they actively close the notice down.  It enables the website not to show the message more than once to a user.  The cookie has a one year lifespan and contains no personal information.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="p">},</span>         
+</span></span></code></pre></div><p>Now its trivial to iterate over each cookie category (group) and get what I&rsquo;m looking for.</p>
+<p>With OneTrust, DNT and GPC signals are assigned per category, not per cookie, which means the value will be found within the the Group.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;IsDntEnabled&#34;</span><span class="err">:</span> <span class="kc">false</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;IsGpcEnabled&#34;</span><span class="err">:</span> <span class="kc">true</span>
+</span></span></code></pre></div><p>Iterate over each cookie in a Group to view all cookies in a category. I&rsquo;m interested in the cookie&rsquo;s:</p>
+<ul>
+<li><code>Name</code>: the name of the cookie (eg, &ldquo;_ga&rdquo; for Google Analytics)</li>
+<li><code>id</code>: the unique identifier of the cookie (eg, &ldquo;_ga_xxxxxxxxx&rdquo;)</li>
+<li><code>Host</code>: the domain hosting the cookie (eg, &ldquo;.example.com&rdquo;)</li>
+<li><code>Session</code>: indicates whether the cookie is a <a href="https://secureprivacy.ai/blog/session-cookies-vs-persistent-cookies">Session or Persistent cookie</a></li>
+<li><code>Length</code>: the duration that the cookie remains in storage, in days
+<ul>
+<li>Session cookies have a value of 0</li>
+<li>Persistent cookies have a <a href="https://developer.chrome.com/blog/cookie-max-age-expires/">max value of 400</a> (about 13 months)</li>
+</ul>
+</li>
+<li><code>description</code>: a short explanation of what the cookie is/does</li>
+</ul>
+<p>This block prints all of the relevant information that OneTrust has about a cookie, which can be automatically pulled from the cookiepedia repo of known existing cookies, or manually configured by the OneTrust admin.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;DomainData&#39;</span><span class="p">][</span><span class="s1">&#39;Groups&#39;</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">group</span><span class="p">[</span><span class="s1">&#39;FirstPartyCookies&#39;</span><span class="p">])</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;No cookies found&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">cookie</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;FirstPartyCookies&#39;</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="n">cookie</span><span class="p">[</span><span class="s1">&#39;Name&#39;</span><span class="p">]</span><span class="s1">&#39;)</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="n">cookie</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="n">cookie</span><span class="p">[</span><span class="s1">&#39;Host&#39;</span><span class="p">]</span><span class="s1">&#39;)</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Session&#39;</span> <span class="k">if</span> <span class="n">cookie</span><span class="p">[</span><span class="s1">&#39;IsSession&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;True&#39;</span> <span class="k">else</span> <span class="s1">&#39;Persistent&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Duration (days): </span><span class="si">{</span><span class="n">cookie</span><span class="p">[</span><span class="s1">&#39;Length&#39;</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Description: </span><span class="si">{</span><span class="n">cookie</span><span class="p">[</span><span class="s1">&#39;description&#39;</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="limitations">Limitations<a hidden class="anchor" aria-hidden="true" href="#limitations">¶</a></h2>
+<p>The main limitation of this solution is that it is only compatible with sites using the OneTrust consent management platform (CMP). This could be configured to work with similar CMPs from other vendors like <a href="https://www.ketch.com/resources/cookie-consent-banner">Ketch</a> and <a href="https://www.osano.com/cookieconsent">Osano</a>, but I just wanted to start with a working prototype first. However, anecdotally, a majority of websites that are using third-party CMPs are using OneTrust or OneTrust&rsquo;s CookiePro (though many customers seem to be ditching OneTrust for its competitors), so this solution has pretty decent coverage.</p>
+<p>Some websites will automatically block the script or try to enforce &ldquo;human checks&rdquo; as an anti-bot/anti-scraping measure. Some requests made over VPN will also be rejected as well. I do not try to bypass any sites that don&rsquo;t like these requests.</p>
+<h2 id="related-projects">Related projects<a hidden class="anchor" aria-hidden="true" href="#related-projects">¶</a></h2>
+<p>I found a similar project from Wesleyan University&rsquo;s <a href="https://privacytechlab.org/">Privacy Tech Lab</a> called <a href="https://github.com/privacy-tech-lab/gpc-web-crawler">GPC Web Crawler</a> which has a similar goal in identifying which sites honor the Global Privacy Control signal, but is vendor-agnostic and uses automated browser testing (with Selenium) to see if the signal is actually honored or not rather than taking the website&rsquo;s word for it.</p>
+<p>Here is how it works, taken from the project&rsquo;s <a href="https://github.com/privacy-tech-lab/gpc-web-crawler">GitHub repo</a>:</p>
+<blockquote>
+<ol>
+<li>The extension checks whether the site is subject to the CCPA by looking at Firefox&rsquo;s urlClassification object. Requests returned by this object are based on the Disconnect list, as described here.</li>
+<li>The extension checks the value of the US Privacy string, OneTrust’s OptanonConsent cookie, and the GPP string, if any of these exist.</li>
+<li>The extension sends a GPC signal to the site.</li>
+<li>The extension rechecks the value of the US Privacy string, OptanonConsent cookie, and GPP string.</li>
+</ol>
+</blockquote>
+<p><figure>
+    <img loading="lazy" src="/images/gpc-web-crawler-flow.png"/> 
+</figure>
+
+<em>A flow diagram of the web crawler script per the <a href="https://github.com/privacy-tech-lab/gpc-web-crawler">gpc-web-crawler repo</a></em></p>
+<p>This solution is much more technical and has the benefit of not being limited by what CMP a site is using. I also like that this solution searches for other signals like the IAB&rsquo;s <a href="https://github.com/InteractiveAdvertisingBureau/Global-Privacy-Platform/blob/main/Core/Consent%20String%20Specification.md">Gloabl Privacy Platform (GPP)</a> string and also the <a href="https://github.com/InteractiveAdvertisingBureau/USPrivacy/blob/master/CCPA/US%20Privacy%20String.md">US Privacy string</a> (although it has recently been deprecated). Though the idea of &ldquo;signal sprawl&rdquo; is a good conversation for another day, I do appreciate that there are more and more solutions releasing to effect user consent.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+<nav class="paginav">
+  <a class="next" href="http://localhost:1313/projects/privacy-policy-directory/">
+    <span class="title">Next Page&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right" style="user-select: text;"><line x1="5" y1="12" x2="19" y2="12" style="user-select: text;"></line><polyline points="12 5 19 12 12 19" style="user-select: text;"></polyline></svg>
+    </span>
+    <br>
+    <span>Privacy Policy Directory</span>
+  </a>
+</nav>
+
+  </footer>
+    <div class="comments-separator"></div>
+</article>
+    </main>
+    
+<footer class="footer">
+  <span>&copy; 2024 <a href="http://localhost:1313/">Corey Stone</a></span><span style="display: inline-block; margin-left: 1em;">
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>
+  </span>
+  <span style="display: inline-block; margin-left: 1em;">
+    Powered by
+    <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+    <a href="https://github.com/reorx/hugo-PaperModX/" rel="noopener" target="_blank">PaperModX</a>
+  </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+    <path d="M12 6H0l6-6z" />
+  </svg>
+</a>
+
+<script>
+  (function() {
+     
+    const disableThemeToggle = '' == '1';
+    if (disableThemeToggle) {
+      return;
+    }
+
+    let button = document.getElementById("theme-toggle")
+    
+    button.removeEventListener('click', toggleThemeListener)
+    
+    button.addEventListener('click', toggleThemeListener)
+  })();
+</script>
+
+<script>
+  (function () {
+    let menu = document.getElementById('menu')
+    if (menu) {
+      menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+      menu.onscroll = function () {
+        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+      }
+    }
+
+    const disableSmoothScroll = '' == '1';
+    const enableInstantClick = '' == '1';
+    
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || disableSmoothScroll || enableInstantClick) {
+      return;
+    }
+    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        var id = this.getAttribute("href").substr(1);
+        document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+          behavior: "smooth"
+        });
+        if (id === "top") {
+          history.replaceState(null, null, " ");
+        } else {
+          history.pushState(null, null, `#${id}`);
+        }
+      });
+    });
+  })();
+</script>
+<script>
+  var mybutton = document.getElementById("top-link");
+  window.onscroll = function () {
+    if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+      mybutton.style.visibility = "visible";
+      mybutton.style.opacity = "1";
+    } else {
+      mybutton.style.visibility = "hidden";
+      mybutton.style.opacity = "0";
+    }
+  };
+</script>
+<script>
+  if (window.scrollListeners) {
+    
+    for (const listener of scrollListeners) {
+      window.removeEventListener('scroll', listener)
+    }
+  }
+  window.scrollListeners = []
+</script>
+
+
+
+<script src="/js/medium-zoom.min.js" data-no-instant
+></script>
+<script>
+  document.querySelectorAll('pre > code').forEach((codeblock) => {
+    const container = codeblock.parentNode.parentNode;
+
+    const copybutton = document.createElement('button');
+    copybutton.classList.add('copy-code');
+    copybutton.innerText = 'copy';
+
+    function copyingDone() {
+      copybutton.innerText = 'copied!';
+      setTimeout(() => {
+        copybutton.innerText = 'copy';
+      }, 2000);
+    }
+
+    copybutton.addEventListener('click', (cb) => {
+      if ('clipboard' in navigator) {
+        navigator.clipboard.writeText(codeblock.textContent);
+        copyingDone();
+        return;
+      }
+
+      const range = document.createRange();
+      range.selectNodeContents(codeblock);
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      try {
+        document.execCommand('copy');
+        copyingDone();
+      } catch (e) { };
+      selection.removeRange(range);
+    });
+
+    if (container.classList.contains("highlight")) {
+      container.appendChild(copybutton);
+    } else if (container.parentNode.firstChild == container) {
+      
+    } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+      
+      codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+    } else {
+      
+      codeblock.parentNode.appendChild(copybutton);
+    }
+  });
+</script>
+
+
+
+
+<script>
+  
+  
+  (function() {
+    const enableTocScroll = '1' == '1'
+    if (!enableTocScroll) {
+      return
+    }
+    if (!document.querySelector('.toc')) {
+      console.log('no toc found, ignore toc scroll')
+      return
+    }
+    
+
+    
+    const scrollListeners = window.scrollListeners
+    const headings = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id]');
+    const activeClass = 'active';
+
+    
+    let activeHeading = headings[0];
+    getLinkByHeading(activeHeading).classList.add(activeClass);
+
+    const onScroll = () => {
+      const passedHeadings = [];
+      for (const h of headings) {
+        
+        if (getOffsetTop(h) < 5) {
+          passedHeadings.push(h)
+        } else {
+          break;
+        }
+      }
+      if (passedHeadings.length > 0) {
+        newActiveHeading = passedHeadings[passedHeadings.length - 1];
+      } else {
+        newActiveHeading = headings[0];
+      }
+      if (activeHeading != newActiveHeading) {
+        getLinkByHeading(activeHeading).classList.remove(activeClass);
+        activeHeading = newActiveHeading;
+        getLinkByHeading(activeHeading).classList.add(activeClass);
+      }
+    }
+
+    let timer = null;
+    const scrollListener = () => {
+      if (timer !== null) {
+        clearTimeout(timer)
+      }
+      timer = setTimeout(onScroll, 50)
+    }
+    window.addEventListener('scroll', scrollListener, false);
+    scrollListeners.push(scrollListener)
+
+    function getLinkByHeading(heading) {
+      const id = encodeURI(heading.getAttribute('id')).toLowerCase();
+      return document.querySelector(`.toc ul li a[href="#${id}"]`);
+    }
+
+    function getOffsetTop(heading) {
+      if (!heading.getClientRects().length) {
+        return 0;
+      }
+      let rect = heading.getBoundingClientRect();
+      return rect.top
+    }
+  })();
+  </script>
+
+</body>
+
+</html>

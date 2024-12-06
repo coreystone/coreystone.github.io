@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Security on Corey Stone</title>
+    <link>http://localhost:1313/tags/security/</link>
+    <description>Recent content in Security on Corey Stone</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 18 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Encrypted cloud backups with Cryptomator</title>
+      <link>http://localhost:1313/posts/encrypted-cloud-backups/</link>
+      <pubDate>Sat, 18 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/encrypted-cloud-backups/</guid>
+      <description>I heard you like encryption, so I encrypted your encrypted backups.</description>
+      <content:encoded><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>I&rsquo;ve recently taken it upon myself to be in charge of backing up my family&rsquo;s digital files and photos.
+It&rsquo;s not the most exciting thing, but God knows it won&rsquo;t get done otherwise and it is extremely important.</p>
+<p>I&rsquo;m following the golden <a href="https://www.seagate.com/blog/what-is-a-3-2-1-backup-strategy/">3-2-1 backup rule</a>, to keep copies of our data in three separate locations,
+in two different types of storage, and one offline backup. An example approach would be a copy of data in the cloud, on a cold (offline) hard drive, and another copy on a phone.
+I already have copies on a hard disk and other devices covered, so that just leaves me with picking a cloud storage provider to go with.</p>
+<p>Popular options like Apple iCloud and Google Drive are appealing because they offer a lot of storage space at a reasonable price, and make it easy to access files across devices.
+And those names alone carry a lot of weight and security in their own right.</p>
+<p>However, there are some serious privacy concerns with these services. Both Apple and Google scan the files uploaded to their cloud for various service reasons, such as improving user experience and app performance, but this ultimately means that they are analyzing the files that you upload. This can be worrying because it raises questions about who can see our data and how it might be used. Especially in light of recent events after Apple has proposed a <a href="https://www.bbc.co.uk/news/technology-58145943">new system to scan images</a> for child abuse material (&ldquo;CSAM&rdquo;).</p>
+<h2 id="encrypted-cloud-storage">Encrypted cloud storage</h2>
+<p>That&rsquo;s why I&rsquo;m considering cloud providers that offer <a href="https://en.wikipedia.org/wiki/Zero-knowledge_service">zero-knowledge encryption</a>. With zero-knowledge encryption, even the service provider can&rsquo;t access my files because they don&rsquo;t have the keys to decrypt them. This means my data is much more secure and private. Only I can access my files, and I can be confident that no one else can see them.</p>
+<p>We want to encrypt our files because it adds an extra layer of security. If someone were to gain unauthorized access to the cloud service, they wouldn&rsquo;t be able to read my files without the encryption key. This is especially important for sensitive information, like personal documents or financial records.</p>
+<p>There are fortuantely a plethora of such services now available to consumers, so do your research and pick the service that seems right for you in terms of pricing.
+For the purpose of this article, I will be using <a href="https://mega.nz/">MEGA</a> (formerly known as <a href="https://en.wikipedia.org/wiki/Megaupload">Mega Upload</a>, which is a different rabbit hole I recommend when you have the time).</p>
+<p><figure>
+    <img loading="lazy" src="/images/zero-knowledge.png"/> 
+</figure>
+
+<em>via <a href="https://tresorit.com/features/zero-knowledge-encryption">Tresorit</a></em></p>
+<h2 id="file-encryption">File encryption</h2>
+<p>To go the extra mile, you can also consider encrypting your files <em>before</em> uploading them to any third-party storage service.
+This may sound overkill, but it can also give you the peace of mind knowing your files are safe even if the cloud provider
+or their keys become compromised. This means that only you can truly see your files. This also means that you have the burden
+of safely storing and protecting your encryption keys at the risk of losing all of your data.</p>
+<p>There are tons of popular encryption programs, but for this article I will be using <a href="https://itsfoss.com/cryptomator/">Cryptomator</a>.</p>
+<figure>
+    <img loading="lazy" src="/images/cryptomator-logo.png"/> 
+</figure>
+
+<h2 id="things-youll-need">Things you&rsquo;ll need</h2>
+<p>Note: For this article, I will be using Windows. However, the steps are ultimately the same across any OS.</p>
+<ul>
+<li><a href="https://cryptomator.org/">Cryptomator</a> for encrypting files before uploading them to the cloud</li>
+<li>A cloud storage provider, preferrably with a desktop app like <a href="https://mega.nz/desktop">MEGAsync</a></li>
+<li>If you are backing up files larger than 4GB, <a href="https://github.com/dokan-dev/dokany/">Dokany</a></li>
+</ul>
+<h2 id="create-an-encrypted-vault">Create an encrypted vault</h2>
+<p>We need to create a Cryptomator &ldquo;vault&rdquo; to store and encrypt our files. Vaults are actually Windows <a href="https://medium.com/r?url=https%A%2F%2Fcomputer.howstuffworks.com%2Fvirtual-hard-drive1.htm">virtual drives</a>
+that Cryptomator will mount whenever you unlock them and will persist in your drive&rsquo;s storage when they are locked.</p>
+<p>Before we do that though, we need to decide what volume type we&rsquo;re going to be using: <a href="https://medium.com/r/?url=https%3A%2F%2Fcommunity.cryptomator.org%2Ft%2Fwebdav-vs-dokany-performance-comparison-when-using-remote-offsite-vault%2F2883%2F2">WebDAV or Dokany</a>.
+Unless you&rsquo;re a &ldquo;power user&rdquo;,  <a href="https://medium.com/r/?url=https%3A%2F%2Fcommunity.cryptomator.org%2Ft%2Fwhat-is-dokan-file-system-driver%2F3369">according to a Cryptomator dev</a>, you really shouldn&rsquo;t worry about the
+difference between the two and should probably go with Dokany. In my case, I actually needed Dokany
+to transfer files larger than 4GB, which otherwise resulted in errors when I tried with WebDAV.
+Download and install the <a href="https://medium.com/r/?url=https%3A%2F%2Fgithub.com%2Fdokan-dev%2Fdokany%2Freleases">newest release</a> of Dokany from GitHub and then return to Cryptomator.</p>
+<figure>
+    <img loading="lazy" src="/images/cryptomator-dokany.png"/> 
+</figure>
+
+<p>In Cryptomator, click on the &ldquo;Preferences&rdquo; gear icon in the top right and then go to &ldquo;Virtual Drive&rdquo;.
+WebDAV should be selected by default. If you need to use Dokany, make sure you have installed the
+newest release already and then select it from the drop down menu (there are only two options).</p>
+<figure>
+    <img loading="lazy" src="/images/cryptomator-main.png"/> 
+</figure>
+
+<p>Start by clicking &ldquo;Add Vault&rdquo; and name it. You&rsquo;ll then be prompted to create a password and optionally
+receive a recovery key for said vault. A recovery key is the only way to recover a vault if you lose
+this password. It is highly recommended to create a recovery key and store it somewhere safely, such
+as a password manager- preferably one that has <a href="https://medium.com/r/?url=https%3A%2F%2Fcloudstorageinfo.org%2Fzero-knowledge-encryption-explained">zero-knowledge encryption</a>, in the spirit of our backup.</p>
+<figure>
+    <img loading="lazy" src="/images/cryptomator-create-vault.png"/> 
+</figure>
+
+<p>Now we&rsquo;re going to store this vault within the MEGA synced folder we created earlier.
+Press the &ldquo;Custom Location&rdquo; button and then &ldquo;Choose&rdquo; and select the synced folder.
+Either copy and paste the path of the MEGA folder or navigate to it in your file browser.
+I placed my synced folder in my C: drive, so I will navigate there and then select it.</p>
+<figure>
+    <img loading="lazy" src="/images/cryptomator-vault-path.png"/> 
+</figure>
+
+<p>Now that our vault is prepared and placed in the synced folder, we can begin to transfer files to it.
+First ensure that your vault is unlocked and then start transferring your files to it in File Explorer.
+Transfer your files directly to the vault and not to the synced folder, or else anything you transfer
+will be unencrypted. Your vault will appear as a virtual drive in File Explorer with the vault name and
+an assigned letter- <code>vault_name (X:)</code>- this is where I dragged and dropped all of my files to.</p>
+<p>You can check that you are doing things right by going to the synced folder and finding the now
+encrypted contents that you transferred. In my synced folder, I found my files inside a hierarchy of
+arbitrary sub-folders. Your files&rsquo; names will be obfuscated by Cryptomator and all files will have
+the type <code>Cryptomator Encrypted Data (.c9r)</code>.</p>
+<p>This is key: even though we can supposedly trust MEGA and its zero-knowledge encryption,
+we really don&rsquo;t even need to now that our backup is entirely encrypted. This just adds another
+layer of security on top of MEGA&rsquo;s <a href="https://medium.com/r/?url=https%3A%2F%2Fmega.io%2Fsecurity">User Controlled Encryption</a> and in theory removes the need to trust
+MEGA in the first place. This revelation goes for any cloud storage provider and turns less private
+alternatives like Google Drive and iCloud into more appealing choices based on their superior pricing models.</p>
+<figure>
+    <img loading="lazy" src="/images/mega-uploading.png"/> 
+</figure>
+
+<p>You can check the progress of your sync by running the MEGAsync application,
+which may already be hidden in the tray on the right of your taskbar.
+MEGA will try to sync multiple files simultaneously, but I noticed that
+larger files like videos would only be uploaded one at a time.</p>
+<h2 id="uploading-to-the-cloud">Uploading to the cloud</h2>
+<p>Now that the files are encrypted (as a .c9r), simply upload them to the cloud like you would any other file. I recommend a cloud provider has desktop sync app to make this
+a continuous process that happens behind the scenes, so you don&rsquo;t have to worry about anything or risk forgetting to back something up.</p>
+<h2 id="accessing-files-in-the-cloud">Accessing files in the cloud</h2>
+<p>Once the files are in the cloud, you can simply decrypt them with the key that you set earlier and be assured that only you have been able to read your data.</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

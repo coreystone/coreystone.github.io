@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Privacy on Corey Stone</title>
+    <link>http://localhost:1313/tags/privacy/</link>
+    <description>Recent content in Privacy on Corey Stone</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 01 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/privacy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Traveling with privacy and security in mind</title>
+      <link>http://localhost:1313/posts/traveling-privately/</link>
+      <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/traveling-privately/</guid>
+      <description>How to enjoy your travels while protecting your privacy and digital devices.</description>
+      <content:encoded><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>I recently returned from a trip abroad in Mexico and it was an incredible time that I plan to write about separately. However, despite all of the preparation and research I had done beforehand, things still always found a way to not go according to plan. Although I would argue that is part of the fun of travel, the element of surprise is still very real. That said, everything that continues will be from the angle of my experiences in Mexico, though these lessons should generally apply to the rest of the world. As with all travel: do your research beforehand based on wherever you&rsquo;re going.</p>
+<p>I asked Meta&rsquo;s <a href="https://www.llama.com/llama3_1/">Llama 3.1</a> to provide an opening statement about the difficulties of preserving your digital privacy while traveling abroad, and I was pretty happy with its response that I&rsquo;m using to introduce this post:</p>
+<blockquote>
+<p>Traveling - a time to disconnect from the daily grind and reconnect with the world around us. But in today&rsquo;s digital age, the freedom to roam comes with a hidden cost: our online security and personal data. As we navigate unfamiliar destinations, we often find ourselves making compromises for the sake of convenience, sacrificing our digital privacy in the process. From using public Wi-Fi to access maps and itineraries, to sharing personal details with travel apps and websites, the risks to our digital well-being can be just as real as the rewards of exploring new places.</p>
+</blockquote>
+<p>It&rsquo;s already challenging enough dealing with all of the delays, cancellations, and things that never go according to plan while you&rsquo;re traveling- and this can lead to sacrifices like missing out on certain sights and experiences and compromises like spending too much money on last-minute bookings and transportation. Another sacrifice I&rsquo;ve noticed during my travels is that of my digital privacy. On a vacation or business trip, it&rsquo;s easy to lose count of all the times you hand someone your ID or passport, fill in a (paper or digital) form with your name, address, phone number, or email, or even connect to a public Wi-Fi network. It can be really overwhelming to keep track of all of these activities, physical and digital, that accumulate your <a href="https://en.wikipedia.org/wiki/Digital_footprint">digital footprint</a> and can affect your privacy. So I made a list of these common activities  while traveling and how to approach them in a realistic way that preserves your privacy without having to ruin your trip.</p>
+<p>Disclaimer: This post is NOT about going &ldquo;off the grid&rdquo; or hiding from a government. If that is what you are trying to do, you&rsquo;re in the wrong place. This post is about balancing the challenges of preserving your privacy and the security of your devices while enjoying your travels.</p>
+<h2 id="the-reality-of-travel">The reality of travel</h2>
+<p>A government rightfully has a vested interest in knowing who and what enters its borders and when. Much like when you step outside of your house into public, <a href="https://sandiegoprivacy.org/myth-no-expectation-of-privacy-in-public.html">you have no expectation of privacy</a> when stepping into a new country- much less so if you are not a citizen. It&rsquo;s a little more complicated than that, but it I believe it to be true when you&rsquo;re in another country.</p>
+<p>Be ready to present identification to government officials (and businesses depending on the activities you have planned), and expect to be subjected to recordings, biometric scanners, and even to potentially have your devices be searched. Like it or not, these are all things that can and do happen at borders (some more than others, of course) and you need to be okay with that before deciding to travel.</p>
+<p>Do NOT lie or provide falsified documents to any government with the goal of retaining your privacy. That is a horrible idea.</p>
+<p>This blog post is not about hiding from those governments or disappearing. It is about recognizing how your privacy can be negatively affected while traveling and what you can realistically do about it. This includes protecting yourself from companies and public networks, whether incompetent or malicious, while maintaining full functionality of all the digital devices and services you need to go about and enjoy your trip.</p>
+<h2 id="establish-your-threat-model">Establish your threat model</h2>
+<p>Before doing anything, you need to first ask yourself a few questions to guide yourself through this process. I&rsquo;m going to provide the basic questions loosely based on those in <a href="https://www.eff.org/keeping-your-site-alive/evaluating-your-threat-model">this EFF article</a> that help define your &ldquo;threat model&rdquo;: a framework used to identify, evaluate, and prioritize potential risks to your personal information and online security. This archetype actually <a href="https://www.iriusrisk.com/resources-blog/history-of-threat-modeling">originated in information security</a> but can be applied to your personal privacy to help stay on track and focus on what really matters to you.</p>
+<ul>
+<li>What personal information are you protecting?
+<ul>
+<li>Example: Sensitive messages, photos, your sexual orientation, race, religious or political views, etc.</li>
+</ul>
+</li>
+<li>Who are you protecting that information from?
+<ul>
+<li>Example: family members, strangers on the internet, companies and advertisers, a government, etc.</li>
+</ul>
+</li>
+<li>How much time and money are you willing to invest into protecting this information?</li>
+</ul>
+<p>Answering these questions will help you better understand your goals with protecting your privacy and ultimately save you time and headaches in the future.</p>
+<h2 id="secure-encrypt--backup-devices">Secure, encrypt, &amp; backup devices</h2>
+<p>Anything can happen while traveling, and that includes losing your phone or other devices. You need to be prepared for this <em>before</em> it happens to avoid turning an inconvenience into an absolute nightmare because you don&rsquo;t have a backup of your data, your phone didn&rsquo;t have a passcode, or a thief can see all of your unencrypted files on your laptop.</p>
+<ol>
+<li>
+<p>Set strong, unique passcodes and passwords on <em>all</em> of your devices; opt for alphanumeric passwords wherever possible; store everything in a <a href="https://www.pcmag.com/explainers/why-you-need-a-password-manager-and-how-to-choose-the-right-one">password manager</a></p>
+</li>
+<li>
+<p>Set up multi-factor authentication methods, preferrably <a href="https://en.wikipedia.org/wiki/Time-based_One-Time_Password">TOTP</a>, for any accounts that offer them (especially your email and password manager)</p>
+</li>
+<li>
+<p>Create backups for anything you can&rsquo;t or wouldn&rsquo;t want to lose: photos, files, and especially <em>2FA recovery codes</em></p>
+<ul>
+<li>Follow the <a href="https://www.veeam.com/blog/321-backup-rule.html">3-2-1 rule</a>: three separate copies of your data, two types of storage, and at least one copy off-site</li>
+<li>Consider using a <a href="https://www.cloudwards.net/best-encrypted-cloud-storage/">encrypted cloud storage provider</a> for online backups that supports <a href="https://www.keepersecurity.com/resources/zero-knowledge-for-ultimate-password-security.html">zero-knowledge encryption</a></li>
+</ul>
+</li>
+<li>
+<p>Make sure that your devices have <a href="https://en.wikipedia.org/wiki/Full_disk_encryption">full disk encryption</a>.
+Popular OS-level solutions include:</p>
+<ul>
+<li><a href="https://support.microsoft.com/en-us/windows/device-encryption-in-windows-cf7e2b6f-3e70-4882-9532-18633605b7df">Bitlocker</a> for Windows</li>
+<li><a href="https://support.apple.com/guide/mac-help/protect-data-on-your-mac-with-filevault-mh11785/mac">FileVault</a> for MacOS</li>
+<li><a href="https://www.cyberciti.biz/security/howto-linux-hard-disk-encryption-with-luks-cryptsetup-command/">Linux Unified Key Setup (LUKS)</a> for Linux</li>
+</ul>
+<p>Here are some third-party FOSS solutions (for encrypting files/volumes):</p>
+<ul>
+<li><a href="https://cryptomator.org/">Cryptomator</a></li>
+<li><a href="https://veracrypt.fr/">VeraCrypt</a></li>
+</ul>
+</li>
+</ol>
+<p>For brownie points, you can even encrypt your backups before uploading them to an encrypted cloud storage provider to mitigate any risk of your data being exfiltrated if that provider and their encryption keys were to be compromised.
+<a href="https://knowyourmeme.com/memes/xzibit-yo-dawg">Yo dawg&hellip;</a> I heard you like encrypted backups.</p>
+<h2 id="freeze-your-credit">Freeze your credit</h2>
+<p>This section is for my US readers, but you should take whatever equivalent steps you can in your country.</p>
+<p>Although not one of the first things you might think of when preparing to travel, <a href="https://www.experian.com/blogs/ask-experian/what-is-a-credit-freeze/">freezing your credit</a> is an important measure to protect yourself from identity theft and fraud while you&rsquo;re away.
+One of the last things you want to hear during your trip is that someone stole your identity while you were relaxing on the beach none the wiser.
+Submitting a credit freeze to each of the <a href="https://www.investopedia.com/personal-finance/top-three-credit-bureaus/">three credit bureaus</a> is an added layer of security and peace of mind that scratches one more item off the list of things that can go wrong.
+The process is takes less than 5 minutes in total. If you haven&rsquo;t already, create an account with <a href="https://my.equifax.com/membercenter/#/login">Equifax</a>, <a href="https://usa.experian.com/">Experian</a>, and <a href="https://service.transunion.com/">TransUnion</a>.
+Then all you have to do is submit a freeze. It&rsquo;s just a good idea to have these accounts created anyways, especially if you want to request your free credit report from any of them.</p>
+<figure>
+    <img loading="lazy" src="/images/transunion-freeze.png"/> 
+</figure>
+
+<p>Freezing your credit is now completely free <a href="https://consumer.ftc.gov/consumer-alerts/2018/09/free-credit-freezes-are-here">thanks to the FTC</a>, and you can submit a freeze as often as you need.
+There&rsquo;s really no excuse <em>not</em> to do this for most people, regardless of if they&rsquo;re traveling or not, especially given that you can even <a href="https://www.experian.com/blogs/ask-experian/how-to-unfreeze-your-credit-report/">schedule a thaw</a>
+on your credit for it to un-freeze by the time you return.</p>
+<p>My advice: always keep your credit frozen until you know you&rsquo;ll need to unfreeze it, which only takes a few minutes. Even when you&rsquo;re not traveling.</p>
+<h2 id="sim-cards">SIM cards</h2>
+<p>A <a href="https://en.wikipedia.org/wiki/SIM_card">SIM card</a> (Subscriber Identity Module, for the curious) is your ticket to connecting to a cell network and sending and receiving phone calls and texts. Traveling without one would be a logistical nightmare.</p>
+<p>Depending on the country you travel to, your existing cell plan will probably still work and will likely just charge you daily roaming fees (unless you have an international plan). Calls and texts may also incur additional fees while you&rsquo;re abroad. However, this may be significantly more expensive than buying your own SIM card after arriving.</p>
+<p>Before continuing, you need to check if there are any SIM card registration laws, otherwise known as Know Your Customer (KYC) requirements, for the country you are visiting. This may change change your game plan.
+Here&rsquo;s a <a href="https://www.phonetravelwiz.com/phone-travel-options/sim-card-registration/">lookup tool</a> for which countries have SIM card registration laws.</p>
+<p>Keep in mind that some services or apps in the country you visit may not accept foreign phone numbers, which, coupled with the potential savings, means that there&rsquo;s no reason for you to be giving out your primary phone number in a foreign country. An anecdote I have for this was trying to register for <a href="https://web.didiglobal.com/mx/pasajero/">DiDi</a> in Mexico (an Uber alternative), which only accepted a Mexican phone number.</p>
+<p>In some countries, it is trivially easy and inexpensive to purchase a new SIM card. Throughout my time in Mexico, I saw people selling SIM cards in the street, in the subway, and in flea markets; a new &ldquo;chip&rdquo; was usually no more than $2.50 USD.</p>
+<p>When purchasing the SIM card, pay in cash to avoid directly linking your identity to your phone with a credit card. The same goes for purchasing more data or a cell plan.</p>
+<p>Now that you have a cell plan and phone number, I also recommend looking into a (paid) service to generate burner phone numbers to help <a href="https://medium.com/codex/everyone-should-implement-digital-compartmentalization-e1cc45395db2">compartmentalize your identity</a> across different numbers linked to different businesses or accounts. Some services worth checking out include <a href="https://hushed.com/">Hushed</a>, <a href="https://www.burnerapp.com/">Burner</a>, <a href="https://anonyome.com/individuals/mysudo/">MySudo</a>, and (ironically?) <a href="https://voice.google.com/">Google Voice</a>.</p>
+<p>But what if you rely on your phone number to text friends and family back home? I recommend letting people know when you will be leaving and how they can reach you, which should be through a secure instant messenger app, as I&rsquo;ll discuss in a moment.</p>
+<h3 id="esims">eSIMs</h3>
+<p>An <a href="https://www.digitaltrends.com/mobile/esim-explainer/#dt-heading-when-can-i-start-using-an-esim">embedded SIM card</a> (eSIM) removes the physical card from your phone and allows you to purchase SIM cards digitally through a dedicated service. Similar to SIM cards, eSIMs may also be subject to <a href="https://www.airalo.com/blog/whats-an-ekyc-and-why-do-some-esims-require-it">&ldquo;eKYC&rdquo;</a> requirements which you will need to check with first.</p>
+<p>Although I don&rsquo;t have any experience with eSIMs yet, I understand them to be <a href="https://www.reddit.com/r/privacy/comments/144amd7/is_an_esim_is_more_secure_than_a_physical_sim/">more secure and convenient than private</a>:</p>
+<ul>
+<li>Phone numbers can be purchased instantly through an app or website; but these numbers are linked to your account/identity (unlike with cash payments)</li>
+<li>A stolen phone with an eSIM can be easily deactivated and a new phone number provisioned; there is no SIM card to plug into another phone</li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/sim-vs-esim.png"/> 
+</figure>
+
+<em>via <a href="https://www.mintmobile.com/blog/esim-vs-physical-sim-cards-what-you-need-to-know/">mintmobile.com</a></em></p>
+<h2 id="messaging--texting">Messaging &amp; texting</h2>
+<p>Believe it or not, outside of the United States not everyone has an iPhone. In fact, here is a sobering <a href="https://x.com/stats_feed/status/1671378198477643777">tweet by World of Statistics</a> that shows the percentage of annual salary, by country, required to buy a new iPhone 14 Pro, which explains the proliferation of different phone brands across across the world, as seen below.</p>
+<p><figure>
+    <img loading="lazy" src="/images/smartphone-market-share.png"/> 
+</figure>
+
+<em>via <a href="https://vividmaps.com/most-popular-mobile-brands/">vividmaps.com</a></em></p>
+<h3 id="sms">SMS</h3>
+<p><strong>SMS (Simple Messenger Service)</strong> is also simply insecure. <a href="https://www.howtogeek.com/709373/why-sms-text-messages-arent-private-or-secure/">This article</a> by How-To Geek explains why SMS is neither private nor secure, and why you should not use it:</p>
+<ul>
+<li>SMS messages are not encrypted</li>
+<li>Because of this, your cell carrier, criminals, and <a href="https://sls.eff.org/technologies/cell-site-simulators-imsi-catchers">the government</a> can read any messages you send or receive</li>
+<li><a href="https://www.microsoft.com/en-us/microsoft-365-life-hacks/privacy-and-safety/what-is-sim-swapping">SIM swapping attacks</a> allow scammers to hijack your SIM card with a modicum of personal information about you to trick your cell carrier by social engineering, and can target anyone, including <a href="https://www.pcmag.com/news/10-suspects-arrested-for-sim-swapping-attacks-on-us-celebrities">celebrities and cryptocurrency holders</a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/sim-swap.png"/> 
+</figure>
+
+<em>via <a href="https://www.snbonline.com/about/news/how-to-prevent-sim-swap-fraud">SNBonline.com</a></em></p>
+<h3 id="rcs">RCS</h3>
+<p>The new and improved <strong>Rich Communication Services (RCS)</strong> protocol, which provides <a href="https://www.androidauthority.com/rcs-vs-sms-3330098/#3">numerous enhancements over SMS</a> is quickly gaining adoption as more cell phones and carriers are finally enabling compatibility. Beyond various quality-of-life and nice-to-haves being added such as media attachments, removed character limits, typing indicators, and group chats, and most notably, <strong>encrypted messages</strong>. In 2023, <a href="https://www.theverge.com/2023/8/8/23824800/google-messages-rcs-end-to-end-encryption-default-group">Google enabled encryption for RCS conversations</a> using Google Messages by default. In late 2024, the Global System for Mobile Communications Association (GSMA), a non-profit that represents the world&rsquo;s largest mobile telecom businesses, announced that it was beginning development of <a href="https://thehackernews.com/2024/09/gsma-plans-end-to-end-encryption-for.html">cross-platform RCS messaging</a> that would allow Android and iOS users to enjoy the same E2EE communications that they already enjoy, but together.</p>
+<p>However, there are still a few barriers holding back RCS:</p>
+<ul>
+<li>Existing ubiquity of third-party messenger apps</li>
+<li>Apple <a href="https://www.theverge.com/2022/9/8/23343336/apple-tim-cook-imessage-blue-green-bubbles-texting-rcs">stubbornly blocked support</a> for RCS until iOS 18, and the feature is <a href="https://www.tomsguide.com/phones/iphones/can-you-get-rcs-messaging-on-your-iphone-heres-how-to-find-out-and-enable-it-in-ios-18">not enabled by default</a>; adoption will continue to be rocky</li>
+<li>Cell phone manufacturers and cell carriers both must enable compatibility for RCS (including for iOS users)</li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/rcs-vs-sms.png"/> 
+</figure>
+
+<em>via <a href="https://bsg.world/blog/what-is-rcs-messaging/">bsg.world</a></em></p>
+<h3 id="third-party-messengers">Third-party messengers</h3>
+<p>Now that we know that SMS, RCS, and iMessage are not realistic options for traveling abroad, where does that leave us? With instant messengers, of course.</p>
+<p>With so many users on different platforms, accompanied by the shortcomings of SMS and the slow rollout of RCS, instant messengers like Facebook Messenger and WhatsApp have taken hold across the world. They offer the same amenities and features like group chats, cross-platform compatibility, and (generally) end-to-end encrypted messaging that provide an appealing package for users across the world.</p>
+<p>NordVPN released an excellent comparison of the <a href="https://nordvpn.com/es-mx/blog/most-secure-messaging-app/">most secure messaging apps</a> which analyzes the differences in data collection and security between these apps that are used by billions daily.</p>
+<p><figure>
+    <img loading="lazy" src="/images/secure-messenger-apps.jpg"/> 
+</figure>
+
+<em>via <a href="https://nordvpn.com/blog/most-secure-messaging-app/">nordvpn.com</a></em></p>
+<p>Spoiler alert: <a href="https://signal.org/">Signal</a> wins, by a mile. <a href="https://en.wikipedia.org/wiki/Wickr">Wickr</a> was previously one of the only technical competitors to Signal, but AWS announced that it would <a href="https://www.pcmag.com/news/amazon-owned-secure-messaging-app-wickr-me-to-shut-down">shut down the free service</a> only a year after acquiring it due to the sinister ethical and legal challenges of running an end-to-end encrypted messaging service.</p>
+<p>But this is a blog post about travel, so you&rsquo;re going to want to use the messenger that everyone else is using. You should do some research based on where you&rsquo;re going beforehand, though it probably won&rsquo;t be surprising. WhatsApp completely dominates the user share for messengers globally. In fact, &ldquo;<a href="https://www.statista.com/statistics/1311229/whatsapp-usage-messaging-app-users-by-country/">WhatsApp is used by over 90% of people</a> in countries where it is the leading messaging app.&rdquo; So chances are that you&rsquo;re going to need to use WhatsApp wherever you go.</p>
+<p><figure>
+    <img loading="lazy" src="/images/most-popular-chat-apps.png"/> 
+</figure>
+
+<em>via <a href="https://nordvpn.com/blog/most-secure-messaging-app/">nordvpn.com</a></em></p>
+<p>I am a Signal fanboy, but in my case in Mexico I had to bite the bullet and install WhatsApp. Almost everyone uses the app in Mexico, including local businesses which only accept reservations or appointments via messaging them through the app (and sometimes Facebook). It was one of the biggest culture shocks for me coming from the U.S. Trying to abstain from Meta here will only guarantee that you have a hard time making friends or any kind of reservation, and people will look at you like a lepyr if you ask to use anything that isn&rsquo;t Facebook, Instagram, or WhatsApp. I concluded that it was not a hill I was willing to die on and ruin my trip.</p>
+<p>The compromise I made was to purchase a SIM card at a 7-Eleven (in cash) then use that phone number to create a new WhatsApp account, which I would only use in Mexico. It&rsquo;s not perfect&ndash;nothing is when you travel&ndash; but I can at least relax knowing that all messages are E2EE and my activity is siloed to the country that I&rsquo;m in.</p>
+<h2 id="public-wi-fi">Public Wi-Fi</h2>
+<p>Times have changed, and the reality is that public Wi-Fi networks aren&rsquo;t inherently dangerous like they used to be thanks to security improvements in web browsers (with <a href="https://support.mozilla.org/en-US/kb/https-only-prefs">HTTPS-only mode</a>), <a href="https://en.wikipedia.org/wiki/Personal_firewall">personal firewalls</a>, and <a href="https://en.wikipedia.org/wiki/Wi-Fi_Protected_Access">networking standards</a>. This means that your browser is no longer making plaintext HTTP requests to servers, your computer likely has a competent firewall and anti-virus, and the network you&rsquo;re connected to is encrypted.</p>
+<p>However, this doesn&rsquo;t mean that public Wi-Fi is without risk. Although malicious actors are limited by these security improvements, they still have a few tricks up their sleeves such as:</p>
+<ul>
+<li><a href="https://www.ibm.com/think/topics/man-in-the-middle">Man-in-the-Middle attacks</a>, where an attacker connects to the same public network and places themselves in between two communicating parties, intercepting all traffic, which allows for eavesdropping and potentially manipulating messages</li>
+<li><a href="https://us.norton.com/blog/emerging-threats/evil-twin-attack">Malicious hotspots (&ldquo;evil twin attacks&rdquo;)</a>, a type of MitM attack where the attacker mimicks an existing network, often using a duplicate SSID network name (&ldquo;Starbucks WiFi&rdquo;), or just   advertises something like &ldquo;FREE PUBLIC WIFI&rdquo; to trick users into connecting to it.</li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/wifi-gratis.jpg"/> 
+</figure>
+
+<em>via <a href="https://www.maspormas.com/urbano/wifi-gratis-en-la-cdmx/">maspormas.com</a></em></p>
+<p>To re-iterate, the danger isn&rsquo;t the Wi-Fi network itself, it&rsquo;s the fact that it&rsquo;s public and anyone can connect to it. Therefore, it is prudent to treat all public networks like they are dangerous, and take a few steps to add some peace of mind:</p>
+<ul>
+<li>Enforce HTTPS-only mode on your browser to make sure all of your requests on the internet are encrypted</li>
+<li>Use a VPN to encrypt all of your traffic between you and the router</li>
+<li>Similarly, a <a href="https://www.tomsguide.com/computing/vpns/heres-why-you-should-consider-using-a-vpn-router-for-travel">travel router</a> is useful if you&rsquo;re traveling with multiple devices (that might not be able to connect directly to a VPN) and adds an additional layer of protection between your devices and the network by forcing all your devices to communicate with the router before reaching the network gateway
+<ul>
+<li>Consider options that support open-source routing operating systems like <a href="https://openwrt.org/">OpenWRT</a> and also installing <a href="https://www.bleepingcomputer.com/vpn/guides/how-to-install-a-vpn-on-your-router/">custom VPN profiles</a></li>
+</ul>
+</li>
+<li>If your device supports it: enable <a href="https://www.guidingtech.com/what-is-mac-randomization-and-how-to-use-it-on-your-devices/">MAC-address randomization</a> for each network you connect to, masking your device&rsquo;s unique hardware identifier (if your device supports random addresses <em>per connection</em>, even better!)</li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/travel-router.png"/> 
+</figure>
+
+<em>via <a href="https://www.vpnuniversity.com/routers/setup-two-routers-with-dedicated-vpn-router">vpnuniversity.com</a></em></p>
+<h2 id="bluetooth-connections">Bluetooth connections</h2>
+<p>During your travels, there&rsquo;s lots of foreign devices that you might connect to via Bluetooth, such as the radio in your rental car or the entertainment system in the airplane or bus ride, for example. You might think that such a cut-and-dry, single function technology would be harmless for your privacy, and that is where you would be <em>technically</em> right, but not really.
+<figure>
+    <img loading="lazy" src="/images/yes-but-no.png"/> 
+</figure>
+</p>
+<h3 id="surveillance">Surveillance</h3>
+<p>However, as with a <a href="https://blog.empowergadgets.com/12-inventions-that-had-a-different-purpose-than-they-are-used-today/">long list of inventions</a>that now have a different purpose from when they were originally created, BlueTooth has been perverted by retail corporations and national governments into a surveillance technology that easily and inexpensively tracks your every move. Retailers commonly use <a href="https://www.nytimes.com/interactive/2019/06/14/opinion/bluetooth-wireless-tracking-privacy.html">BlueTooth beacons</a> which track your movements from the time you enter the store until you leave, which allows them to identify shopping habits and patterns, trigger relevant offers through their mobile apps, and deliver personalized ads. This <a href="https://www.shopify.com/retail/the-ultimate-guide-to-using-beacon-technology-for-retail-stores">Shopify article</a> gives a brief overview of how Bluetooth is used by marketers and it&rsquo;s pretty unnerving.</p>
+<p>Similarly, governments have begun to implement a more sinister form of BlueTooth surveillance, such as that along the U.S.-Mexico border, as <a href="https://www.eff.org/deeplinks/2024/05/add-bluetooth-long-list-border-surveillance-technologies">this EFF article describes</a>, where certain counties have purchased a Bluetooth scanner which can &ldquo;track devices that emit Bluetooth signals, including cell phones, smartwatches, wireless earbuds, and car entertainment systems&rdquo;. This works by exploiting Bluetooth devices&rsquo; desire to broadcast their <a href="https://novelbits.io/bluetooth-address-privacy-ble/">device address</a> to the world, where that address can be used to link other to other devices and even individuals.</p>
+<p>So what do you have to do? It&rsquo;s simple. Full stop: <strong>turn off</strong> your Bluetooth <em>before</em> you enter an airport or border crossing. I argue that you should just entirely power off all of your devices as well, whenever possible, though I know this isn&rsquo;t always realistic because you might need your phone for a ticket or ID - try to use printed copies to avoid this.</p>
+<p>Side note: one frustrating thing about iOS is that turning off your Bluetooth in the Control Center does not permanently disable it, so the phone will begin to scan for devices again after a period of time. Do some research for your device to learn how to disable it permanently. But again, I recommend powering off the device entirely.</p>
+<p><figure>
+    <img loading="lazy" src="/images/bluetooth-beacons.png"/> 
+</figure>
+
+<em>via <a href="https://www.mouser.kr/applications/bluetooth-5-mesh-networking-standard/">mouse.kr</a></em></p>
+<h3 id="allowing-access-to-contacts--calls">Allowing access to contacts &amp; calls</h3>
+<p>Earlier I mentioned rental cars. Newer rental cars will commonly have a head unit that you can connect your phone to in order to use Bluetooth, or Car Play/Android Auto. In the rentals that I&rsquo;ve been in, I&rsquo;ve noticed that people will connect their phones to the head unit, often allowing access to their contacts and phone calls, and then forget to unlink the device before they return the car. What this means is that anyone else who uses the car after them can look through their contacts and call history. It&rsquo;s easy to understand how someone could forget such a seemingly small detail, but this could lead to a serious violation of that person&rsquo;s privacy. You wouldn&rsquo;t want a stranger to be able to go through your text messages, contacts list, or see who you&rsquo;ve been talking to on the phone, right? Well that&rsquo;s unfortunately what can happen by allowing this access and not unlinking the device.</p>
+<p>I am <em>not</em> blaming the individuals here, rather I believe it is the onus of the rental company to ensure that this data gets deleted each time the car is returned so that other customers can&rsquo;t snoop through such information.</p>
+<p><figure>
+    <img loading="lazy" src="/images/android-bluetooth-screen.png"/> 
+</figure>
+
+So what should you do?</p>
+<ul>
+<li>Do not allow access to contacts/call history unless you know that you need to do so
+<ul>
+<li>You can still make phone calls, play music, and use navigation without granting this permission</li>
+</ul>
+</li>
+<li>When you are done, go to the settings of the head unit or console that you are connected to and deliberately &ldquo;Forget&rdquo; your phone or device that you connected. Do this <em>before</em> forgetting the device on your phone</li>
+<li>If you see other peoples&rsquo; devices that they forgot to disconnect, do the right thing and Forget those devices as well</li>
+</ul>
+<h2 id="burner-phones">&ldquo;Burner&rdquo; phones</h2>
+<p>Depending on your threat model and concerns about safety in the place that you are visiting, &ldquo;burner&rdquo; phones may be an option to consider. I emphasize, with quotations around &ldquo;burner&rdquo;, that I am <em>not</em> talking about those dummy flip phones that bad guys use in the movies and then destroy after taking a phone call. Buying something like this is likely counterproductive for your needs as a traveler and overkill for your threat model; I&rsquo;m sure you probably get added to some kind of list for buying one now too.</p>
+<p>What I am actually talking about is a cheap backup phone that only has the essential apps or information you need loaded onto it, which you can use as a daily driver if you are worried that your phone might get lost or stolen during your travels. Carrying around an expensive phone in some countries is an easy way to draw unwanted attention, and a cheap phone can help you not stick out so much (because sometimes you can never really &ldquo;blend in&rdquo;).</p>
+<p>By buying a cheap (ideally second-hand) phone and setting up only the bare minimum to get around, you can worry less about the implications of data loss or exfiltration, and more importantly, you can spend more time enjoying your trip. I actually advocate for a burner phone more from the angle of <a href="https://calnewport.com/on-digital-minimalism/">digital minimalism</a> than I do for privacy or security, although there are benefits to be had in all regards.</p>
+<p>A caveat worth mentioning: many cheap smart phones that you may come across are <a href="https://www.androidauthority.com/xiaomi-privacy-cheap-phone-1118444/">data harvesting machines</a>. Just like the old saying goes, there&rsquo;s no such thing as a cheap? lunch, and lots of the more economical options are discounted at the <a href="https://arxiv.org/abs/2302.01890">cost of your privacy.</a> There&rsquo;s also something to be said about truly &ldquo;owning&rdquo; your devices. I purchased a Xiaomi phone in Mexico just to play around with it and I was pretty shocked by how little control I had over  it. Every time I turned it on there was new bloatware being installed. I tried to install <a href="https://lineageos.org/">LineageOS</a> to make it a little more usable, only to learn that Xiaomi <a href="https://miuirom.org/updates/xiaomi-bootloader">locks the bootloader</a> behind a &ldquo;Mi&rdquo; account that link you need to link to the device; so you need to create an account first, which requires a phone number and email address.</p>
+<p>I factory reset the phone and threw it into a sock drawer, and I&rsquo;m going to exchange it for an unlocked phone compatible with LineageOS the next time I go back.</p>
+<p>Any unlocked phone that is supported by a privacy-friendly custom ROM such as <a href="https://wiki.lineageos.org/devices/">LineageOS</a>, <a href="https://divestos.org/pages/devices">DivestOS</a> (a privacy-focused fork of Lineage), and <a href="https://grapheneos.org/faq#device-support">GrapheneOS</a> would be sufficient. However, Graphene is exclusive to Pixel devices which are pricier and harder to come by depending on the country.</p>
+<h2 id="payments">Payments</h2>
+<h3 id="cash">Cash</h3>
+<p>How you pay for stuff is going to depend on where you&rsquo;re visiting, but the general rule is that <strong>cash is king</strong>. In Mexico, it was also completely required: paying for food and even public transit was often cash-only. There were also multiple occasions where I went to a restaurant that &ldquo;accepted&rdquo; card, but the reader had no internet connection or the business charged a fee for using card. Coming from the U.S., this was another culture shock and challenge for me as I was not used to carrying much cash on me, and much less <em>coins</em>, but I quickly grew to enjoy dealing with cash. This is also a reminder that <a href="https://mitsloan.mit.edu/experts/how-credit-cards-activate-reward-center-our-brains-and-drive-spending">credit cards psychologically manipulate us</a> into spending more.</p>
+<h3 id="card">Card</h3>
+<p>Realistically, however, the time will come when you do need to pay with card, whether you don&rsquo;t have enough cash on hand, or you want to take advantage of cashback or rewards points for a large purchase. There are a few things you can do to enjoy the benefits of credit while preserving a modicum of privacy abroad.</p>
+<h4 id="contactless-payments--digital-wallets">Contactless payments &amp; digital wallets</h4>
+<p>&ldquo;Tap to pay&rdquo;: you&rsquo;ve heard and seen it before, and you already know that it works on phones now through services like Apple, Google, and Samsung Pay (among others), known as &ldquo;<a href="https://www.nerdwallet.com/article/credit-cards/what-is-a-digital-wallet-and-how-does-it-work">digital wallets</a>&rdquo;.</p>
+<p><figure>
+    <img loading="lazy" src="/images/tap-to-pay.png"/> 
+</figure>
+
+<em>via <a href="https://usa.visa.com/pay-with-visa/contactless-payments/contactless-payments.html">visa.com</a></em></p>
+<p>What you might not have known is that behind the scenes, these digital wallets actually mask your credit card details by generating a &ldquo;token&rdquo; (through a process called <a href="https://stripe.com/resources/more/payment-tokenization-101">tokenization</a>) which essentially hides your credit card from the vendor. This marginally protects your information from the business, but you are still ultimately sharing your transaction information with the service provider (such as Apple), and of course, your bank. However, this is a happy medium when you need to use card, especially for the improved security and peace of mind not having to worry about <a href="https://www.capitalone.com/learn-grow/privacy-security/credit-card-skimmers/">card skimmers</a>, and the authentication required before making payments.</p>
+<p>Physical cards are less ideal. Only swipe or insert your card if there is no contactless option available, and in such a case, be cognizant of skimmers.</p>
+<h4 id="virtual-cards">Virtual cards</h4>
+<p>Where contactless payment services like Apply Pay hide your payment information by generating temporary tokens for each transaction, <a href="https://www.cnet.com/personal-finance/credit-cards/advice/what-is-a-virtual-card-and-how-do-you-use-it/">virtual cards</a> remove that payment information from the equation by generating disposable 16-digit cards funded by your bank account. Virtual cards also offer budgetary benefits like being able to set spend limits for specific cards, lock cards to specific vendors, and block recurring payments from expensive subscriptions. The largest consumer virtual card provider (which is only available in the U.S.) is <a href="https://privacy.com/">Privacy.com</a>.</p>
+<p><figure>
+    <img loading="lazy" src="/images/virtual-card.png"/> 
+</figure>
+
+<em>via <a href="https://privacy.com/blog/is-privacy-com-safe-an-overview-of-privacys-security-practices">Privacy.com</a></em></p>
+<p>Privacy.com recently announced the beta release of their <a href="https://privacy.com/blog/how-digital-wallets-bring-security-to-payments">digital wallet integration</a> for Premium members, which allows for adding virtual cards to digital wallet providers like Apple Pay, Google Pay, and Samsung Pay. This gives you the best of both worlds and is absolutely the best approach for paying with card in-person. Just make a virtual card, throw it into your digital wallet, and you&rsquo;re good to go.</p>
+<p><figure>
+    <img loading="lazy" src="/images/digital-wallet.png"/> 
+</figure>
+
+<em>via <a href="https://privacy.com/blog/how-digital-wallets-bring-security-to-payments">Privacy.com</a></em></p>
+<p>To re-iterate:</p>
+<ul>
+<li><a href="https://youtu.be/or5C2jV1qRc">Cash rules</a></li>
+<li>Where cash is not an option, use a virtual card within a digital wallet</li>
+<li>Where cash is not an option and no contactless pay is available, check for card skimmers</li>
+<li>For online purchases, use a virtual card</li>
+</ul>
+<h2 id="email-aliases">Email aliases</h2>
+<p>We&rsquo;re already asked for our email address pretty often at home, now just imagine while traveling. Here are some common occasions where you&rsquo;ll be solicited for your email address (and probably your phone number too):</p>
+<ul>
+<li>Signing up for a hotel or accomodation</li>
+<li>Booking reservations for tours, activities, or other outings</li>
+<li>Creating new accounts for things like local transit or loyalty programs</li>
+<li>Filling out government travel forms</li>
+</ul>
+<p>Clearly, you&rsquo;re going to have to give out your email address pretty frequently- even for activities or services that you&rsquo;re never going to do or need again. And you can rest assured that most businesses are going to add you to their mailing list. Or worse: they&rsquo;ll get hacked, and your email address will fall into the hands of whoever stole it (and whoever subsequently buys it).</p>
+<p>That&rsquo;s what happened to me. In 2023, I visited Montreal and I wanted to rent a bike to explore the city, but the only option was those self-service rent-a-bikes on the side of the street; in Montreal they have &ldquo;<a href="https://bixi.com/en/">BIXI</a>&rdquo;. I later found out that they are or were owned by Lyft. I remember being in disbelief that I had to sign up for an account with my email and phone number just to rent a crappy bike for 30 minutes, but I was on vacation and in the mood to explore so I acquiesced. When all was said and done my account had been created; I also lost cell service so I wasn&rsquo;t even able to actually rent the bike, but that&rsquo;s not the point.</p>
+<p>When I created this account, I used a <a href="https://simplelogin.io/blog/what-is-an-email-alias/">random email alias</a> that would forward to my primary inbox. This allows me to hide my actual email address and generate a unique email specific to each service or vendor that I share my email with.</p>
+<p>Fast forward about 12 months and I receive two phishing emails. I checked to see which address they were sent to in order to see how and where they got my email and, lo and behold, I see that these phishing emails were sent to the email alias that I had created a year earlier when I signed up for BIXI in the streets of Montreal. I never received or was able to find any news from BIXI about a security incident, but my money is on them being hacked and not giving notice to consumers.</p>
+<p><figure>
+    <img loading="lazy" src="/images/email-alias.png"/> 
+</figure>
+
+<em>via <a href="https://davescomputertips.com/how-to-use-email-aliases-with-bitwarden/">davescomputertips.com</a></em></p>
+<p>So yeah, use an email alias. It lets you cut down on the amount of email you receive, while shielding your primary email address and identity and protecting you from data breaches. If anything ever happens, or if you just don&rsquo;t need the alias anymore, you can easily pause or delete the address. Aliasing is easily one of the best tools that exist today to protect your privacy.</p>
+<p>There are a few popular services out there (including built-in aliases for Outlook and Gmail), but I recommend FOSS solutions like <a href="https://addy.io/">addy.io</a> and <a href="https://simplelogin.io/">SimpleLogin</a>, which also integrate with several password managers to make it easy to create new accounts with random aliases.</p>
+<p>Pro tip: email aliases are also not just for receiving email. You can to send outgoing mail addressed from your alias so you don&rsquo;t expose your original address.</p>
+<h2 id="handling-identity-documents-and-passports">Handling identity documents and passports</h2>
+<p>To start, as a general rule, you should have a paper and digital copy of:</p>
+<ul>
+<li>Your primary identification (such as a driver&rsquo;s license)</li>
+<li>Your passport</li>
+<li>Any other relevant documents that you know you will need, such as reservations or appointments</li>
+</ul>
+<p>Having these handy is important if you get asked by customs what you will be doing or where you will be going, and having separate copies is essential if you lose one or the other.</p>
+<p>That&rsquo;s all and well, but after all the research and planning I did before my trip, I was shocked when,
+during my time in Mexico, multiple hotels and hostels took a photocopy of my ID- something I had never seen before in the United States. I found a <a href="https://www.reddit.com/r/privacy/comments/xzdm6u/how_do_you_guys_handle_hotels_photocopyingtaking/">reddit thread</a> discussing exactly this, and it seems to be common practice in some countries in Latin America and Asia.</p>
+<p>I had no expectation of privacy coming into my travels, but that doesn&rsquo;t mean I shouldn&rsquo;t feel uncomfortable about a copy of my driver&rsquo;s license sitting on the computer or the printer in the front desk of some tiny hostel, or in the WhatsApp messages of a building attendant.</p>
+<p>So what can be done about this?</p>
+<ol>
+<li>
+<p>Ask to have the photo deleted upon leaving. Be nice, which goes a long way and is just good life advice.</p>
+</li>
+<li>
+<p>If possible, provide a form of identification that provides only the <em>minimum necessary information</em> about you, reducing the amount of personal information you share. This is a principle referred to as &ldquo;<a href="https://en.wikipedia.org/wiki/Data_minimization">data minimization</a>&rdquo;  in the data privacy and protection field.</p>
+<p>For example, a U.S. drivers license discloses sensitive personal information including address, height, weight, even organ donor status. However, a U.S. passport has none of those items. On paper, a passport sounds pretty sensitive, but if you think about it a driver&rsquo;s license is much more sensitive and identifying. Driver&rsquo;s licenses numbers are even used as a form of authentication sometimes. But the only time your passport number is ever used is traveling between countries, and any government is going to know it. I&rsquo;d argue there&rsquo;s a lot less harm in having your passport number revealed than your DL#.</p>
+<p>For this reason, I recommend U.S. citizens elect to use their passport as a form of identification whenever possible, and even consider getting a <a href="https://en.wikipedia.org/wiki/United_States_Passport_Card">passport card</a> for $30.</p>
+</li>
+<li>
+<p>If solicited for any other information, for example, at a hotel: provide a burner phone number and a PO box.</p>
+</li>
+</ol>
+<h2 id="navigating-border-crossings-and-airports">Navigating border crossings and airports</h2>
+<p>Some previous points apply here:</p>
+<ul>
+<li>DO NOT lie or provide false information to a government</li>
+<li>Use an email alias (or dedicated travel email address) and backup phone number when filling out forms</li>
+<li>Encrypt your devices</li>
+<li>Power off your devices and Bluetooth before points of entry</li>
+<li>Accept that you can&rsquo;t be private all the time</li>
+</ul>
+<p>Some suggested reading includes <a href="https://proton.me/blog/border-crossing-protect-electronics">this Proton article</a> which discusses some of these points and others in more detail.</p>
+<h3 id="know-your-rights-or-lack-thereof">Know your rights (or lack thereof)</h3>
+<p>Depending on the country you are visiting and your relation to that country (such as a resident, versus a citizen) you may have certain rights available to you during this process. It is your responsibility to do your research beforehand to understand what you can and cannot do here. Just because things are a certain way in your country doesn&rsquo;t mean they are (or should be) in another. Never try to &ldquo;debate&rdquo; a government official about your rights- either calmly exercise them or comply.</p>
+<p>Also know what to expect. Sometimes border agencies will &ldquo;request&rdquo; your device for &ldquo;inspection&rdquo;, which can mean browsing through your text messages to make sure that you&rsquo;re not working in the country without permission, or it can mean taking your phone to the backroom and scanning it through a forensics device like a <a href="https://en.wikipedia.org/wiki/Cellebrite_UFED">Cellebrite</a> - nobody knows. It is on you to know whether or not you need to comply with such a request.</p>
+<p>If you are seriously concerned about your devices being seized or inspected, you can (in ascending order of caution):</p>
+<ul>
+<li>Turn off biometric logins (fingerprint or FaceID, for example) - the Fifth Amendment does NOT prohibit the police from <a href="https://arstechnica.com/tech-policy/2024/04/cops-can-force-suspect-to-unlock-phone-with-thumbprint-us-court-rules/">compelling device unlocks using biometrics</a>; this can also be avoided by powering off the device to force <a href="https://blogs.dsu.edu/digforce/2023/08/23/bfu-and-afu-lock-states/">Before First Unlock (BFU) state</a></li>
+<li>Only travel with the bare minimum amount of data you need for your trip</li>
+<li>Mail the device to wherever you will be staying and collect it after arriving</li>
+<li>Completely wipe the device before crossing and then restore from a cloud backup afterwards</li>
+<li>An interesting discussion, but I do not recommend <a href="https://security.stackexchange.com/questions/135846/is-plausible-deniability-actually-feasible-for-encrypted-volumes-disks">hidden encrypted volumes</a></li>
+</ul>
+<p>Here are some interesting articles about device searches and seizures at borders around the world:</p>
+<ul>
+<li>A <a href="https://techcrunch.com/2024/07/29/us-border-agents-must-get-warrant-before-cell-phone-searches-federal-court-rules/">new 2024 ruling</a> finds that &ldquo;U.S. border agents must obtain a warrant before searching the electronic devices of Americans and international travelers crossing the U.S. border&rdquo;</li>
+<li>The Australian Border Force can ask to search your phone, and you can refuse at the <a href="https://www.abc.net.au/news/2022-01-24/can-border-force-search-your-phone-when-you-travel-to-australia/100774644">risk of being detained</a></li>
+</ul>
+<h3 id="say-no-to-biometrics-if-possible">Say no to biometrics, if possible</h3>
+<p>Biometrics have been around borders and airports for decades now, but these technologies are becoming increasingly sophisticated and ubiquitous, especially in the U.S. as the TSA and CBP <a href="https://www.tsa.gov/sites/default/files/tsa_biometrics_roadmap.pdf">push for further adoption</a> and test biometrics <a href="https://westsidenewsny.com/news/2024-11-24/cbp-announces-facial-biometric-test-for-inbound-vehicle-travelers-at-peace-bridge/">in new environments</a>.</p>
+<p><figure>
+    <img loading="lazy" src="/images/biometric-checkpoint.png"/> 
+</figure>
+
+<em>via <a href="https://identityreview.com/u-s-airlines-are-expanding-biometric-services-for-passengers/">identityreview.com</a></em></p>
+<p>As a U.S. citizen, you have the right to decline biometric checks at airports, as <a href="https://www.vox.com/future-perfect/360952/summer-travel-airport-facial-recognition-scan">explained by this Vox article</a>. In my personal experience it takes almost the same amount of time to pass through without as it does with biometrics. However, this heavily depends on the agent that attends to you and how many questions they want to ask.</p>
+<p>Usually you will also see signage before going up to the agent that explains your rights and whether or not you may refuse a biometric scan, as shown in the picture above.</p>
+<p><em>Why bother refusing a biometric scan?</em> What&rsquo;s the point of having rights if nobody is willing to exercise them?</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Travel is incredibly rewarding, and a privilege. Enjoy it as much as you can. All of this information serves me to be able to enjoy my time abroad more thoroughly and uninterrupted, with a greater peace of mind free from distractions and doubt.</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Automotive privacy and DIY defense</title>
+      <link>http://localhost:1313/posts/automotive-privacy/</link>
+      <pubDate>Fri, 22 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/automotive-privacy/</guid>
+      <description>How smart cars collect and share your sensitive data, and what you can do about it.</description>
+      <content:encoded><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>As cars become increasingly &ldquo;smarter&rdquo; and connected with our online world, they come equipped with features akin to those of smartphones. These advanced capabilities are made possible through a combination of sensors, cameras, and connectivity technologies that enable vehicles to collect and analyze data in real-time. Like smartphones, cars have evolved into mobile computers, but on a much larger scale with <a href="https://www.azosensors.com/article.aspx?ArticleID=1905">higher levels of precision</a>, collecting new types of data that can be used to identify and profile drivers. Therefore, it is crucial for automakers to safeguard this data. Yet, time and time again, they show us that they shirk this responsibility.</p>
+<p>Take Toyota, for example, who recently announced another data breach - this being their <a href="https://www.bleepingcomputer.com/news/security/toyota-confirms-third-party-data-breach-impacting-customers/">third only within the last two years</a>. In November 2024, <a href="https://www.cpomagazine.com/cyber-security/american-auto-giant-ford-alleged-data-breach-impacted-44000-customers/">Ford suffered a data breach</a> that resulted in 44,000 customer records being published on the dark web.</p>
+<figure>
+    <img loading="lazy" src="/images/Toyota-August-data-leak.webp"/> 
+</figure>
+
+<p>Moreover when automotive companies aren&rsquo;t being careless with your data, they&rsquo;re being <em>reckless</em> with it. In 2024, General Motors <a href="https://www.pressreader.com/usa/las-vegas-review-journal/20240425/282445649119086">received ten federal lawsuits</a> after it was revealed that they had &ldquo;tricked millions of drivers&rdquo; into signing up for their <a href="https://www.forbes.com/sites/antoniopequenoiv/2024/04/24/general-motors-axes-onstar-smart-driver-system-after-privacy-and-insurance-complaints/">Smart Driver program</a>, subsequently sharing this information with data broker <a href="https://www.pressreader.com/usa/las-vegas-review-journal/20240425/282445649119086">LexisNexis</a>.</p>
+<p>In short, cars pose serious privacy risks. Don&rsquo;t take it from me, take it from the <a href="https://foundation.mozilla.org/">Mozilla Foundation</a>, who conducted a privacy review of 25 major automakers, and released their findings: <a href="https://foundation.mozilla.org/en/privacynotincluded/articles/its-official-cars-are-the-worst-product-category-we-have-ever-reviewed-for-privacy/">&ldquo;Cars Are the Worst Product Category We Have Ever Reviewed for Privacy&rdquo;</a>.</p>
+<p>Almost all major auto brands are sharing or selling customer data to third parties for marketing or the ever nebulous &ldquo;business&rdquo; purposes. And there&rsquo;s nothing stopping these manufacturers from changing those purposes at any time. As if things weren&rsquo;t already absurd enough, like cars <a href="https://medium.com/tech-topics/car-feature-subscriptions-are-here-to-stay-94feb8cce8fd">locking features behind a subscription model</a>, I encourage you to imagine a dystopian world where your own car serves you personalized advertisements, a <a href="https://www.motortrend.com/news/ford-in-vehicle-advertising-patent/">technology that Ford has recently patented</a>.</p>
+<p>Whether you have a car that already comes equipped with a modern head unit with all the shiny bells and whistles, or you drive a 2003 Camry that never seems like it&rsquo;s going to give out, you have the option to try to manage and limit the collection taking place in your car currently, or nip the issue in the bud and replace the device collecting your data altogether.</p>
+<h2 id="is-your-car-spying-on-you">Is your car &ldquo;spying&rdquo; on you?</h2>
+<p>The data your car collects is used for much more than just letting you turn you car on with your phone or locate the vehicle if it gets stolen. Auto companies are actively sharing this data with <a href="https://reason.com/2024/03/25/stop-your-car-from-spying-on-you/">the insurance industry</a> to hike insurance premiums for drivers based on factors like how fast you drive, where you go, and how far you drive - all of which is recorded by your car and can be shared directly with insurance companies for monetary gain.</p>
+<p>These &ldquo;smart&rdquo; cars can also allow police to <a href="https://www.governing.com/security/police-dont-need-a-warrant-to-pull-personal-data-from-cars">bypass Fourth Amendment protections</a> that would apply to you and your devices normally by instead going directly to your auto manufacturer and requesting that data <em>without the need for a warrant</em>.</p>
+<p>This <a href="https://www.eff.org/deeplinks/2024/03/how-figure-out-what-your-car-knows-about-you-and-opt-out-sharing-when-you-can">EFF article</a> walks through the types of data collected by cars and how to find out what data your car has collected and how to stop it from being shared.</p>
+<p>A neat website you can check out is <a href="https://vehicleprivacyreport.com/#">Vehicle Privacy Report</a>, which allows you to view what types of data your car collects, who it sells/shares that data to, and other documents like the privacy policies and terms of service for your car.</p>
+<p><figure>
+    <img loading="lazy" src="/images/vehicle-privacy-report.png"/> 
+</figure>
+
+<em>via <a href="https://vehicleprivacyreport.com/#">vehicleprivacyreport.com</a></em></p>
+<h2 id="aftermarket-android-head-units">Aftermarket Android head units</h2>
+<p>An automotive &ldquo;head unit&rdquo;, also known as the stereo or &ldquo;infotainment&rdquo; system, is the interface for all multimedia and general system controls in your car. This is where the radio is in &ldquo;analog&rdquo; vehicles, and where the display screen is in newer digitally-equipped vehicles. Most automakers provide a proprietary head unit in their cars that come equipped with their own safety features and custom software, but this comes with all the aforementioned concerns about data collection and being locked into your manufacturer&rsquo;s hardware ecosystem when superior alternatives exist, as <a href="https://www.reddit.com/r/CarAV/comments/z60i6u/comment/iy0gyre/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button">this reddit comment</a> discusses. And those alternative (aftermarket) systems can easily be purchased for a reasonable price and self-installed.</p>
+<p><figure>
+    <img loading="lazy" src="/images/headunit-loading.jpg"/> 
+</figure>
+
+<em>The bootup screen for my Android head unit.</em></p>
+<p>Most vehicles made in the last 20 years will have a compatible head unit that can be installed. Though some aftermarket systems also include their own proprietary operating system, many are based on Android. Android is the <a href="https://www.businessofapps.com/data/android-statistics/">most popular operating system in the world</a> which runs on practically anything, and now even on cars that are over 20 years old. With a free, open-source operating system running inside your vehicle comes the liberty to do pretty much whatever you want, whether that be something as simple as playing music and podcasts from your phone over Bluetooth, or answering the age-old question: <a href="https://youtu.be/5mmiPT2avrY">&ldquo;can it run DOOM?&rdquo;</a> (yes, cars can run DOOM).</p>
+<p><figure>
+    <img loading="lazy" src="/images/android-launcher.png"/> 
+</figure>
+
+<em>The launcher I use.</em></p>
+<p>Most popular (and economical) Android head units are produced in China, which probably isn&rsquo;t a surprise to anybody. They generally include most of the basic features of any proprietary stereo system, including front and reverse camera software, Apple Car Play and Android Auto compatibility, Bluetooth, and lots of customization. Proprietary safety features that you&rsquo;ll find in most modern cars like lane assist, automatic cruise control, and other advanced options are obviously not included. However, the nature of an open-source operating system in your car unlocks so many more possibilities that would otherwise be completely unavailable, additionally offering tangible functional benefits beyond the peace of mind knowing that your data isn&rsquo;t being harvested by your vehicle manufacturer.</p>
+<p>I have had an Android head unit in my pre-digital vehicle for over 2 years now. When I first received the unit, I was overwhelmed by a 10-pound box full of messy cables, plugs, and antennae/receivers. But that shock turned to excitement as I realized I could equip my car with exactly what I wanted, no more, and no less. After half an hour of tinkering with the console and praying not to break anything (I did end up breaking a few plastic clips that were weakened by sun damage), I had a fully functional head unit in a car that previously could barely use the radio. The self-install process is super simple, albeit intimidating if you&rsquo;ve never pulled out your car stereo before, but it&rsquo;s really difficult to royally mess anything up here. Now, I have a car with a:</p>
+<ul>
+<li>9-inch IPS touchscreen panel</li>
+<li>Reverse camera</li>
+<li>GPS antenna for offline map navigation (to be paired with downloadble maps)</li>
+<li>4G modem, for mobile hotspots</li>
+<li>Built in music library, Bluetooth, CarPlay/Android Auto, et. al</li>
+<li>All the perks of the Android OS</li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/headunit-install.jpeg"/> 
+</figure>
+
+<em>A look behind the scenes.</em></p>
+<p>What excites me is that my car was manufactured before most of these things even existed. And that is just the list of hardware. Remember that I said that this was Android? Yeah, that Android&hellip; with the Google Play Store. This means that this system is capable of running any Play Store app you can think of. Netflix, YouTube, Spotify, mobile games, whatever your sick heart desires. Of course, I am not going to download <em>any</em> of those things in my car (and neither should you) for the safety of myself and others around me, but also because this is a blog focused on privacy.</p>
+<p>However, because this is Android, we are able to control granular permissions on an app-by-app basis, so if there is an application that you really need, you are able to connect to the Play Store, download the app, and then disable the Play Store and/or switch off network permissions wherever necessary. Out of habit, I&rsquo;ve disabled any non-essential apps and granted only the bare minimum permissions needed everywhere else &ndash; this serves as a safeguard in case the device does connect to a network for whatever reason.</p>
+<p><figure>
+    <img loading="lazy" src="/images/android-permissions.png"/> 
+</figure>
+
+<em>Denying app permissions for Google Chrome, which I have no intention of using- in my car, or otherwise.</em></p>
+<p>Because my head unit comes with a built-in file manager, I elect to install the .APKs for my apps via USB as to avoid giving the unit any network permissions at all. This way I don&rsquo;t need to trust the manufacturer because the device is completely offline. This also gives me the added benefits of being able to verify the source of the APK and install apps that aren&rsquo;t found on the Play Store or F-Droid all with the convenience of a physical keyboard (seriously, those touch screen keyboards are painful). I also ripped out the old aux cord module in the car and replaced it with a female USB slot that connects to the back of the head unit for a more plug-and-play experience.</p>
+<p><figure>
+    <img loading="lazy" src="/images/android-file-explorer.png"/> 
+</figure>
+
+<em>The built-in file explorer where I can transfer files to and from a USB.</em></p>
+<p>One such app that I&rsquo;ve installed is an on-board diagnostics (OBD2) reader for diagnosing any issues with my car. <a href="https://www.csselectronics.com/pages/obd2-explained-simple-intro">OBD2</a> is a &ldquo;standardized protocol that allows extraction of diagnostic trouble codes (DTCs) and real-time data&rdquo; via a reader device that hooks into the car&rsquo;s OBD port (you may have heard your mechanic refer to this generically as the &ldquo;computer&rdquo; in your car). These devices can range from ten to hundreds of dollars based on their capabilities and accuracy; I decided to pick up a very cheap <a href="https://en.wikipedia.org/wiki/ELM327">ELM 327 microcontroller</a> just to test things out for fun.</p>
+<p>On the head unit, I installed a FOSS app called <a href="https://github.com/fr3ts0n/AndrOBD">AndrOBD</a> which connects to the ELM327 adaptor via Bluetooth to relay any vehicle and diagnostic data that it can find. The app was able to confirm general info about my car and didn&rsquo;t find any issues, but it otherwise didn&rsquo;t fetch much useful data&ndash; I&rsquo;m not sure whether this is a fault of the app or the limitations of the ELM 327 paired with the age of my vehicle. As a quick aside, launching the app from the head unit in my car worked fine and required no permissions other than BlueTooth. However, I could not get the app to work properly on my phone as the app is still <a href="https://github.com/fr3ts0n/AndrOBD/issues/282">limited to Android 13</a> and it also <a href="https://github.com/fr3ts0n/AndrOBD/issues/270">requires superfluous permissions</a>, though this could be addressed with an application firewall and <a href="https://source.android.com/docs/core/storage/scoped?hl=es-419">scoped storage</a>.</p>
+<p>There are almost limitless options you can tinker with like any Android device, such as <a href="https://xdaforums.com/t/app-launcher-vivid-best-launcher-for-driving.4308751/">custom launchers</a> for your car, but at the end of the day, this is a car. The only time I&rsquo;m using it is to drive somewhere, and I&rsquo;m not spending time hanging out in my car to watch a movie or look at cool launch animations. Navigation and a media player are realistically the only important apps that most drivers will need, and these are already packaged into Car Play/Android Auto in one sleek solution, or a plethora of offline alternatives.</p>
+<h2 id="offline-android-auto">Offline Android Auto</h2>
+<p>Besides a reverse camera, the biggest incentive for buying one of these head units is the Car Play and Android Auto capabilities. They immediately turn any old car into a modern interface that can be used for convenient navigation and media playing (music, podcasts, audiobooks, etc.), arguably while reducing distractions on the road and improving your safety.</p>
+<p>Although my head unit supports wireless Car Play/Android Auto, I elect to use a wired connection for Android Auto because it also conveniently charges my phone at the same time and I&rsquo;ve noticed the connection is more reliable. However, this also has the added benefit of granting fewer permissions to the app. In my setup, the app is offline and can only connect to BlueTooth, access the Phone for calls, and receive Notifications from those apps whitelisted for Android Auto. Some apps may not show up in your launcher because they come from an <a href="https://www.groovypost.com/howto/android-allow-install-apps-unknown-sources/">untrusted source</a>, meaning anything not installed via the Play Store. To fix this, simply <a href="https://9to5google.com/2023/01/25/how-to-enable-developer-mode-in-android-auto-and-why-you-might-want-to/">enable developer options</a>, go to &ldquo;Developer settings&rdquo; in the drop-down menu, then select &ldquo;Unknown sources&rdquo; at the bottom. From there, go back to Android Auto and click on &ldquo;Customize launcher&rdquo; to select whatever apps you want to be visible from your head unit.</p>
+<p>I recommend using a navigation app that supports downloadable offline maps. I encourage you to consider FOSS solutions based on OpenStreetMap like <a href="https://organicmaps.app/">Organic Maps</a> and <a href="https://www.osmand.net/">OsmAnd</a>. But I get it, and sometimes these solutions just don&rsquo;t cut it, in which case Google Maps with offline maps and no network permissions is a very effective solution and a happy-medium.</p>
+<h3 id="android-auto-on-grapheneos">Android Auto on GrapheneOS</h3>
+<p>For context, I am using <a href="https://grapheneos.org/">GrapheneOS</a>, which recently <a href="https://grapheneos.org/usage#android-auto">added support for Android Auto</a> in early 2024. This allows for Android Auto to be installed through Graphene&rsquo;s revolutionary <a href="https://grapheneos.org/usage#sandboxed-google-play">sandboxed Google Play</a>, which allows for Google Play (and subsequently Google Play Services) to be installed like any ordinary app without granting it &ldquo;highly priviliged access&rdquo; that it would normally require otherwise (and without needing to sign into a Google account).</p>
+<figure>
+    <img loading="lazy" src="/images/android-auto-preview.jpeg"/> 
+</figure>
+
+<p>As with the majority of my experiences using Graphene, Android Auto mostly works. I use &ldquo;mostly&rdquo; deliberately here, as the core experience and features that you would expect are functional and require minimal troubleshooting. However, small nice-to-have&rsquo;s like voice controls and text-to-speech to play messages do not work. Also, navigation apps need to be installed via the Play Store (ahem, <a href="https://aurorastore.org/">Aurora Store</a>) in order to be recognized. FOSS navigation alternatives like <a href="https://organicmaps.app/">Organic Maps</a> or <a href="https://osmand.net/">OsmAnd</a> supposedly work, but I have not tested them just yet.</p>
+<figure>
+    <img loading="lazy" src="/images/android-auto-media.jpeg"/> 
+</figure>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>If you already have a newer vehicle equipped with a system collecting (and possibly sharing) data - get informed. Learn about what kinds of data your car is collecting and what you can do about it by visiting the privacy center for your manufacturer. There is usually a page hidden somewhere in Settings that will direct you to where you can learn more.</p>
+<p>Aftermarket head units, especially equipped with Android, are still viable and powerful options that may sacrifice some conveniences with the benefit of increased control, transparency, and peace of mind when you turn on your vehicle.</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Federal privacy: ready, or not?</title>
+      <link>http://localhost:1313/posts/federal-privacy-law/</link>
+      <pubDate>Tue, 30 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/federal-privacy-law/</guid>
+      <description>Discussing the recent American Privacy Rights Act (APRA) and its failed predecessors.</description>
+      <content:encoded><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>A common gripe in the United States privacy space is the lack of a cohesive, unifying federal privacy law. At the time of writing, 16 states have taken it upon themselves to enact their own state-level privacy legislation and there are over 10 other states with some kind of legislation under review. Each year sees more states drafting and passing privacy legislation that they see fit for their residents.</p>
+<p><figure>
+    <img loading="lazy" src="/images/state-law-map.png"/> 
+</figure>
+
+<em>via <a href="https://medium.com/@Steiner254/insecure-direct-object-references-idor-16bf0b981b90">IAPP</a></em></p>
+<p>To make things more complicated&ndash; and in true American fashion&ndash; each state&rsquo;s privacy law(s) often have their own quirks that set them apart from the rest. This can includes how &ldquo;personal information&rdquo; is defined and what types of data and entities are in scope of the law and also what rights a consumer may have with respect to their data, for example. Understanding and accounting for these differences across each state is a real challenge for organizations just trying to be compliant.</p>
+<p>Consumers, understandably not abreast of the constant developments in state data protection and privacy laws,  stand to lose even more than the organizations processing their data because <a href="https://www.permission.io/blog/data-ownership-who-owns-data-and-why-it-matters">that data ultimately belongs to them</a>.</p>
+<p>Privacy-conscious residents of one state might find themselves confused trying to understand what rights they have compared to residents of other states, and, where there is an overlap, that confusion might turn to frustration upon finding out that, in some cases, the rights they are afforded may not be as strong or expansive as those of other states.</p>
+<p>If you ask a privacy professional what they think of this current state of affairs, they might call this a headache. Another might simply call it job security. What most will agree on, however, is that things can and need to be better: for the sake of consumers and organizations alike.</p>
+<h2 id="some-history">Some history</h2>
+<p>Currently, <a href="https://worldpopulationreview.com/country-rankings/data-privacy-laws-by-country">over 120 countries</a> (about 70% of nations worldwide) have effected some form of national data privacy legislation, <em>except the United States</em>.</p>
+<p>Well, it&rsquo;s not actually that simple. It is correct to say that the United States does not yet have a <em>comprehensive</em> federal data privacy law, but that doesn&rsquo;t paint the whole picture.</p>
+<p>In this context, a &ldquo;comprehensive&rdquo; law is one that defines and sets rules for the processing of personal information (by any company or entity), outlines penalties for violations, provides rights and liberties to data subjects, and institutes an authority to enforce the law. The golden standard is currently Europe&rsquo;s <a href="https://gdpr.eu/what-is-gdpr/">General Data Protectuion Regulation (GDPR)</a>, which provides across-the-board protection for personal data pertaining to EU citizens and residents, barring some exceptions.</p>
+<p>We Americans just do things a little differently here, from the high-fructose corn syrup to the imperial system, including a sector-based approach to national legislation, including privacy.</p>
+<p>Editor&rsquo;s note: <a href="https://worldpopulationreview.com/country-rankings/countries-that-use-imperial">after further research</a>, I have learned that Liberia and Myanmar officially use freedom units and some Commonwealth countries still use them in various cases.</p>
+<p>In the past, the US has tackled privacy concerns by focusing on a specific sector or industry (like healthcare or banking), rather than making sweeping (comprehensive) changes across industries.</p>
+<p>Below are some federal laws tangential to privacy:</p>
+<ul>
+<li>1974: <a href="https://www.justice.gov/opcl/privacy-act-1974">Privacy Act of 1974</a>
+<ul>
+<li>Established general <a href="https://www.techtarget.com/whatis/definition/Fair-Information-Practices-FIP">fair information practices (FIPs)</a> and restrictions to govern records containing personal information</li>
+</ul>
+</li>
+<li>1996: <a href="https://www.hhs.gov/hipaa/for-professionals/privacy/laws-regulations/index.html">Health Insurance Portability and Accountability Act (HIPAA)</a>
+<ul>
+<li>Defined <a href="https://www.hipaajournal.com/what-is-hipaa/">&ldquo;protected health information” (PHI)</a> to regulate the health insurance industry</li>
+</ul>
+</li>
+<li>1999: <a href="https://www.ftc.gov/business-guidance/privacy-security/gramm-leach-bliley-act">Gramm-Leach-Bliley Act (GLBA)</a>
+<ul>
+<li>Requires financial institutions to protect sensitive data and provide notice regarding information-sharing practices</li>
+</ul>
+</li>
+<li>2000: <a href="https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa">Children&rsquo;s Online Privacy Protection Act (COPPA)</a>
+<ul>
+<li>Regulates collection of personal information of children under the age of 13</li>
+</ul>
+</li>
+</ul>
+<p>So things are a little more complicated than it seems. But this is not to say that the US hasn&rsquo;t <em>tried</em> its hand at a comprehensive privacy law. In fact, 2022 saw the introduction of the <a href="https://www.congress.gov/bill/117th-congress/house-bill/8152">American Data Privacy and Protection Act (ADPPA)</a> which sought to establish a comprehensive framework for &ldquo;how companies, including nonprofits and common carriers, handle personal data, which includes information that identifies or is reasonably linkable to an individual.&rdquo; In July 2022, <a href="https://natlawreview.com/article/american-data-privacy-and-protection-act-are-we-finally-getting-federal-data-privacy">the draft</a> passed through the <a href="https://energycommerce.house.gov/">House Energy and Commerce Committee</a> with bipartisan support. ADPPA (<em>ad-puh?</em>) defined categories of personal and sensitive personal data that would be protected, afforded various privacy rights and opt-out choices to consumers (inlcuding <a href="https://amazelaw.com/private-right-of-action/">private right of actions</a>).</p>
+<p>The ADPPA was not without its critics, however, such as the <a href="https://www.eff.org/deeplinks/2022/07/americans-deserve-more-current-american-data-privacy-protection-act">Electronic Frontier Foundation (EFF)</a>, who warned that the bill would &ldquo;[diminish] the country&rsquo;s privacy landscape&rdquo; by undermining existing state protections provided to consumers and also set up loopholes for &ldquo;service providers&rdquo; that process personal information and contract with the government.</p>
+<p>There has not been any movement on the bill in the last two years, however, and after Congress adjourned in January 2023, the committee would need to re-introduce and vote on the bill to move it to the House floor.</p>
+<p><figure>
+    <img loading="lazy" src="/images/state-law-chart.png"/> 
+</figure>
+
+<em>via <a href="https://medium.com/@Steiner254/insecure-direct-object-references-idor-16bf0b981b90">IAPP</a></em></p>
+<h2 id="enter-apra">Enter APRA</h2>
+<p>In April 2024, the House Commitee on Energy and Commerce sought to avenge the ADPPA by unveiling a draft of <a href="https://www.commerce.senate.gov/2024/4/committee-chairs-cantwell-mcmorris-rodgers-unveil-historic-draft-comprehensive-data-privacy-legislation">the American Privacy Rights Act (APRA)</a>: a new bipartisan federal data privacy bill that provisions &ldquo;[national] data privacy rights and protections for Americans, eliminates the existing patchwork of state comprehensive data privacy laws and establishes robust enforcement mechanisms to hold violators accountable, including a private right of action for individuals.&rdquo;</p>
+<p>At first glance, APRA (<em>ap-ruh?</em>) seems to check all the boxes for a comprehensive privacy framework by strengthenening protections outlined in ADPPA and outlining new ones. Additionally, there is a clear impression of trying to &ldquo;get with the times&rdquo; here, as to adapt the law to developing trends and technologies that regulators have struggled to keep up with. For example, AI and <a href="https://towardsdatascience.com/what-is-algorithm-fairness-3182e161cf9f">algorithm fairness</a> are specific areas of concern, where new &ldquo;algorithm impact assessments&rdquo; would be required under certain circumstances. Other obligations for data brokers and &ldquo;high-impact social media companies&rdquo; would also seek to put a bigger onus on ad-tech and big tech companies to properly manage personal information for consumers at a national level.</p>
+<p>However, the fact that APRA is so similar to ADPPA seems to be its biggest weakness.</p>
+<h2 id="california-against-the-world">California against the world</h2>
+<p>In April, the <a href="https://cppa.ca.gov/about_us/">California Privacy Protection Agency (CPPA)</a> wrote to the Chairs of the House Energy &amp; Commerce Committee and the Innovation, Data, and Commerce Subcommittee (come on&hellip; there has to be an acronym or nickname for that, right?)  and <a href="https://cppa.ca.gov/announcements/2024/20240416.html">described how the current draft of APRA would &ldquo;weaken privacy protections for Californians.&rdquo;</a></p>
+<p><a href="https://ashkansoltani.org/">Ashkan Soltani</a>, the executive director of the CPPA, is an outspoken critic of APRA: &ldquo;The CPPA supports a federal law that sets the floor for these protections, but as drafted, APRA seeks to set the ceiling. This could freeze protections in place for decades.&rdquo;</p>
+<blockquote>
+<p>&ldquo;The CPPA supports a federal law that sets the floor for these protections, but as drafted, APRA seeks to set the ceiling. This could freeze protections in place for decades.&rdquo; -Ashkan Soltani, Executive Director, California Privacy Protection Agency</p>
+</blockquote>
+<p>Here are some of the grievances addressed by Soltani in that April letter:</p>
+<ul>
+<li>APRA would preempt the CPPA&rsquo;s authority and fully divest its responsibilities to the FTC</li>
+<li>APRA would prevent legislation around emerging technologies &ldquo;like artificial intelligence, including <a href="https://www.dwt.com/blogs/privacy--security-law-blog/2023/12/california-drafts-automated-decisionmaking-ai-rule">automated decisionmaking technology (ADMT)</a>&rdquo;</li>
+<li>APRA would weaken consumer protections against data brokers by repealing the <a href="https://www.latimes.com/politics/story/2023-09-14/california-bill-delete-online-personal-data">California Delete Act</a></li>
+<li>APRA does not categorize sexual orientation, union membership, and immigration status as sensitive covered data (unlike the CCPA)</li>
+</ul>
+<p>tl;dr: California argues that it already does everything that APRA wants do to, but better.</p>
+<h2 id="whats-next">What&rsquo;s next?</h2>
+<p>States like California, Virginia, Utah, and others with already established state-level privacy frameworks are going to be hesitant to welcome these changes, especially if they perceive APRA to provide inferior rights and protections for their residents. Additionally, APRA in its current state would preempt any existing state-level enforcement and transfer that authority to the FTC. Though the FTC has an extensive track record of <a href="https://www.ftc.gov/news-events/topics/protecting-consumer-privacy-security/privacy-security-enforcement">privacy and security enforcement</a>, some state institutions&ndash; such as the CPPA or state attorneys general&ndash; might prefer to be the ones protecting their constituents, especially if they think they can do it better than the FTC. <a href="https://www.newamerica.org/oti/in-the-news/cybersecurity-leaders-express-reserved-support-for-american-privacy-rights-act/">Similar sentiments have been expressed</a> with regards to the FTC being encharged to regulate service providers instead of the FCC.</p>
+<p>But what about the residents of those other twenty-some states that are <em>not</em> covered by any data privacy law? Are they to miss out so that residents of already covered states can enjoy their stronger rights?
+Should states like California &ldquo;take one for the team&rdquo; so that disenfranchised Americans in the rest of the country can enjoy a modicum of these rights?</p>
+<p>My opinion? NO: residents of states with existing privacy laws should not have their rights minimized in the name of &ldquo;the greater good&rdquo;. Civil rights are not a compromise.
+It is up to legislators to find a way to empower all Americans without undermining the work that states have already done to protect their constituents.</p>
+<p>We&rsquo;ll just have to see what the House thinks.</p>
+<p>At the end of the day, all of this is food for though as any talk is ultimately pre-mature. The bill is still in comittee, so it&rsquo;s likely there will be some changes before it gets sent to Congress. It should also be said that the 118th Congress is a Republican majority, so one has to think that it&rsquo;s going to be even more challenging to pass any federal regulations under such circumstances.</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Privacy &#34;harms&#34; and why they matter</title>
+      <link>http://localhost:1313/posts/privacy-harms/</link>
+      <pubDate>Sat, 17 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/privacy-harms/</guid>
+      <description>A look at the dangers that result when privacy protections don&amp;#39;t protect.</description>
+      <content:encoded><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>What is the point of a privacy program? Is it to avoid <a href="https://www.statista.com/statistics/1170520/worldwide-data-breach-fines-settlements/">whopping legal penalties</a>? To prevent the <a href="https://www.varonis.com/blog/company-reputation-after-a-data-breach">tarnished reputation</a> that comes with being in the news for the wrong reasons? Or even to comply with a <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3782222">consent decree</a>?</p>
+<p>For some companies, any of these reasons might certainly be the case &ndash; and that&rsquo;s perfectly fine and arguably mutually beneficial for both companies and consumers alike (when done right). But, for the sake of discussion, allow me to put all of that to the side and think about privacy on a more fundamental, personal level. Of course, the point of a privacy program is to protect and preserve user privacy &ndash; but <em>why?</em></p>
+<p>Why else should we care about user privacy, even if the user themselves might not understand or care?</p>
+<p>I recently read a brilliant paper titled <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3782222"><em>Privacy Harms</em></a> by Danielle Citron and Daniel Solove. One of the goals of the paper is to outline the risks and damages that can result from the misuse, mishandling, and insufficient protection of personal information which they refer to as &ldquo;harms&rdquo;.</p>
+<p>In the paper, Citron and Solove take a legal approach to help courts better understand and effectively adjudicate cases that relate to privacy, where courts currently have a myopic focus on clear, explicit monetary loss or injury to enforce violations of privacy. To do so, Citron and Solove define a &ldquo;typology&rdquo; of privacy harms that can transpire from privacy violations.</p>
+<p>That&rsquo;s quite the word. For the uninitiated (i.e, myself), what is a typology? Per the <a href="https://www.merriam-webster.com/dictionary/typology">Merriam-Webster dictionary</a>:</p>
+<blockquote>
+<p><strong>Typology (n)</strong> <em>[the] study of or analysis or classification based on types or categories</em></p>
+</blockquote>
+<p>With that established, let&rsquo;s continue and see how this might help us better understand (and protect) privacy.</p>
+<h2 id="some-context">Some context</h2>
+<p>Citron and Solove&rsquo;s paper is heavily grounded in law and this topic carries with it legal implications that are far beyond my qualifications. I am not a lawyer, even if I have passed the <a href="https://iapp.org/certify/cippus/">CIPP/US</a>. That said, I am not going to focus on the legal aspect of this paper, but it is important to provide some context for the rest of the post.</p>
+<p>The idea of a &ldquo;harm&rdquo; comes to us from the legal world, as part of a broader concept called a <strong>tort</strong>, defined by the Cornell&rsquo;s <a href="https://www.law.cornell.edu/wex/tort">Legal Information Institute</a> as &ldquo;an act or omission that gives rise to injury or harm to another and amounts to a civil wrong for which courts impose liability&rdquo;. Simply put: being able to demonstrate some damage has occurred, like your car being totaled after an accident, which lays the groundwork for an entity to be sued (liable) in court is what constitutes a tort.</p>
+<p>However, current caselaw is woefully unprepared and inept at acknowledging harms resulting from privacy violations because they do not fall under the umbrella of what are pre-established &ldquo;cognizable&rdquo; (recognized) harms. A harm to you or me, like being unable to buy a new car because <a href="https://en.wikipedia.org/wiki/TransUnion_LLC_v._Ramirez">your credit report says you are a terrorist</a>, or receiving spam emails because your bank violated its own privacy policy and <a href="https://casetext.com/case/cherny-v-emigrant-bank">shared your email address with third-parties</a>, is not the same kind of harm to the courts. If your identity was stolen after you were victim to a data breach, good luck putting two and two together in court to establish causality. And if you are worried that your identity <em>will</em> be stolen after a data breach, <a href="https://www.mcafee.com/blogs/privacy-identity-protection/how-to-protect-yourself-from-identity-theft-after-a-data-breach/">as one might naturally expect</a>, there doesn&rsquo;t yet exist any such recourse for <em>future</em> harms. These are all examples of why it is difficult to legally validate privacy violations, and things can get really subjective really fast.</p>
+<p>Before I continue, I encourage you to read this paper (linked in <a href="#references">References</a>) if you&rsquo;re interested, lest I get carried away.</p>
+<h2 id="defining-harm">Defining <em>harm</em></h2>
+<p>Beyond financial penalties, in this space I don&rsquo;t see much dialogue about the personal repercussions of when privacy protections, well, don&rsquo;t protect.</p>
+<p>The consequences and implications of the misuse or mishandling of personal data (that result from lapses in those protections) can be articulated as privacy <strong>&ldquo;harms&rdquo;</strong>. These harms describe a sobering aftermath of often deeply personal, real issues that affect humans (not users) and transcend fines and other legal penalties.</p>
+<blockquote>
+<p>These harms describe a sobering aftermath of often deeply personal, real issues that affect humans (not users) and transcend fines and other legal penalties.</p>
+</blockquote>
+<p>You&rsquo;ll see that these harms characterize relatable and sometimes existential concerns that may resonate with many or at least lead them to consider their significance, and hopefully reconsider how they think about privacy.</p>
+<h2 id="types-of-harms">Types of harms</h2>
+<p>The <em>Privacy Harms</em> typology outlines these harms as a means for courts to better understand and hopefully litigate privacy harms, however, they still serve as a guideline for any organization to understand what can come of privacy violations beyond legal repercussions.</p>
+<p>All quotations will be taken from the paper unless otherwise explicitly mentioned.</p>
+<p><figure>
+    <img loading="lazy" src="/images/typology-of-harms.png"/> 
+</figure>
+
+<em>via Privacy Harms, Figure 1, page 831</em></p>
+<h3 id="1-physical">1. Physical</h3>
+<p>Physical harms are &ldquo;harms that result in bodily injury or death&rdquo;. Short, simple, and somber.
+Personal information falling into the wrong hands can lead to violence that precipitates harm, whether that information is acquired intentionally or accidentally.</p>
+<p>Physical harm resulting from privacy violations primarily threatens journalists and members of vulnerable or oppressed populations (such as the LGTBQ+ community and certain religions) but, ultimately, anyone can be affected:</p>
+<ul>
+<li><a href="https://www.latimes.com/archives/la-xpm-1999-dec-05-mn-40632-story.html">The murder of Amy Boyer</a>: A man purchases personal information from a data broker/people-search site to stalk and eventually murder a woman he had never met.</li>
+<li><a href="https://www.dailydot.com/upstream/pop-smoke-address/">The murder of Pop Smoke</a>: A famous rapper accidentally reveals his address in an Instagram story and is murdered during a home invasion that same night.</li>
+</ul>
+<h3 id="2-economic">2. Economic</h3>
+<p>An economic harm might involve &ldquo;monetary losses or a loss in the value of something.&rdquo;</p>
+<p>This includes:</p>
+<ul>
+<li>Missed opportunities (indirect loss), such as a job offer, a loan, or other prospects with a financial element.</li>
+<li>Immediate identity theft or the lingering potential for future identity theft (for example, after sensitive data is leaked in a data breach) - and the time and resources involved in dealing with the aftermath.</li>
+<li>Stolen financial data (direct loss), such as account information or credit card numbers.</li>
+</ul>
+<h3 id="3-reputational">3. Reputational</h3>
+<p>&ldquo;Reputational harms involve injuries to an individual’s reputation and standing
+in the community.&rdquo; These harms can &ldquo;impair a person’s ability
+to maintain &lsquo;personal esteem in the eyes of others&rsquo; and can taint a person&rsquo;s
+image&rdquo;. This is one of the more well-known harms when it comes to privacy, whether people may realize it or not.</p>
+<p>Poor <a href="https://www.ibm.com/topics/data-quality">data quality</a> (accuracy and correctness) can negatively impact a person&rsquo;s standing in society. Some examples include:</p>
+<ul>
+<li>Incorrect information in a credit report.</li>
+<li>Poor &ldquo;data hygiene&rdquo; that results in incorrect data being propagated or indexed across the internet (in credit reports or on people search sites, for example) which can be difficult and lengthy to remove. Meanwhile, this bad data can spread and have negative implications for a person&rsquo;s public perception.</li>
+</ul>
+<p>By the same token, however, consider information that <em>is</em> true that might equally harm a person&rsquo;s reputation.</p>
+<ul>
+<li>This can involve invasion-of-privacy cases of <a href="https://en.wikipedia.org/wiki/Revenge_porn">&ldquo;revenge porn&rdquo;</a>, such as <a href="https://www.forbes.com/sites/mattdrange/2019/12/23/best-stories-of-the-decade-behind-peter-thiels-plan-to-destroy-gawker/?sh=25afb81072d9">Hulk Hogan&rsquo;s lawsuit against Gawker</a> in 2016, where the Hulkster (backed by Peter Thiel) bankrupted the tabloid &ldquo;news&rdquo; site that posted an illegally obtained sex-tape featuring him and his friend&rsquo;s wife.</li>
+<li>In an extreme case in 2015, a <a href="https://money.cnn.com/2015/09/08/technology/ashley-madison-suicide/index.html">pastor took his own life</a> after Ashley Madison, the dating app he allegedly signed up for which is marketed towards married individuals looking for an affair, experienced a data massive data breach which exposed over 37 million users. Netflix has announced an <a href="https://www.msn.com/en-us/tv/other/new-netflix-series-reveals-scandalous-stories-behind-ashley-madison-hack/ar-AA1o2QTo">upcoming mini-series</a> about the breach.</li>
+</ul>
+<h3 id="4-psychological">4. Psychological</h3>
+<p>&ldquo;Psychological harms involve a range of negative mental responses&rdquo;, which can be generally
+categorized into two sub-types:</p>
+<ol>
+<li>Emotional distress: &ldquo;painful or unpleasant feelings&rdquo;</li>
+<li>Disturbance: &ldquo;disruption to tranquility and peace of mind&rdquo;</li>
+</ol>
+<p>Sinister online attacks like doxxing, death threats, revenge porn, <a href="https://www.dictionary.com/e/slang/brigading/">brigading</a> and others that violate or attempt to violate one&rsquo;s privacy can impose an immense psychological burden on victims. This burden may be in the form of fear (such as for one&rsquo;s safety), regret, shame, loss of self-worth, and various other negative emotions.</p>
+<p>The authors also discuss the idea of &ldquo;disturbance&rdquo;, where victims experience &ldquo;unwanted intrusions that disturb tranquility, interrupt activities, sap time, and otherwise serve as a nuisance.&rdquo; An unfortunately common example of disturbance is the resulting barrage of phone calls or messages that a doxxing victim may receive after their information is posted online. These messages do not need to be threatening to constitute a disturbance, but the content of these messages may exacerbate the emotional distress that is caused.</p>
+<h3 id="5-autonomy">5. Autonomy</h3>
+<p>A harm against autonomy invovles the &ldquo;restricting, undermining, inhibiting, or unduly
+influencing of people’s choices.&rdquo; This may entail preventing a user from making a choice for their cookie consent or data sharing preferences, for example, or otherwise tricking a user to make a choice that they did not intend or even outright denying which choices can be made or which controls are available to them.</p>
+<p>This is heavily related, but not exclusive to, <a href="https://www.wired.com/story/how-to-spot-avoid-dark-patterns/">dark patterns</a>.
+<figure>
+    <img loading="lazy" src="/images/dark-patterns.png"/> 
+</figure>
+
+<em>via Krisztina Szerovay, <a href="https://uxknowledgebase.com/dark-patterns-3b41ed7a690e">UX Knowledge Base</a></em></p>
+<p>Autonomy harms may manifest through user-facing mechanisms like cookie consent banners and preference centers, opt-out or privacy web forms, or other features that might solicit some type of input, where the service unfairly influences or manipulates the user&rsquo;s input. Sometimes, however, these mechanisms may not even provide a user the choice or option to control how their data is collected or shared, which the paper describes as a &ldquo;lack of control&rdquo; where users have no say.</p>
+<p>Similarly, information popups and disclosures across a site are important to help a user understand the consequences of their use of the site or service. Inadequate, or worse: absent, notices are also harmful to users who may make decisions that contradict their privacy preferences.</p>
+<h3 id="6-discrimination">6. Discrimination</h3>
+<p>Discrimination harms are an extension of other harms which are founded on &ldquo;inequality and disadvantaging people based on gender, race, national origin, sexual orientation, age, group membership, or other characteristics or affiliations.&rdquo;</p>
+<p>As the name suggests, marginalized communities are particularly affected by discrimination harms which &ldquo;thwart people’s ability to have an equal chance to obtain and keep jobs, to secure affordable insurance, to find housing, and to pursue other crucial life opportunities.&rdquo; Societal norms, increased surveilance, and unfair algorithms are some of the mechanisms that enable the undermining of privacy as it pertains to persons of marginalized groups that may lead to discrimination.</p>
+<h3 id="7-relationship">7. Relationship</h3>
+<p><a href="https://www.takingcharge.csh.umn.edu/what-do-we-mean-personal-relationships">Relationships</a> are a vital part of a healthy, functional life and society. Common types of relationships include friends, family, romantic partners, or even business associates (&ldquo;fiduciary relationships&rdquo;). This harm has two components:</p>
+<ol>
+<li>The &ldquo;[immediate] loss of confidentiality&rdquo; between partners</li>
+<li>&ldquo;[In] the longer term, damage to the trust that is essential for the relationship&rdquo;</li>
+</ol>
+<h2 id="taking-harms-into-account-for-your-organization">Taking harms into account for your organization</h2>
+<p>What kinds of harms might befall a user depend entirely on the context and scope of service  in use. A person signing up for a social media app to post memes of their cat may be subject to an entirely different set of potential harms compared to a person ordering a pizza with a food delivery app or a journalist sharing their geolocation data in an instant messenger app.</p>
+<p>That is, the harms that will need to be proctected against will differ wildly by organization. It is vital to understand that these harms exist and map them to those that might be relevant to your users.</p>
+<p>I believe taking these harms into account is a critical starting point for implementing an effective and empathetic privacy program across any organization that humanizes the user and safeguards privacy as a fundamental human right.</p>
+<h2 id="references">References</h2>
+<p>Citron, Danielle Keats and Solove, Daniel J., Privacy Harms (February 9, 2021). GWU Legal Studies Research Paper No. 2021-11, GWU Law School Public Law Research Paper No. 2021-11, 102 Boston University Law Review 793 (2022), Available at SSRN: <a href="https://ssrn.com/abstract=3782222">https://ssrn.com/abstract=3782222</a> or <a href="http://dx.doi.org/10.2139/ssrn.3782222">http://dx.doi.org/10.2139/ssrn.3782222</a></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Encrypted cloud backups with Cryptomator</title>
+      <link>http://localhost:1313/posts/encrypted-cloud-backups/</link>
+      <pubDate>Sat, 18 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/encrypted-cloud-backups/</guid>
+      <description>I heard you like encryption, so I encrypted your encrypted backups.</description>
+      <content:encoded><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>I&rsquo;ve recently taken it upon myself to be in charge of backing up my family&rsquo;s digital files and photos.
+It&rsquo;s not the most exciting thing, but God knows it won&rsquo;t get done otherwise and it is extremely important.</p>
+<p>I&rsquo;m following the golden <a href="https://www.seagate.com/blog/what-is-a-3-2-1-backup-strategy/">3-2-1 backup rule</a>, to keep copies of our data in three separate locations,
+in two different types of storage, and one offline backup. An example approach would be a copy of data in the cloud, on a cold (offline) hard drive, and another copy on a phone.
+I already have copies on a hard disk and other devices covered, so that just leaves me with picking a cloud storage provider to go with.</p>
+<p>Popular options like Apple iCloud and Google Drive are appealing because they offer a lot of storage space at a reasonable price, and make it easy to access files across devices.
+And those names alone carry a lot of weight and security in their own right.</p>
+<p>However, there are some serious privacy concerns with these services. Both Apple and Google scan the files uploaded to their cloud for various service reasons, such as improving user experience and app performance, but this ultimately means that they are analyzing the files that you upload. This can be worrying because it raises questions about who can see our data and how it might be used. Especially in light of recent events after Apple has proposed a <a href="https://www.bbc.co.uk/news/technology-58145943">new system to scan images</a> for child abuse material (&ldquo;CSAM&rdquo;).</p>
+<h2 id="encrypted-cloud-storage">Encrypted cloud storage</h2>
+<p>That&rsquo;s why I&rsquo;m considering cloud providers that offer <a href="https://en.wikipedia.org/wiki/Zero-knowledge_service">zero-knowledge encryption</a>. With zero-knowledge encryption, even the service provider can&rsquo;t access my files because they don&rsquo;t have the keys to decrypt them. This means my data is much more secure and private. Only I can access my files, and I can be confident that no one else can see them.</p>
+<p>We want to encrypt our files because it adds an extra layer of security. If someone were to gain unauthorized access to the cloud service, they wouldn&rsquo;t be able to read my files without the encryption key. This is especially important for sensitive information, like personal documents or financial records.</p>
+<p>There are fortuantely a plethora of such services now available to consumers, so do your research and pick the service that seems right for you in terms of pricing.
+For the purpose of this article, I will be using <a href="https://mega.nz/">MEGA</a> (formerly known as <a href="https://en.wikipedia.org/wiki/Megaupload">Mega Upload</a>, which is a different rabbit hole I recommend when you have the time).</p>
+<p><figure>
+    <img loading="lazy" src="/images/zero-knowledge.png"/> 
+</figure>
+
+<em>via <a href="https://tresorit.com/features/zero-knowledge-encryption">Tresorit</a></em></p>
+<h2 id="file-encryption">File encryption</h2>
+<p>To go the extra mile, you can also consider encrypting your files <em>before</em> uploading them to any third-party storage service.
+This may sound overkill, but it can also give you the peace of mind knowing your files are safe even if the cloud provider
+or their keys become compromised. This means that only you can truly see your files. This also means that you have the burden
+of safely storing and protecting your encryption keys at the risk of losing all of your data.</p>
+<p>There are tons of popular encryption programs, but for this article I will be using <a href="https://itsfoss.com/cryptomator/">Cryptomator</a>.</p>
+<figure>
+    <img loading="lazy" src="/images/cryptomator-logo.png"/> 
+</figure>
+
+<h2 id="things-youll-need">Things you&rsquo;ll need</h2>
+<p>Note: For this article, I will be using Windows. However, the steps are ultimately the same across any OS.</p>
+<ul>
+<li><a href="https://cryptomator.org/">Cryptomator</a> for encrypting files before uploading them to the cloud</li>
+<li>A cloud storage provider, preferrably with a desktop app like <a href="https://mega.nz/desktop">MEGAsync</a></li>
+<li>If you are backing up files larger than 4GB, <a href="https://github.com/dokan-dev/dokany/">Dokany</a></li>
+</ul>
+<h2 id="create-an-encrypted-vault">Create an encrypted vault</h2>
+<p>We need to create a Cryptomator &ldquo;vault&rdquo; to store and encrypt our files. Vaults are actually Windows <a href="https://medium.com/r?url=https%A%2F%2Fcomputer.howstuffworks.com%2Fvirtual-hard-drive1.htm">virtual drives</a>
+that Cryptomator will mount whenever you unlock them and will persist in your drive&rsquo;s storage when they are locked.</p>
+<p>Before we do that though, we need to decide what volume type we&rsquo;re going to be using: <a href="https://medium.com/r/?url=https%3A%2F%2Fcommunity.cryptomator.org%2Ft%2Fwebdav-vs-dokany-performance-comparison-when-using-remote-offsite-vault%2F2883%2F2">WebDAV or Dokany</a>.
+Unless you&rsquo;re a &ldquo;power user&rdquo;,  <a href="https://medium.com/r/?url=https%3A%2F%2Fcommunity.cryptomator.org%2Ft%2Fwhat-is-dokan-file-system-driver%2F3369">according to a Cryptomator dev</a>, you really shouldn&rsquo;t worry about the
+difference between the two and should probably go with Dokany. In my case, I actually needed Dokany
+to transfer files larger than 4GB, which otherwise resulted in errors when I tried with WebDAV.
+Download and install the <a href="https://medium.com/r/?url=https%3A%2F%2Fgithub.com%2Fdokan-dev%2Fdokany%2Freleases">newest release</a> of Dokany from GitHub and then return to Cryptomator.</p>
+<figure>
+    <img loading="lazy" src="/images/cryptomator-dokany.png"/> 
+</figure>
+
+<p>In Cryptomator, click on the &ldquo;Preferences&rdquo; gear icon in the top right and then go to &ldquo;Virtual Drive&rdquo;.
+WebDAV should be selected by default. If you need to use Dokany, make sure you have installed the
+newest release already and then select it from the drop down menu (there are only two options).</p>
+<figure>
+    <img loading="lazy" src="/images/cryptomator-main.png"/> 
+</figure>
+
+<p>Start by clicking &ldquo;Add Vault&rdquo; and name it. You&rsquo;ll then be prompted to create a password and optionally
+receive a recovery key for said vault. A recovery key is the only way to recover a vault if you lose
+this password. It is highly recommended to create a recovery key and store it somewhere safely, such
+as a password manager- preferably one that has <a href="https://medium.com/r/?url=https%3A%2F%2Fcloudstorageinfo.org%2Fzero-knowledge-encryption-explained">zero-knowledge encryption</a>, in the spirit of our backup.</p>
+<figure>
+    <img loading="lazy" src="/images/cryptomator-create-vault.png"/> 
+</figure>
+
+<p>Now we&rsquo;re going to store this vault within the MEGA synced folder we created earlier.
+Press the &ldquo;Custom Location&rdquo; button and then &ldquo;Choose&rdquo; and select the synced folder.
+Either copy and paste the path of the MEGA folder or navigate to it in your file browser.
+I placed my synced folder in my C: drive, so I will navigate there and then select it.</p>
+<figure>
+    <img loading="lazy" src="/images/cryptomator-vault-path.png"/> 
+</figure>
+
+<p>Now that our vault is prepared and placed in the synced folder, we can begin to transfer files to it.
+First ensure that your vault is unlocked and then start transferring your files to it in File Explorer.
+Transfer your files directly to the vault and not to the synced folder, or else anything you transfer
+will be unencrypted. Your vault will appear as a virtual drive in File Explorer with the vault name and
+an assigned letter- <code>vault_name (X:)</code>- this is where I dragged and dropped all of my files to.</p>
+<p>You can check that you are doing things right by going to the synced folder and finding the now
+encrypted contents that you transferred. In my synced folder, I found my files inside a hierarchy of
+arbitrary sub-folders. Your files&rsquo; names will be obfuscated by Cryptomator and all files will have
+the type <code>Cryptomator Encrypted Data (.c9r)</code>.</p>
+<p>This is key: even though we can supposedly trust MEGA and its zero-knowledge encryption,
+we really don&rsquo;t even need to now that our backup is entirely encrypted. This just adds another
+layer of security on top of MEGA&rsquo;s <a href="https://medium.com/r/?url=https%3A%2F%2Fmega.io%2Fsecurity">User Controlled Encryption</a> and in theory removes the need to trust
+MEGA in the first place. This revelation goes for any cloud storage provider and turns less private
+alternatives like Google Drive and iCloud into more appealing choices based on their superior pricing models.</p>
+<figure>
+    <img loading="lazy" src="/images/mega-uploading.png"/> 
+</figure>
+
+<p>You can check the progress of your sync by running the MEGAsync application,
+which may already be hidden in the tray on the right of your taskbar.
+MEGA will try to sync multiple files simultaneously, but I noticed that
+larger files like videos would only be uploaded one at a time.</p>
+<h2 id="uploading-to-the-cloud">Uploading to the cloud</h2>
+<p>Now that the files are encrypted (as a .c9r), simply upload them to the cloud like you would any other file. I recommend a cloud provider has desktop sync app to make this
+a continuous process that happens behind the scenes, so you don&rsquo;t have to worry about anything or risk forgetting to back something up.</p>
+<h2 id="accessing-files-in-the-cloud">Accessing files in the cloud</h2>
+<p>Once the files are in the cloud, you can simply decrypt them with the key that you set earlier and be assured that only you have been able to read your data.</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

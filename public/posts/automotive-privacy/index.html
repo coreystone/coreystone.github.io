@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Automotive privacy and DIY defense | Corey Stone</title>
+<meta name="keywords" content="FOSS, privacy">
+<meta name="description" content="How smart cars collect and share your sensitive data, and what you can do about it.">
+<meta name="author" content="Me">
+<link rel="canonical" href="http://localhost:1313/posts/automotive-privacy/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.cd0c10bc3cbe679e2e41b40a4edfe5a6f5e2a27e696a2b7f0aa7e1b9874ad556.css" integrity="sha256-zQwQvDy&#43;Z54uQbQKTt/lpvXion5pait/CqfhuYdK1VY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/automotive-privacy/">
+
+<meta name="twitter:title" content="Automotive privacy and DIY defense | Corey Stone" />
+<meta name="twitter:description" content="How smart cars collect and share your sensitive data, and what you can do about it." />
+<meta property="og:title" content="Automotive privacy and DIY defense | Corey Stone" />
+<meta property="og:description" content="How smart cars collect and share your sensitive data, and what you can do about it." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/automotive-privacy/" />
+<meta property="article:section" content="posts" />
+  <meta property="article:published_time" content="2024-11-22T00:00:00&#43;00:00" />
+  <meta property="article:modified_time" content="2024-11-22T00:00:00&#43;00:00" />
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "http://localhost:1313/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Automotive privacy and DIY defense",
+      "item": "http://localhost:1313/posts/automotive-privacy/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Automotive privacy and DIY defense | Corey Stone",
+  "name": "Automotive privacy and DIY defense",
+  "description": "How smart cars collect and share your sensitive data, and what you can do about it.",
+  "keywords": [
+    "FOSS", "privacy"
+  ],
+  "wordCount" : "2325",
+  "inLanguage": "en",
+  "datePublished": "2024-11-22T00:00:00Z",
+  "dateModified": "2024-11-22T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Me"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/posts/automotive-privacy/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Corey Stone",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/favicon.ico"
+    }
+  }
+}
+</script>
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary-bg: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list-page {
+                background: var(--theme);
+            }
+
+            .list-page:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list-page:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+
+</head>
+
+<body class=" type-posts kind-page layout-" id="top"><script data-no-instant>
+function switchTheme(theme) {
+  switch (theme) {
+    case 'light':
+      document.body.classList.remove('dark');
+      break;
+    case 'dark':
+      document.body.classList.add('dark');
+      break;
+    
+    default:
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+      }
+  }
+}
+
+function isDarkTheme() {
+  return document.body.className.includes("dark");
+}
+
+function getPrefTheme() {
+  return localStorage.getItem("pref-theme");
+}
+
+function setPrefTheme(theme) {
+  switchTheme(theme)
+  localStorage.setItem("pref-theme", theme);
+}
+
+const toggleThemeCallbacks = {}
+toggleThemeCallbacks['main'] = (isDark) => {
+  
+  if (isDark) {
+    setPrefTheme('light');
+  } else {
+    setPrefTheme('dark');
+  }
+}
+
+
+
+
+window.addEventListener('toggle-theme', function() {
+  
+  const isDark = isDarkTheme()
+  for (const key in toggleThemeCallbacks) {
+    toggleThemeCallbacks[key](isDark)
+  }
+});
+
+
+function toggleThemeListener() {
+  
+  window.dispatchEvent(new CustomEvent('toggle-theme'));
+}
+
+</script>
+<script>
+  
+  (function() {
+    const defaultTheme = 'auto';
+    const prefTheme = getPrefTheme();
+    const theme = prefTheme ? prefTheme : defaultTheme;
+
+    switchTheme(theme);
+  })();
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Corey Stone (Alt + H)">Corey Stone</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/about/" title="About Me"
+                >About Me
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Blog" class="active"
+                >Blog
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/projects/" title="Projects"
+                >Projects
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main post">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div><h1 class="post-title">Automotive privacy and DIY defense</h1>
+    <div class="post-description">How smart cars collect and share your sensitive data, and what you can do about it.</div>
+    <div class="post-meta"><span class="meta-item">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar" style="user-select: text;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" style="user-select: text;"></rect><line x1="16" y1="2" x2="16" y2="6" style="user-select: text;"></line><line x1="8" y1="2" x2="8" y2="6" style="user-select: text;"></line><line x1="3" y1="10" x2="21" y2="10" style="user-select: text;"></line></svg>
+  <span>November 22, 2024</span></span><span class="meta-item">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon" style="user-select: text;"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" style="user-select: text;"></path><line x1="7" y1="7" x2="7" y2="7" style="user-select: text;"></line></svg>
+  <span class="post-tags"><a href="http://localhost:1313/tags/foss/">FOSS</a><a href="http://localhost:1313/tags/privacy/">Privacy</a></span></span><span class="meta-item">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 15"></polyline></svg>
+  <span>11 min</span></span>
+
+      
+      
+    </div>
+  </header> <div class="toc side right">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#introduction" aria-label="Introduction">Introduction</a></li>
+                <li>
+                    <a href="#is-your-car-spying-on-you" aria-label="Is your car &ldquo;spying&rdquo; on you?">Is your car &ldquo;spying&rdquo; on you?</a></li>
+                <li>
+                    <a href="#aftermarket-android-head-units" aria-label="Aftermarket Android head units">Aftermarket Android head units</a></li>
+                <li>
+                    <a href="#offline-android-auto" aria-label="Offline Android Auto">Offline Android Auto</a><ul>
+                        
+                <li>
+                    <a href="#android-auto-on-grapheneos" aria-label="Android Auto on GrapheneOS">Android Auto on GrapheneOS</a></li></ul>
+                </li>
+                <li>
+                    <a href="#conclusion" aria-label="Conclusion">Conclusion</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h2 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">¶</a></h2>
+<p>As cars become increasingly &ldquo;smarter&rdquo; and connected with our online world, they come equipped with features akin to those of smartphones. These advanced capabilities are made possible through a combination of sensors, cameras, and connectivity technologies that enable vehicles to collect and analyze data in real-time. Like smartphones, cars have evolved into mobile computers, but on a much larger scale with <a href="https://www.azosensors.com/article.aspx?ArticleID=1905">higher levels of precision</a>, collecting new types of data that can be used to identify and profile drivers. Therefore, it is crucial for automakers to safeguard this data. Yet, time and time again, they show us that they shirk this responsibility.</p>
+<p>Take Toyota, for example, who recently announced another data breach - this being their <a href="https://www.bleepingcomputer.com/news/security/toyota-confirms-third-party-data-breach-impacting-customers/">third only within the last two years</a>. In November 2024, <a href="https://www.cpomagazine.com/cyber-security/american-auto-giant-ford-alleged-data-breach-impacted-44000-customers/">Ford suffered a data breach</a> that resulted in 44,000 customer records being published on the dark web.</p>
+<figure>
+    <img loading="lazy" src="/images/Toyota-August-data-leak.webp"/> 
+</figure>
+
+<p>Moreover when automotive companies aren&rsquo;t being careless with your data, they&rsquo;re being <em>reckless</em> with it. In 2024, General Motors <a href="https://www.pressreader.com/usa/las-vegas-review-journal/20240425/282445649119086">received ten federal lawsuits</a> after it was revealed that they had &ldquo;tricked millions of drivers&rdquo; into signing up for their <a href="https://www.forbes.com/sites/antoniopequenoiv/2024/04/24/general-motors-axes-onstar-smart-driver-system-after-privacy-and-insurance-complaints/">Smart Driver program</a>, subsequently sharing this information with data broker <a href="https://www.pressreader.com/usa/las-vegas-review-journal/20240425/282445649119086">LexisNexis</a>.</p>
+<p>In short, cars pose serious privacy risks. Don&rsquo;t take it from me, take it from the <a href="https://foundation.mozilla.org/">Mozilla Foundation</a>, who conducted a privacy review of 25 major automakers, and released their findings: <a href="https://foundation.mozilla.org/en/privacynotincluded/articles/its-official-cars-are-the-worst-product-category-we-have-ever-reviewed-for-privacy/">&ldquo;Cars Are the Worst Product Category We Have Ever Reviewed for Privacy&rdquo;</a>.</p>
+<p>Almost all major auto brands are sharing or selling customer data to third parties for marketing or the ever nebulous &ldquo;business&rdquo; purposes. And there&rsquo;s nothing stopping these manufacturers from changing those purposes at any time. As if things weren&rsquo;t already absurd enough, like cars <a href="https://medium.com/tech-topics/car-feature-subscriptions-are-here-to-stay-94feb8cce8fd">locking features behind a subscription model</a>, I encourage you to imagine a dystopian world where your own car serves you personalized advertisements, a <a href="https://www.motortrend.com/news/ford-in-vehicle-advertising-patent/">technology that Ford has recently patented</a>.</p>
+<p>Whether you have a car that already comes equipped with a modern head unit with all the shiny bells and whistles, or you drive a 2003 Camry that never seems like it&rsquo;s going to give out, you have the option to try to manage and limit the collection taking place in your car currently, or nip the issue in the bud and replace the device collecting your data altogether.</p>
+<h2 id="is-your-car-spying-on-you">Is your car &ldquo;spying&rdquo; on you?<a hidden class="anchor" aria-hidden="true" href="#is-your-car-spying-on-you">¶</a></h2>
+<p>The data your car collects is used for much more than just letting you turn you car on with your phone or locate the vehicle if it gets stolen. Auto companies are actively sharing this data with <a href="https://reason.com/2024/03/25/stop-your-car-from-spying-on-you/">the insurance industry</a> to hike insurance premiums for drivers based on factors like how fast you drive, where you go, and how far you drive - all of which is recorded by your car and can be shared directly with insurance companies for monetary gain.</p>
+<p>These &ldquo;smart&rdquo; cars can also allow police to <a href="https://www.governing.com/security/police-dont-need-a-warrant-to-pull-personal-data-from-cars">bypass Fourth Amendment protections</a> that would apply to you and your devices normally by instead going directly to your auto manufacturer and requesting that data <em>without the need for a warrant</em>.</p>
+<p>This <a href="https://www.eff.org/deeplinks/2024/03/how-figure-out-what-your-car-knows-about-you-and-opt-out-sharing-when-you-can">EFF article</a> walks through the types of data collected by cars and how to find out what data your car has collected and how to stop it from being shared.</p>
+<p>A neat website you can check out is <a href="https://vehicleprivacyreport.com/#">Vehicle Privacy Report</a>, which allows you to view what types of data your car collects, who it sells/shares that data to, and other documents like the privacy policies and terms of service for your car.</p>
+<p><figure>
+    <img loading="lazy" src="/images/vehicle-privacy-report.png"/> 
+</figure>
+
+<em>via <a href="https://vehicleprivacyreport.com/#">vehicleprivacyreport.com</a></em></p>
+<h2 id="aftermarket-android-head-units">Aftermarket Android head units<a hidden class="anchor" aria-hidden="true" href="#aftermarket-android-head-units">¶</a></h2>
+<p>An automotive &ldquo;head unit&rdquo;, also known as the stereo or &ldquo;infotainment&rdquo; system, is the interface for all multimedia and general system controls in your car. This is where the radio is in &ldquo;analog&rdquo; vehicles, and where the display screen is in newer digitally-equipped vehicles. Most automakers provide a proprietary head unit in their cars that come equipped with their own safety features and custom software, but this comes with all the aforementioned concerns about data collection and being locked into your manufacturer&rsquo;s hardware ecosystem when superior alternatives exist, as <a href="https://www.reddit.com/r/CarAV/comments/z60i6u/comment/iy0gyre/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button">this reddit comment</a> discusses. And those alternative (aftermarket) systems can easily be purchased for a reasonable price and self-installed.</p>
+<p><figure>
+    <img loading="lazy" src="/images/headunit-loading.jpg"/> 
+</figure>
+
+<em>The bootup screen for my Android head unit.</em></p>
+<p>Most vehicles made in the last 20 years will have a compatible head unit that can be installed. Though some aftermarket systems also include their own proprietary operating system, many are based on Android. Android is the <a href="https://www.businessofapps.com/data/android-statistics/">most popular operating system in the world</a> which runs on practically anything, and now even on cars that are over 20 years old. With a free, open-source operating system running inside your vehicle comes the liberty to do pretty much whatever you want, whether that be something as simple as playing music and podcasts from your phone over Bluetooth, or answering the age-old question: <a href="https://youtu.be/5mmiPT2avrY">&ldquo;can it run DOOM?&rdquo;</a> (yes, cars can run DOOM).</p>
+<p><figure>
+    <img loading="lazy" src="/images/android-launcher.png"/> 
+</figure>
+
+<em>The launcher I use.</em></p>
+<p>Most popular (and economical) Android head units are produced in China, which probably isn&rsquo;t a surprise to anybody. They generally include most of the basic features of any proprietary stereo system, including front and reverse camera software, Apple Car Play and Android Auto compatibility, Bluetooth, and lots of customization. Proprietary safety features that you&rsquo;ll find in most modern cars like lane assist, automatic cruise control, and other advanced options are obviously not included. However, the nature of an open-source operating system in your car unlocks so many more possibilities that would otherwise be completely unavailable, additionally offering tangible functional benefits beyond the peace of mind knowing that your data isn&rsquo;t being harvested by your vehicle manufacturer.</p>
+<p>I have had an Android head unit in my pre-digital vehicle for over 2 years now. When I first received the unit, I was overwhelmed by a 10-pound box full of messy cables, plugs, and antennae/receivers. But that shock turned to excitement as I realized I could equip my car with exactly what I wanted, no more, and no less. After half an hour of tinkering with the console and praying not to break anything (I did end up breaking a few plastic clips that were weakened by sun damage), I had a fully functional head unit in a car that previously could barely use the radio. The self-install process is super simple, albeit intimidating if you&rsquo;ve never pulled out your car stereo before, but it&rsquo;s really difficult to royally mess anything up here. Now, I have a car with a:</p>
+<ul>
+<li>9-inch IPS touchscreen panel</li>
+<li>Reverse camera</li>
+<li>GPS antenna for offline map navigation (to be paired with downloadble maps)</li>
+<li>4G modem, for mobile hotspots</li>
+<li>Built in music library, Bluetooth, CarPlay/Android Auto, et. al</li>
+<li>All the perks of the Android OS</li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/headunit-install.jpeg"/> 
+</figure>
+
+<em>A look behind the scenes.</em></p>
+<p>What excites me is that my car was manufactured before most of these things even existed. And that is just the list of hardware. Remember that I said that this was Android? Yeah, that Android&hellip; with the Google Play Store. This means that this system is capable of running any Play Store app you can think of. Netflix, YouTube, Spotify, mobile games, whatever your sick heart desires. Of course, I am not going to download <em>any</em> of those things in my car (and neither should you) for the safety of myself and others around me, but also because this is a blog focused on privacy.</p>
+<p>However, because this is Android, we are able to control granular permissions on an app-by-app basis, so if there is an application that you really need, you are able to connect to the Play Store, download the app, and then disable the Play Store and/or switch off network permissions wherever necessary. Out of habit, I&rsquo;ve disabled any non-essential apps and granted only the bare minimum permissions needed everywhere else &ndash; this serves as a safeguard in case the device does connect to a network for whatever reason.</p>
+<p><figure>
+    <img loading="lazy" src="/images/android-permissions.png"/> 
+</figure>
+
+<em>Denying app permissions for Google Chrome, which I have no intention of using- in my car, or otherwise.</em></p>
+<p>Because my head unit comes with a built-in file manager, I elect to install the .APKs for my apps via USB as to avoid giving the unit any network permissions at all. This way I don&rsquo;t need to trust the manufacturer because the device is completely offline. This also gives me the added benefits of being able to verify the source of the APK and install apps that aren&rsquo;t found on the Play Store or F-Droid all with the convenience of a physical keyboard (seriously, those touch screen keyboards are painful). I also ripped out the old aux cord module in the car and replaced it with a female USB slot that connects to the back of the head unit for a more plug-and-play experience.</p>
+<p><figure>
+    <img loading="lazy" src="/images/android-file-explorer.png"/> 
+</figure>
+
+<em>The built-in file explorer where I can transfer files to and from a USB.</em></p>
+<p>One such app that I&rsquo;ve installed is an on-board diagnostics (OBD2) reader for diagnosing any issues with my car. <a href="https://www.csselectronics.com/pages/obd2-explained-simple-intro">OBD2</a> is a &ldquo;standardized protocol that allows extraction of diagnostic trouble codes (DTCs) and real-time data&rdquo; via a reader device that hooks into the car&rsquo;s OBD port (you may have heard your mechanic refer to this generically as the &ldquo;computer&rdquo; in your car). These devices can range from ten to hundreds of dollars based on their capabilities and accuracy; I decided to pick up a very cheap <a href="https://en.wikipedia.org/wiki/ELM327">ELM 327 microcontroller</a> just to test things out for fun.</p>
+<p>On the head unit, I installed a FOSS app called <a href="https://github.com/fr3ts0n/AndrOBD">AndrOBD</a> which connects to the ELM327 adaptor via Bluetooth to relay any vehicle and diagnostic data that it can find. The app was able to confirm general info about my car and didn&rsquo;t find any issues, but it otherwise didn&rsquo;t fetch much useful data&ndash; I&rsquo;m not sure whether this is a fault of the app or the limitations of the ELM 327 paired with the age of my vehicle. As a quick aside, launching the app from the head unit in my car worked fine and required no permissions other than BlueTooth. However, I could not get the app to work properly on my phone as the app is still <a href="https://github.com/fr3ts0n/AndrOBD/issues/282">limited to Android 13</a> and it also <a href="https://github.com/fr3ts0n/AndrOBD/issues/270">requires superfluous permissions</a>, though this could be addressed with an application firewall and <a href="https://source.android.com/docs/core/storage/scoped?hl=es-419">scoped storage</a>.</p>
+<p>There are almost limitless options you can tinker with like any Android device, such as <a href="https://xdaforums.com/t/app-launcher-vivid-best-launcher-for-driving.4308751/">custom launchers</a> for your car, but at the end of the day, this is a car. The only time I&rsquo;m using it is to drive somewhere, and I&rsquo;m not spending time hanging out in my car to watch a movie or look at cool launch animations. Navigation and a media player are realistically the only important apps that most drivers will need, and these are already packaged into Car Play/Android Auto in one sleek solution, or a plethora of offline alternatives.</p>
+<h2 id="offline-android-auto">Offline Android Auto<a hidden class="anchor" aria-hidden="true" href="#offline-android-auto">¶</a></h2>
+<p>Besides a reverse camera, the biggest incentive for buying one of these head units is the Car Play and Android Auto capabilities. They immediately turn any old car into a modern interface that can be used for convenient navigation and media playing (music, podcasts, audiobooks, etc.), arguably while reducing distractions on the road and improving your safety.</p>
+<p>Although my head unit supports wireless Car Play/Android Auto, I elect to use a wired connection for Android Auto because it also conveniently charges my phone at the same time and I&rsquo;ve noticed the connection is more reliable. However, this also has the added benefit of granting fewer permissions to the app. In my setup, the app is offline and can only connect to BlueTooth, access the Phone for calls, and receive Notifications from those apps whitelisted for Android Auto. Some apps may not show up in your launcher because they come from an <a href="https://www.groovypost.com/howto/android-allow-install-apps-unknown-sources/">untrusted source</a>, meaning anything not installed via the Play Store. To fix this, simply <a href="https://9to5google.com/2023/01/25/how-to-enable-developer-mode-in-android-auto-and-why-you-might-want-to/">enable developer options</a>, go to &ldquo;Developer settings&rdquo; in the drop-down menu, then select &ldquo;Unknown sources&rdquo; at the bottom. From there, go back to Android Auto and click on &ldquo;Customize launcher&rdquo; to select whatever apps you want to be visible from your head unit.</p>
+<p>I recommend using a navigation app that supports downloadable offline maps. I encourage you to consider FOSS solutions based on OpenStreetMap like <a href="https://organicmaps.app/">Organic Maps</a> and <a href="https://www.osmand.net/">OsmAnd</a>. But I get it, and sometimes these solutions just don&rsquo;t cut it, in which case Google Maps with offline maps and no network permissions is a very effective solution and a happy-medium.</p>
+<h3 id="android-auto-on-grapheneos">Android Auto on GrapheneOS<a hidden class="anchor" aria-hidden="true" href="#android-auto-on-grapheneos">¶</a></h3>
+<p>For context, I am using <a href="https://grapheneos.org/">GrapheneOS</a>, which recently <a href="https://grapheneos.org/usage#android-auto">added support for Android Auto</a> in early 2024. This allows for Android Auto to be installed through Graphene&rsquo;s revolutionary <a href="https://grapheneos.org/usage#sandboxed-google-play">sandboxed Google Play</a>, which allows for Google Play (and subsequently Google Play Services) to be installed like any ordinary app without granting it &ldquo;highly priviliged access&rdquo; that it would normally require otherwise (and without needing to sign into a Google account).</p>
+<figure>
+    <img loading="lazy" src="/images/android-auto-preview.jpeg"/> 
+</figure>
+
+<p>As with the majority of my experiences using Graphene, Android Auto mostly works. I use &ldquo;mostly&rdquo; deliberately here, as the core experience and features that you would expect are functional and require minimal troubleshooting. However, small nice-to-have&rsquo;s like voice controls and text-to-speech to play messages do not work. Also, navigation apps need to be installed via the Play Store (ahem, <a href="https://aurorastore.org/">Aurora Store</a>) in order to be recognized. FOSS navigation alternatives like <a href="https://organicmaps.app/">Organic Maps</a> or <a href="https://osmand.net/">OsmAnd</a> supposedly work, but I have not tested them just yet.</p>
+<figure>
+    <img loading="lazy" src="/images/android-auto-media.jpeg"/> 
+</figure>
+
+<h2 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">¶</a></h2>
+<p>If you already have a newer vehicle equipped with a system collecting (and possibly sharing) data - get informed. Learn about what kinds of data your car is collecting and what you can do about it by visiting the privacy center for your manufacturer. There is usually a page hidden somewhere in Settings that will direct you to where you can learn more.</p>
+<p>Aftermarket head units, especially equipped with Android, are still viable and powerful options that may sacrifice some conveniences with the benefit of increased control, transparency, and peace of mind when you turn on your vehicle.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/traveling-privately/">
+    <span class="title">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left" style="user-select: text;"><line x1="19" y1="12" x2="5" y2="12" style="user-select: text;"></line><polyline points="12 19 5 12 12 5" style="user-select: text;"></polyline></svg>&nbsp;Prev Page</span>
+    <br>
+    <span>Traveling with privacy and security in mind</span>
+  </a>
+  <a class="next" href="http://localhost:1313/posts/federal-privacy-law/">
+    <span class="title">Next Page&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right" style="user-select: text;"><line x1="5" y1="12" x2="19" y2="12" style="user-select: text;"></line><polyline points="12 5 19 12 12 19" style="user-select: text;"></polyline></svg>
+    </span>
+    <br>
+    <span>Federal privacy: ready, or not?</span>
+  </a>
+</nav>
+
+  </footer>
+    <div class="comments-separator"></div>
+</article>
+    </main>
+    
+<footer class="footer">
+  <span>&copy; 2024 <a href="http://localhost:1313/">Corey Stone</a></span><span style="display: inline-block; margin-left: 1em;">
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>
+  </span>
+  <span style="display: inline-block; margin-left: 1em;">
+    Powered by
+    <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+    <a href="https://github.com/reorx/hugo-PaperModX/" rel="noopener" target="_blank">PaperModX</a>
+  </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+    <path d="M12 6H0l6-6z" />
+  </svg>
+</a>
+
+<script>
+  (function() {
+     
+    const disableThemeToggle = '' == '1';
+    if (disableThemeToggle) {
+      return;
+    }
+
+    let button = document.getElementById("theme-toggle")
+    
+    button.removeEventListener('click', toggleThemeListener)
+    
+    button.addEventListener('click', toggleThemeListener)
+  })();
+</script>
+
+<script>
+  (function () {
+    let menu = document.getElementById('menu')
+    if (menu) {
+      menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+      menu.onscroll = function () {
+        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+      }
+    }
+
+    const disableSmoothScroll = '' == '1';
+    const enableInstantClick = '' == '1';
+    
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || disableSmoothScroll || enableInstantClick) {
+      return;
+    }
+    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        var id = this.getAttribute("href").substr(1);
+        document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+          behavior: "smooth"
+        });
+        if (id === "top") {
+          history.replaceState(null, null, " ");
+        } else {
+          history.pushState(null, null, `#${id}`);
+        }
+      });
+    });
+  })();
+</script>
+<script>
+  var mybutton = document.getElementById("top-link");
+  window.onscroll = function () {
+    if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+      mybutton.style.visibility = "visible";
+      mybutton.style.opacity = "1";
+    } else {
+      mybutton.style.visibility = "hidden";
+      mybutton.style.opacity = "0";
+    }
+  };
+</script>
+<script>
+  if (window.scrollListeners) {
+    
+    for (const listener of scrollListeners) {
+      window.removeEventListener('scroll', listener)
+    }
+  }
+  window.scrollListeners = []
+</script>
+
+
+
+<script src="/js/medium-zoom.min.js" data-no-instant
+></script>
+<script>
+  document.querySelectorAll('pre > code').forEach((codeblock) => {
+    const container = codeblock.parentNode.parentNode;
+
+    const copybutton = document.createElement('button');
+    copybutton.classList.add('copy-code');
+    copybutton.innerText = 'copy';
+
+    function copyingDone() {
+      copybutton.innerText = 'copied!';
+      setTimeout(() => {
+        copybutton.innerText = 'copy';
+      }, 2000);
+    }
+
+    copybutton.addEventListener('click', (cb) => {
+      if ('clipboard' in navigator) {
+        navigator.clipboard.writeText(codeblock.textContent);
+        copyingDone();
+        return;
+      }
+
+      const range = document.createRange();
+      range.selectNodeContents(codeblock);
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      try {
+        document.execCommand('copy');
+        copyingDone();
+      } catch (e) { };
+      selection.removeRange(range);
+    });
+
+    if (container.classList.contains("highlight")) {
+      container.appendChild(copybutton);
+    } else if (container.parentNode.firstChild == container) {
+      
+    } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+      
+      codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+    } else {
+      
+      codeblock.parentNode.appendChild(copybutton);
+    }
+  });
+</script>
+
+
+
+
+<script>
+  
+  
+  (function() {
+    const enableTocScroll = '1' == '1'
+    if (!enableTocScroll) {
+      return
+    }
+    if (!document.querySelector('.toc')) {
+      console.log('no toc found, ignore toc scroll')
+      return
+    }
+    
+
+    
+    const scrollListeners = window.scrollListeners
+    const headings = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id]');
+    const activeClass = 'active';
+
+    
+    let activeHeading = headings[0];
+    getLinkByHeading(activeHeading).classList.add(activeClass);
+
+    const onScroll = () => {
+      const passedHeadings = [];
+      for (const h of headings) {
+        
+        if (getOffsetTop(h) < 5) {
+          passedHeadings.push(h)
+        } else {
+          break;
+        }
+      }
+      if (passedHeadings.length > 0) {
+        newActiveHeading = passedHeadings[passedHeadings.length - 1];
+      } else {
+        newActiveHeading = headings[0];
+      }
+      if (activeHeading != newActiveHeading) {
+        getLinkByHeading(activeHeading).classList.remove(activeClass);
+        activeHeading = newActiveHeading;
+        getLinkByHeading(activeHeading).classList.add(activeClass);
+      }
+    }
+
+    let timer = null;
+    const scrollListener = () => {
+      if (timer !== null) {
+        clearTimeout(timer)
+      }
+      timer = setTimeout(onScroll, 50)
+    }
+    window.addEventListener('scroll', scrollListener, false);
+    scrollListeners.push(scrollListener)
+
+    function getLinkByHeading(heading) {
+      const id = encodeURI(heading.getAttribute('id')).toLowerCase();
+      return document.querySelector(`.toc ul li a[href="#${id}"]`);
+    }
+
+    function getOffsetTop(heading) {
+      if (!heading.getClientRects().length) {
+        return 0;
+      }
+      let rect = heading.getBoundingClientRect();
+      return rect.top
+    }
+  })();
+  </script>
+
+</body>
+
+</html>
