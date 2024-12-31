@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>A privacy engineering glossary | Corey Stone</title>
+<meta name="keywords" content="PrivacyEngineering">
+<meta name="description" content="Defining and exploring privacy computation concepts and technologies.">
+<meta name="author" content="Me">
+<link rel="canonical" href="http://localhost:1313/posts/privacy-engineering-glossary/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.cd0c10bc3cbe679e2e41b40a4edfe5a6f5e2a27e696a2b7f0aa7e1b9874ad556.css" integrity="sha256-zQwQvDy&#43;Z54uQbQKTt/lpvXion5pait/CqfhuYdK1VY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/privacy-engineering-glossary/">
+
+<meta name="twitter:title" content="A privacy engineering glossary | Corey Stone" />
+<meta name="twitter:description" content="Defining and exploring privacy computation concepts and technologies." />
+<meta property="og:title" content="A privacy engineering glossary | Corey Stone" />
+<meta property="og:description" content="Defining and exploring privacy computation concepts and technologies." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/privacy-engineering-glossary/" />
+<meta property="article:section" content="posts" />
+  <meta property="article:published_time" content="2024-12-31T00:00:00&#43;00:00" />
+  <meta property="article:modified_time" content="2024-12-31T00:00:00&#43;00:00" />
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "http://localhost:1313/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "A privacy engineering glossary",
+      "item": "http://localhost:1313/posts/privacy-engineering-glossary/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "A privacy engineering glossary | Corey Stone",
+  "name": "A privacy engineering glossary",
+  "description": "Defining and exploring privacy computation concepts and technologies.",
+  "keywords": [
+    "PrivacyEngineering"
+  ],
+  "wordCount" : "2270",
+  "inLanguage": "en",
+  "datePublished": "2024-12-31T00:00:00Z",
+  "dateModified": "2024-12-31T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Me"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/posts/privacy-engineering-glossary/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Corey Stone",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/favicon.ico"
+    }
+  }
+}
+</script>
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary-bg: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list-page {
+                background: var(--theme);
+            }
+
+            .list-page:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list-page:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+
+</head>
+
+<body class=" type-posts kind-page layout-" id="top"><script data-no-instant>
+function switchTheme(theme) {
+  switch (theme) {
+    case 'light':
+      document.body.classList.remove('dark');
+      break;
+    case 'dark':
+      document.body.classList.add('dark');
+      break;
+    
+    default:
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+      }
+  }
+}
+
+function isDarkTheme() {
+  return document.body.className.includes("dark");
+}
+
+function getPrefTheme() {
+  return localStorage.getItem("pref-theme");
+}
+
+function setPrefTheme(theme) {
+  switchTheme(theme)
+  localStorage.setItem("pref-theme", theme);
+}
+
+const toggleThemeCallbacks = {}
+toggleThemeCallbacks['main'] = (isDark) => {
+  
+  if (isDark) {
+    setPrefTheme('light');
+  } else {
+    setPrefTheme('dark');
+  }
+}
+
+
+
+
+window.addEventListener('toggle-theme', function() {
+  
+  const isDark = isDarkTheme()
+  for (const key in toggleThemeCallbacks) {
+    toggleThemeCallbacks[key](isDark)
+  }
+});
+
+
+function toggleThemeListener() {
+  
+  window.dispatchEvent(new CustomEvent('toggle-theme'));
+}
+
+</script>
+<script>
+  
+  (function() {
+    const defaultTheme = 'auto';
+    const prefTheme = getPrefTheme();
+    const theme = prefTheme ? prefTheme : defaultTheme;
+
+    switchTheme(theme);
+  })();
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Corey Stone (Alt + H)">Corey Stone</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/about/" title="About Me"
+                >About Me
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Blog" class="active"
+                >Blog
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/projects/" title="Projects"
+                >Projects
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main post">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div><h1 class="post-title">A privacy engineering glossary</h1>
+    <div class="post-description">Defining and exploring privacy computation concepts and technologies.</div>
+    <div class="post-meta"><span class="meta-item">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar" style="user-select: text;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" style="user-select: text;"></rect><line x1="16" y1="2" x2="16" y2="6" style="user-select: text;"></line><line x1="8" y1="2" x2="8" y2="6" style="user-select: text;"></line><line x1="3" y1="10" x2="21" y2="10" style="user-select: text;"></line></svg>
+  <span>December 31, 2024</span></span><span class="meta-item">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon" style="user-select: text;"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" style="user-select: text;"></path><line x1="7" y1="7" x2="7" y2="7" style="user-select: text;"></line></svg>
+  <span class="post-tags"><a href="http://localhost:1313/tags/privacyengineering/">PrivacyEngineering</a></span></span><span class="meta-item">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 15"></polyline></svg>
+  <span>11 min</span></span>
+
+      
+      
+    </div>
+  </header> <div class="toc side right">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#a" aria-label="A">A</a><ul>
+                        <ul>
+                        
+                <li>
+                    <a href="#aggregation" aria-label="Aggregation"><code>Aggregation</code></a></li>
+                <li>
+                    <a href="#algorithmic-fairness" aria-label="Algorithmic fairness"><code>Algorithmic fairness</code></a></li>
+                <li>
+                    <a href="#anonymization" aria-label="Anonymization"><code>Anonymization</code></a></li>
+                <li>
+                    <a href="#authorization-authz" aria-label="Authorization (AuthZ)"><code>Authorization (AuthZ)</code></a></li>
+                <li>
+                    <a href="#authenticaton-authn" aria-label="Authenticaton (AuthN)"><code>Authenticaton (AuthN)</code></a></li>
+                <li>
+                    <a href="#availability" aria-label="Availability"><code>Availability</code></a></li></ul>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#b" aria-label="B">B</a><ul>
+                        <ul>
+                        
+                <li>
+                    <a href="#background-knowledge-attack" aria-label="Background knowledge attack"><code>Background knowledge attack</code></a></li></ul>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#c" aria-label="C">C</a><ul>
+                        <ul>
+                        
+                <li>
+                    <a href="#cia-triad" aria-label="CIA triad"><code>CIA triad</code></a></li>
+                <li>
+                    <a href="#confidentiality" aria-label="Confidentiality"><code>Confidentiality</code></a></li>
+                <li>
+                    <a href="#consent-management-platform-cmp" aria-label="Consent management platform (CMP)"><code>Consent management platform (CMP)</code></a></li></ul>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#d" aria-label="D">D</a><ul>
+                        <ul>
+                        
+                <li>
+                    <a href="#data-classification" aria-label="Data classification"><code>Data classification</code></a></li>
+                <li>
+                    <a href="#data-lineage" aria-label="Data lineage"><code>Data lineage</code></a></li>
+                <li>
+                    <a href="#data-minimization" aria-label="Data minimization"><code>Data minimization</code></a></li>
+                <li>
+                    <a href="#data-provenance" aria-label="Data provenance"><code>Data provenance</code></a></li>
+                <li>
+                    <a href="#data-quality" aria-label="Data quality"><code>Data quality</code></a></li>
+                <li>
+                    <a href="#data-tagging" aria-label="Data tagging"><code>Data tagging</code></a></li>
+                <li>
+                    <a href="#de-identification" aria-label="De-identification"><code>De-identification</code></a></li>
+                <li>
+                    <a href="#delta-%ce%b4-presence" aria-label="Delta (δ) presence"><code>Delta (δ) presence</code></a></li>
+                <li>
+                    <a href="#deterministic-algorithm" aria-label="Deterministic algorithm"><code>Deterministic algorithm</code></a></li>
+                <li>
+                    <a href="#differential-privacy" aria-label="Differential privacy"><code>Differential privacy</code></a></li>
+                <li>
+                    <a href="#downcoding-attack" aria-label="Downcoding attack"><code>Downcoding attack</code></a></li></ul>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#f" aria-label="F">F</a><ul>
+                        <ul>
+                        
+                <li>
+                    <a href="#federated-learning" aria-label="Federated learning"><code>Federated learning</code></a></li></ul>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#h" aria-label="H">H</a><ul>
+                        <ul>
+                        
+                <li>
+                    <a href="#homogeneity-attack" aria-label="Homogeneity attack"><code>Homogeneity attack</code></a></li>
+                <li>
+                    <a href="#homomorphic-encryption" aria-label="Homomorphic encryption"><code>Homomorphic encryption</code></a></li></ul>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#i" aria-label="I">I</a><ul>
+                        <ul>
+                        
+                <li>
+                    <a href="#insecure-direct-object-reference-idor" aria-label="Insecure direct object reference (IDOR)"><code>Insecure direct object reference (IDOR)</code></a></li>
+                <li>
+                    <a href="#integrity" aria-label="Integrity"><code>Integrity</code></a></li></ul>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#k" aria-label="K">K</a><ul>
+                        <ul>
+                        
+                <li>
+                    <a href="#k-anonymity" aria-label="K-anonymity"><code>K-anonymity</code></a></li>
+                <li>
+                    <a href="#k-map" aria-label="K-map"><code>K-map</code></a></li></ul>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#l" aria-label="L">L</a><ul>
+                        <ul>
+                        
+                <li>
+                    <a href="#%e2%84%93-diversity" aria-label="ℓ-diversity"><code>ℓ-diversity</code></a></li></ul>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#n" aria-label="N">N</a><ul>
+                        <ul>
+                        
+                <li>
+                    <a href="#non-deterministic-algorithm" aria-label="Non-deterministic algorithm"><code>Non-deterministic algorithm</code></a></li></ul>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#p" aria-label="P">P</a><ul>
+                        <ul>
+                        
+                <li>
+                    <a href="#privacy-by-design" aria-label="Privacy by design"><code>Privacy by design</code></a></li>
+                <li>
+                    <a href="#privacy-enhancing-technology-pet" aria-label="Privacy-enhancing technology (PET)"><code>Privacy-enhancing technology (PET)</code></a></li>
+                <li>
+                    <a href="#private-set-intersection-psi" aria-label="Private set intersection (PSI)"><code>Private set intersection (PSI)</code></a></li>
+                <li>
+                    <a href="#pseudonymization-tokenization" aria-label="Pseudonymization (tokenization)"><code>Pseudonymization (tokenization)</code></a></li></ul>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#r" aria-label="R">R</a><ul>
+                        <ul>
+                        
+                <li>
+                    <a href="#re-identification" aria-label="Re-identification"><code>Re-identification</code></a></li></ul>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#s" aria-label="S">S</a><ul>
+                        <ul>
+                        
+                <li>
+                    <a href="#secure-multi-party-computation-smpc" aria-label="Secure multi-party computation (S/MPC)"><code>Secure multi-party computation (S/MPC)</code></a></li>
+                <li>
+                    <a href="#scream-test" aria-label="Scream test"><code>Scream test</code></a></li>
+                <li>
+                    <a href="#software-development-lifecycle-sdlc" aria-label="Software development lifecycle (SDLC)"><code>Software development lifecycle (SDLC)</code></a></li>
+                <li>
+                    <a href="#structured-data" aria-label="Structured data"><code>Structured data</code></a></li>
+                <li>
+                    <a href="#static-code-analysis" aria-label="Static code analysis"><code>Static code analysis</code></a></li>
+                <li>
+                    <a href="#synthetic-data" aria-label="Synthetic data"><code>Synthetic data</code></a></li></ul>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#t" aria-label="T">T</a><ul>
+                        <ul>
+                        
+                <li>
+                    <a href="#threat-modeling" aria-label="Threat modeling"><code>Threat modeling</code></a></li>
+                <li>
+                    <a href="#trusted-execution-environment-tee" aria-label="Trusted execution environment (TEE)"><code>Trusted execution environment (TEE)</code></a></li></ul>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#u" aria-label="U">U</a><ul>
+                        <ul>
+                        
+                <li>
+                    <a href="#unstructured-data" aria-label="Unstructured data"><code>Unstructured data</code></a></li></ul>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#z" aria-label="Z">Z</a><ul>
+                        <ul>
+                        
+                <li>
+                    <a href="#zero-knowledge-proof" aria-label="Zero knowledge proof"><code>Zero knowledge proof</code></a></li>
+                <li>
+                    <a href="#zk-snark" aria-label="zk-SNARK"><code>zk-SNARK</code></a>
+                </li>
+            </ul>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h2 id="a">A<a hidden class="anchor" aria-hidden="true" href="#a">¶</a></h2>
+<h4 id="aggregation"><code>Aggregation</code><a hidden class="anchor" aria-hidden="true" href="#aggregation">¶</a></h4>
+<p>A statistical method to combine a collection of raw data and output it as a total or summary of that data.
+Useful for analytics and research. Offers a modicum of privacy protection, but still susceptible to re-identification attacks.</p>
+<ul>
+<li>Read more: <a href="https://coefficient.io/data-aggregation">What Is Data Aggregation?</a></li>
+<li>Related: <a href="#re-identification"><em>Re-identification</em></a></li>
+</ul>
+<h4 id="algorithmic-fairness"><code>Algorithmic fairness</code><a hidden class="anchor" aria-hidden="true" href="#algorithmic-fairness">¶</a></h4>
+<p>The notion that algorithms should make decisions without &ldquo;bias&rdquo;, ensuring equitable treatment across different demographic groups in a dataset.</p>
+<ul>
+<li>Read more: <a href="https://towardsdatascience.com/what-is-algorithm-fairness-3182e161cf9f">What is Algorithm Fairness?</a></li>
+</ul>
+<h4 id="anonymization"><code>Anonymization</code><a hidden class="anchor" aria-hidden="true" href="#anonymization">¶</a></h4>
+<p>The &ldquo;process by which personal data is altered in such a way that a data subject can no longer be identified directly or indirectly,
+either by the data controller alone or in collaboration with any other party&rdquo; (<a href="https://www.iso.org/standard/63553.html">ISO 25237:2017</a>).</p>
+<ul>
+<li>Data is erased or overwritten absolutely in an attempt to delink it from an individual.</li>
+<li>Related: <a href="#data-classification"><em>De-identification</em></a>, <a href="#pseudonymization-tokenization"><em>Pseudonymization</em></a></li>
+</ul>
+<h4 id="authorization-authz"><code>Authorization (AuthZ)</code><a hidden class="anchor" aria-hidden="true" href="#authorization-authz">¶</a></h4>
+<p>A set of permissions for an authenticated user.</p>
+<ul>
+<li>Mechanisms include: Role-based access control (RBAC), Policy-based access control (PBAC)</li>
+<li>Read more: <a href="https://www.cloudflare.com/learning/access-management/authn-vs-authz/">Authn vs. authz: How are they different?</a></li>
+<li>Related: <a href="#authenticaton-authn"><em>Authentication (AuthN)</em></a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/authn-vs-authz.png"/> 
+</figure>
+
+<em>via <a href="https://heimdalsecurity.com/blog/authentication-vs-authorization/">Heimdal Security</a></em></p>
+<h4 id="authenticaton-authn"><code>Authenticaton (AuthN)</code><a hidden class="anchor" aria-hidden="true" href="#authenticaton-authn">¶</a></h4>
+<p>Ensuring a person (or system) is who they claim they are by verifying their identity.</p>
+<ul>
+<li>Mechanisms include: Asymmetric/public-key cryptography (certificate exchange), username/password login, biometrics, et. al</li>
+<li>Related: <a href="#authorization-authz"><em>Authorization (AuthZ)</em></a></li>
+</ul>
+<h4 id="availability"><code>Availability</code><a hidden class="anchor" aria-hidden="true" href="#availability">¶</a></h4>
+<ul>
+<li>Data is readily served upon request without delay or downtime.</li>
+<li>Read more: <a href="https://www.fortinet.com/resources/cyberglossary/cia-triad">What is the CIA Triad and Why is it important?</a></li>
+<li>Related: <a href="#confidentiality"><em>Confidentiality</em></a>, <a href="#integrity"><em>Integrity</em></a>, <a href="#cia-triad"><em>CIA triad</em></a></li>
+</ul>
+<h2 id="b">B<a hidden class="anchor" aria-hidden="true" href="#b">¶</a></h2>
+<h4 id="background-knowledge-attack"><code>Background knowledge attack</code><a hidden class="anchor" aria-hidden="true" href="#background-knowledge-attack">¶</a></h4>
+<p>A type of attack against <a href="#k-anonymity">k-anonymity</a> where an adversary uses external information to infer sensitive data about individuals from anonymized datasets.</p>
+<ul>
+<li>Read more:
+<ul>
+<li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0167404822002681?via%3Dihub">Background knowledge attacks in privacy-preserving data publishing models</a></li>
+<li><a href="https://www.cs.rochester.edu/u/muthuv/ldiversity-TKDD.pdf">ℓ-Diversity: Privacy Beyond k-Anonymity</a></li>
+</ul>
+</li>
+<li>Related: <a href="#k-anonymity"><em>K-anonymity</em></a>, <a href="#re-identification"><em>Re-identification</em></a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/bg-knowledge-attack.png"/> 
+</figure>
+
+<em>via <a href="https://www.slideserve.com/paytah/l-diversity-privacy-beyond-k-anonymity">CS 295 Data privacy and confidentiality</a></em></p>
+<h2 id="c">C<a hidden class="anchor" aria-hidden="true" href="#c">¶</a></h2>
+<h4 id="cia-triad"><code>CIA triad</code><a hidden class="anchor" aria-hidden="true" href="#cia-triad">¶</a></h4>
+<p>Confidentiality, Integrity, Availability. An archetype of cybersecurity.</p>
+<ul>
+<li>Read more: <a href="https://www.fortinet.com/resources/cyberglossary/cia-triad">What is the CIA Triad and Why is it important?</a></li>
+<li>Related: <a href="#confidentiality"><em>Confidentiality</em></a>, <a href="#integrity"><em>Integrity</em></a>, <a href="#availability"><em>Availability</em></a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/cia-triad.png"/> 
+</figure>
+
+<em>via <a href="https://thingscouplesdo.com/what-is-cia-triad-and-how-does-it-work/">thingscoupledo.com</a></em></p>
+<h4 id="confidentiality"><code>Confidentiality</code><a hidden class="anchor" aria-hidden="true" href="#confidentiality">¶</a></h4>
+<p>Data is protected as to prevent any unauthorized access, &ldquo;whether intentional or accidental&rdquo;.</p>
+<ul>
+<li>Read more: <a href="https://www.fortinet.com/resources/cyberglossary/cia-triad">What is the CIA Triad and Why is it important?</a></li>
+<li>Related: <a href="#cia-triad"><em>CIA triad</em></a>, <a href="#integrity"><em>Integrity</em></a>, <a href="#availability"><em>Availability</em></a></li>
+</ul>
+<h4 id="consent-management-platform-cmp"><code>Consent management platform (CMP)</code><a hidden class="anchor" aria-hidden="true" href="#consent-management-platform-cmp">¶</a></h4>
+<p>A data governance tool to obtain, record, map, and manage user consent for data collection and processing in compliance with privacy regulations.</p>
+<ul>
+<li>Read more: <a href="https://securiti.ai/what-is-consent-management-platform-cmp/">What is Consent Management Platform (CMP) &amp; Why Do You Need It?</a></li>
+</ul>
+<h2 id="d">D<a hidden class="anchor" aria-hidden="true" href="#d">¶</a></h2>
+<h4 id="data-classification"><code>Data classification</code><a hidden class="anchor" aria-hidden="true" href="#data-classification">¶</a></h4>
+<p>A hierarchy or class system used to assign risk or sensitivity levels to data, where higher levels indicate higher risk or sensitivity (and potentially prescribe stricter controls). The most popular example is the <a href="https://en.wikipedia.org/wiki/Classified_information_in_the_United_States">US government&rsquo;s information classification system</a>, which includes &ldquo;Top Secret&rdquo; and &ldquo;Classified&rdquo;.</p>
+<ul>
+<li>Read more:
+<ul>
+<li><a href="https://www.history.com/news/top-secret-classification-documents">How Are US Government Documents Classified?</a></li>
+<li><a href="https://www.imperva.com/learn/data-security/data-classification/">Data Classification</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="data-lineage"><code>Data lineage</code><a hidden class="anchor" aria-hidden="true" href="#data-lineage">¶</a></h4>
+<p>A complete history of the lifecycle of a data point, from beginning to end. This includes all transformations, movement, and other operations performed on the data.</p>
+<blockquote>
+<p><a href="https://www.wordnik.com/words/lineage">Lineage (n)</a>: Descent in a line from a common progenitor</p>
+</blockquote>
+<ul>
+<li>Read more:
+<ul>
+<li><a href="https://www.graphable.ai/blog/what-is-data-lineage-data-provenance/">What is Data Lineage and Data Provenance? Quick Overview</a></li>
+<li><a href="https://www.xenonstack.com/blog/data-lineage-tools">Data Lineage tools and its Best Practice | Complete Guide</a></li>
+</ul>
+</li>
+<li>Related: <a href="#data-provenance"><em>Data provenance</em></a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/data-lineage.png"/> 
+</figure>
+
+<em>via <a href="https://www.xenonstack.com/blog/data-lineage-tools">xenonstack.com</a></em></p>
+<h4 id="data-minimization"><code>Data minimization</code><a hidden class="anchor" aria-hidden="true" href="#data-minimization">¶</a></h4>
+<p>The principle of limiting data collection to only what is necessary for a specific purpose, reducing privacy &ldquo;attack surface&rdquo;.</p>
+<ul>
+<li>Read more: <a href="https://iapp.org/news/a/data-minimization-an-increasingly-global-concept/">Data minimization: An increasingly global concept</a></li>
+</ul>
+<h4 id="data-provenance"><code>Data provenance</code><a hidden class="anchor" aria-hidden="true" href="#data-provenance">¶</a></h4>
+<p>A high-level overview of &ldquo;where the data comes from.&rdquo;</p>
+<blockquote>
+<p><a href="https://www.wordnik.com/words/provenance">Provenance (n)</a>: Place of origin; derivation.</p>
+</blockquote>
+<ul>
+<li>Read more:
+<ul>
+<li><a href="https://www.ibm.com/think/topics/data-provenance">What is Data Provenance?</a></li>
+<li><a href="https://www.graphable.ai/blog/what-is-data-lineage-data-provenance/">What is Data Lineage and Data Provenance? Quick Overview</a></li>
+</ul>
+</li>
+<li>Related: <a href="#data-lineage"><em>Data lineage</em></a></li>
+</ul>
+<h4 id="data-quality"><code>Data quality</code><a hidden class="anchor" aria-hidden="true" href="#data-quality">¶</a></h4>
+<p>The relative accuracy, completeness, reliability, and relevance of data which is important for compliance and relevant analytical efforts.
+It is important to avoid storing &ldquo;stale&rdquo; data.</p>
+<ul>
+<li>Read more: <a href="https://www.dataversity.net/understanding-data-quality/">Understanding Data Quality</a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/data-quality.png"/> 
+</figure>
+
+<em>via <a href="https://gaine.com/blog/mdm/data-quality-checks-your-key-to-reliable-and-accurate-information/">gaine.com</a></em></p>
+<h4 id="data-tagging"><code>Data tagging</code><a hidden class="anchor" aria-hidden="true" href="#data-tagging">¶</a></h4>
+<p>The process of labeling data with metadata to enhance its organization, retrieval, and compliance with privacy regulations.</p>
+<ul>
+<li>Distinct, machine-readable inputs used to filter data across systems</li>
+<li>Usually represented as or similar to a regular expression</li>
+<li>Read more: <a href="https://www.dataversity.net/data-tagging-what-you-need-to-know/">Data Tagging: What You Need to Know</a></li>
+</ul>
+<h4 id="de-identification"><code>De-identification</code><a hidden class="anchor" aria-hidden="true" href="#de-identification">¶</a></h4>
+<p>The general process of removing or altering personal information from a dataset to prevent the identification of individuals, while still allowing for useful data analysis.</p>
+<ul>
+<li>Read more: <a href="https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html">De-identification: A Primer</a></li>
+<li>Related: <a href="#anonymization"><em>Anonymization</em></a></li>
+</ul>
+<h4 id="delta-δ-presence"><code>Delta (δ) presence</code><a hidden class="anchor" aria-hidden="true" href="#delta-δ-presence">¶</a></h4>
+<p>A mathematical concept that refers to the ability to determine whether a specific individual is present in a dataset based on the changes in data over time.</p>
+<ul>
+<li>&ldquo;This is slightly different than re-identification risk in that the goal is not to find which exact record corresponds which individual, only to know whether an individual is part of the dataset.&rdquo;</li>
+<li>Read more: <a href="https://cloud.google.com/sensitive-data-protection/docs/concepts-risk-analysis#about-delta-presence">About δ-presence</a></li>
+</ul>
+<h4 id="deterministic-algorithm"><code>Deterministic algorithm</code><a hidden class="anchor" aria-hidden="true" href="#deterministic-algorithm">¶</a></h4>
+<p>An algorithm that &ldquo;always returns the same result given the same input parameters in the same state&rdquo; of a dataset.</p>
+<ul>
+<li>Read more:
+<ul>
+<li><a href="https://stackoverflow.com/questions/7946553/deterministic-function-in-mysql">Deterministic function in MySQL</a></li>
+<li><a href="https://www.tutorialspoint.com/difference-between-deterministic-and-non-deterministic-algorithms">Difference between Deterministic and Non-deterministic Algorithms</a></li>
+</ul>
+</li>
+<li>Related: <a href="#non-deterministic-algorithm"><em>Non-deterministic algorithm</em></a></li>
+</ul>
+<h4 id="differential-privacy"><code>Differential privacy</code><a hidden class="anchor" aria-hidden="true" href="#differential-privacy">¶</a></h4>
+<p>A privacy-preserving mathematical framework to maximize the accuracy of queries from statistical databases while minimizing the chances of identifying individual entries in the dataset by introducing <strong>noise</strong>.</p>
+<ul>
+<li>Read: <a href="https://blog.openmined.org/a-survey-of-differential-privacy-frameworks/">A Survey of Differential Privacy Frameworks</a></li>
+<li>Watch: <a href="https://www.youtube.com/watch?v=-JRURYTfBXQ">What is Differential Privacy?</a></li>
+<li>Related: <a href="#privacy-enhancing-technology-pet"><em>Privacy-enhancing technology (PET)</em></a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/differential-privacy-models.png"/> 
+</figure>
+
+<em>via <a href="https://blog.openmined.org/a-survey-of-differential-privacy-frameworks/">OpenMined</a></em></p>
+<h4 id="downcoding-attack"><code>Downcoding attack</code><a hidden class="anchor" aria-hidden="true" href="#downcoding-attack">¶</a></h4>
+<p>An attack against &ldquo;quasi-identifier-based deidentification techniques (QI-deidentification)[,] including k-anonymity, l-diversity, and t-closeness.&rdquo;</p>
+<ul>
+<li>Read more:
+<ul>
+<li><a href="https://techxplore.com/news/2022-10-kind-downcoding-flaws-anonymizing.html">New kind of attack called &lsquo;downcoding&rsquo; demonstrates flaws in anonymizing data</a></li>
+<li><a href="https://www.semanticscholar.org/paper/Attacks-on-Deidentification's-Defenses-Cohen/784de911b3cc582776a0dc26501a0e440ba11851">Attacks on Deidentificaton&rsquo;s Defenses</a></li>
+</ul>
+</li>
+<li>Watch: <a href="https://www.youtube.com/watch?v=lB516bLBO7s">USENIX Security &lsquo;22 - Attacks on Deidentification&rsquo;s Defenses</a></li>
+</ul>
+<h2 id="f">F<a hidden class="anchor" aria-hidden="true" href="#f">¶</a></h2>
+<h4 id="federated-learning"><code>Federated learning</code><a hidden class="anchor" aria-hidden="true" href="#federated-learning">¶</a></h4>
+<p>A decentralized machine learning approach that enables disparate data sources (nodes) to collaboratively train a central model,
+without having training data ever leave any data source or be sent to the central (federated) server.</p>
+<ul>
+<li>Read more:
+<ul>
+<li><a href="https://www.techopedia.com/definition/federated-learning">Federated Learning</a></li>
+<li><a href="https://blogs.nvidia.com/blog/what-is-federated-learning/">What Is Federated Learning?</a></li>
+<li><a href="https://research.google/blog/federated-learning-collaborative-machine-learning-without-centralized-training-data/">Federated Learning: Collaborative Machine Learning without Centralized Training Data</a></li>
+</ul>
+</li>
+<li>Related: <a href="#privacy-enhancing-technology-pet"><em>Privacy-enhancing technology (PET)</em></a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/federated-learning.png"/> 
+</figure>
+
+<em>via <a href="https://blogs.nvidia.com/blog/what-is-federated-learning/">NVIDIA</a></em></p>
+<h2 id="h">H<a hidden class="anchor" aria-hidden="true" href="#h">¶</a></h2>
+<h4 id="homogeneity-attack"><code>Homogeneity attack</code><a hidden class="anchor" aria-hidden="true" href="#homogeneity-attack">¶</a></h4>
+<p>An attack on a k-anonymous dataset where the  attacker exploits &ldquo;groups that leak information due to lack of diversity in the sensitive attribute.&rdquo; To address this,
+a sanitized table should be “diverse”, where &ldquo;all tuples that share the same values of their quasi-identifiers should have diverse values for their sensitive attributes.&rdquo;</p>
+<ul>
+<li>Read more: <a href="https://www.cs.rochester.edu/u/muthuv/ldiversity-TKDD.pdf">ℓ-Diversity: Privacy Beyond k-Anonymity</a></li>
+<li>Related: <a href="#k-anonymity"><em>K-anonymity</em></a>, <a href="#background-knowledge-attack"><em>Background knowledge attack</em></a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/homogeneity-attack.png"/> 
+</figure>
+
+<em>via <a href="https://www.slideserve.com/paytah/l-diversity-privacy-beyond-k-anonymity">CS 295 Data privacy and confidentiality</a></em></p>
+<h4 id="homomorphic-encryption"><code>Homomorphic encryption</code><a hidden class="anchor" aria-hidden="true" href="#homomorphic-encryption">¶</a></h4>
+<p>A &ldquo;method to encrypt data and perform operations on it&rdquo; without having to decrypt the data. Particular use cases include financial, health, and other environments with highly sensitive data.</p>
+<ul>
+<li>There are several <a href="https://digitalprivacy.ieee.org/publications/topics/types-of-homomorphic-encryption">types of homomorphic encryption</a></li>
+<li>A popular example is the asymetric algorithm <a href="https://www.splunk.com/en_us/blog/learn/rsa-algorithm-cryptography.html">RSA</a>, which is <em>partially homomorphic</em></li>
+<li>Read more:
+<ul>
+<li><a href="https://blog.openmined.org/what-is-homomorphic-encryption/">What is Homomorphic Encryption?</a></li>
+<li><a href="https://www.splunk.com/en_us/blog/learn/homomorphic-encryption.html">Homomorphic Encryption: How It Works</a></li>
+</ul>
+</li>
+<li>Related: <a href="#privacy-enhancing-technology-pet"><em>Privacy-enhancing technology (PET)</em></a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/homomorphic-encryption.png"/> 
+</figure>
+
+<em>via <a href="https://heimdalsecurity.com/blog/authentication-vs-authorization/">OpenMined</a></em></p>
+<h2 id="i">I<a hidden class="anchor" aria-hidden="true" href="#i">¶</a></h2>
+<h4 id="insecure-direct-object-reference-idor"><code>Insecure direct object reference (IDOR)</code><a hidden class="anchor" aria-hidden="true" href="#insecure-direct-object-reference-idor">¶</a></h4>
+<p>A &ldquo;vulnerability that arises when attackers can access or modify objects by manipulating identifiers used in a web application&rsquo;s URLs or parameters.&rdquo; Poor access controls fail to verify if a user is authorized to access data (such as that of another user).</p>
+<ul>
+<li>Read more: <a href="https://cheatsheetseries.owasp.org/cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html">Insecure Direct Object Reference Prevention Cheat Sheet</a></li>
+<li>Related: <a href="#cia-triad"><em>CIA triad</em></a>, <a href="#integrity"><em>Integrity</em></a>, <a href="#availability"><em>Availability</em></a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/idor.png"/> 
+</figure>
+
+<em>via <a href="https://medium.com/@Steiner254/insecure-direct-object-references-idor-16bf0b981b90">@Steiner254 on Medium</a></em></p>
+<h4 id="integrity"><code>Integrity</code><a hidden class="anchor" aria-hidden="true" href="#integrity">¶</a></h4>
+<p>Data is free from corruption, manipulation, or other unknown modifications. Data is &ldquo;authentic, accurate, and reliable&rdquo;.</p>
+<ul>
+<li>Read more: <a href="https://www.fortinet.com/resources/cyberglossary/cia-triad">What is the CIA Triad and Why is it important?</a></li>
+<li>Related: <a href="#availability"><em>Availability</em></a>, <a href="#cia-triad"><em>CIA triad</em></a>, <a href="#confidentiality"><em>Confidentiality</em></a></li>
+</ul>
+<h2 id="k">K<a hidden class="anchor" aria-hidden="true" href="#k">¶</a></h2>
+<h4 id="k-anonymity"><code>K-anonymity</code><a hidden class="anchor" aria-hidden="true" href="#k-anonymity">¶</a></h4>
+<p>&ldquo;A property of anonymized data&rdquo; with &ldquo;scientific guarantees that the individuals who are the subjects of the data cannot be re-identified while the data remain practically useful.&rdquo;</p>
+<ul>
+<li>Read more:
+<ul>
+<li><a href="https://epic.org/wp-content/uploads/privacy/reidentification/Sweeney_Article.pdf?utm_source=Data+Protocol+Docs&amp;utm_medium=referral&amp;utm_campaign=Data+Sharing:+A+Guide+to+Anonymization&amp;utm_id=DP">k-Anonymity: A Model for Protecting Privacy</a></li>
+<li><a href="https://cloud.google.com/sensitive-data-protection/docs/concepts-risk-analysis#about-k-anonymity">About k-anonymity</a></li>
+<li><a href="https://docs.dataprotocol.com/guides/data-sharing-a-guide-to-anonymization">Data Sharing: A Guide to Anonymization</a></li>
+</ul>
+</li>
+<li>Related: <a href="#privacy-enhancing-technology-pet"><em>Privacy-enhancing technology (PET)</em></a></li>
+</ul>
+<h4 id="k-map"><code>K-map</code><a hidden class="anchor" aria-hidden="true" href="#k-map">¶</a></h4>
+<p>A similar approach to k-anonymity, &ldquo;except that it assumes that the attacker most likely doesn&rsquo;t know who is in the dataset.&rdquo;</p>
+<ul>
+<li>Read more:
+<ul>
+<li><a href="https://cloud.google.com/sensitive-data-protection/docs/compute-k-map">Computing k-map for a dataset</a></li>
+<li><a href="https://desfontain.es/blog/k-map.html">k-map, the weird cousin of k-anonymity</a></li>
+<li><a href="https://cloud.google.com/sensitive-data-protection/docs/concepts-risk-analysis#about-k-map">About k-map</a></li>
+</ul>
+</li>
+<li>Related: <a href="#privacy-enhancing-technology-pet"><em>Privacy-enhancing technology (PET)</em></a></li>
+</ul>
+<h2 id="l">L<a hidden class="anchor" aria-hidden="true" href="#l">¶</a></h2>
+<h4 id="ℓ-diversity"><code>ℓ-diversity</code><a hidden class="anchor" aria-hidden="true" href="#ℓ-diversity">¶</a></h4>
+<p>An attempt to address k-anonymity attacks (such as homogeneity and background knowledge attacks), which &ldquo;attempts to measure how much an attacker can learn about people in terms of k-anonymity and equivalence classes&rdquo;.</p>
+<ul>
+<li>Read more:
+<ul>
+<li><a href="https://cloud.google.com/sensitive-data-protection/docs/concepts-risk-analysis#about-l-diversity">About l-diversity</a></li>
+<li><a href="https://www.cs.cornell.edu/johannes/papers/2006/2006-icde-publishing.pdf?utm_source=Data+Protocol+Docs&amp;utm_medium=referral&amp;utm_campaign=Data+Sharing:+A+Guide+to+Anonymization&amp;utm_id=DP">ℓ-Diversity: Privacy Beyond k-Anonymity</a></li>
+</ul>
+</li>
+<li>Related: <a href="#privacy-enhancing-technology-pet"><em>Privacy-enhancing technology (PET)</em></a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/l-diversity.png"/> 
+</figure>
+
+<em>via <a href="https://www.researchgate.net/figure/An-illustration-of-l-Diversity-for-sensitive-attribute-values_fig3_266740295">Kato Mivule</a></em></p>
+<h2 id="n">N<a hidden class="anchor" aria-hidden="true" href="#n">¶</a></h2>
+<h4 id="non-deterministic-algorithm"><code>Non-deterministic algorithm</code><a hidden class="anchor" aria-hidden="true" href="#non-deterministic-algorithm">¶</a></h4>
+<p>An algorithm that &ldquo;does not necessarily always return the same result given the same input parameters in the same state&rdquo; of a dataset. <a href="https://stackoverflow.com/questions/7946553/deterministic-function-in-mysql">(Stack Overflow)</a></p>
+<ul>
+<li>Read more: <a href="https://www.tutorialspoint.com/difference-between-deterministic-and-non-deterministic-algorithms">Difference between Deterministic and Non-deterministic Algorithms</a></li>
+<li>Related: <a href="#deterministic-algorithm"><em>Deterministic algorithm</em></a></li>
+</ul>
+<h2 id="p">P<a hidden class="anchor" aria-hidden="true" href="#p">¶</a></h2>
+<h4 id="privacy-by-design"><code>Privacy by design</code><a hidden class="anchor" aria-hidden="true" href="#privacy-by-design">¶</a></h4>
+<p>A collection of data privacy principles proposed by Dr. Ann Cavoukian to take a &ldquo;proactive approach to privacy that emphasises the need to incorporate data protection practices into projects and decisions at the outset, rather than as an afterthought.&rdquo;</p>
+<ul>
+<li>Read more: <a href="https://privacy.ucsc.edu/resources/privacy-by-design---foundational-principles.pdf">Privacy by Design The 7 Foundational Principles</a></li>
+<li>Related: <a href="#software-development-lifecycle-sdlc"><em>Software development lifecycle</em></a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/pbd-infographic.png"/> 
+</figure>
+
+<em>via <a href="https://www.cookieyes.com/blog/privacy-by-design/">CookieYes</a></em></p>
+<h4 id="privacy-enhancing-technology-pet"><code>Privacy-enhancing technology (PET)</code><a hidden class="anchor" aria-hidden="true" href="#privacy-enhancing-technology-pet">¶</a></h4>
+<p>An assortment of tools that that enable businesses to comply with privacy regulations while preserving the individual privacy and utility of their data sets, for purposes such as analytics, development,  sharing, etc.</p>
+<ul>
+<li>Popular PETs: Homomorphic encryption, de-identification (k-anonymity), differential privacy, federated learning, secure multiparty computation, private set intersection, synthetic data, zero knowledge proofs, trusted execution environments</li>
+<li>Read more:
+<ul>
+<li><a href="https://www.syntho.ai/what-are-privacy-enhancing-technologies-pets/">What are Privacy-Enhancing Technologies (PETs)? Types &amp; Selection Guide</a></li>
+<li><a href="https://www.cpomagazine.com/data-privacy/what-are-privacy-enhancing-technologies-pets-and-how-you-can-choose-the-right-ones/">What Are Privacy-Enhancing Technologies (PETs) And How You Can Choose the Right One(s)</a></li>
+</ul>
+</li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/pets-infographic.png"/> 
+</figure>
+
+<em>via <a href="https://www.enveil.com/privacy-enhancing-technologies/">Enveil</a></em></p>
+<h4 id="private-set-intersection-psi"><code>Private set intersection (PSI)</code><a hidden class="anchor" aria-hidden="true" href="#private-set-intersection-psi">¶</a></h4>
+<p>Also called <strong>&ldquo;double encryption&rdquo;</strong>. A type of secure multiparty computation &ldquo;in which each party has a set of items and the goal is to learn the intersection of those sets while revealing nothing else about those sets.&rdquo;</p>
+<ul>
+<li>Read more: <a href="https://csrc.nist.gov/presentations/2021/stppa2-psi">A Brief Overview of Private Set Intersection</a></li>
+<li>Related: <a href="#privacy-enhancing-technology-pet"><em>Privacy-enhancing technology (PET)</em></a>, <a href="#secure-multi-party-computation-smpc"><em>Secure multi-party computation</em></a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/psi-diagram.png"/> 
+</figure>
+
+<em>via <a href="https://commons.wikimedia.org/wiki/File:Example_PSI_diagram_depicting_basic_security_requirements.png">Anonos</a></em></p>
+<h4 id="pseudonymization-tokenization"><code>Pseudonymization (tokenization)</code><a hidden class="anchor" aria-hidden="true" href="#pseudonymization-tokenization">¶</a></h4>
+<p>A form of de-identification where personal identifiers are replaced with placeholder values (or &ldquo;tokens&rdquo;). Unlike anonymization, pseudonymization does <em>not</em> alter the original data, which can still be linked to an individual, and pseudonymization is reversible.</p>
+<ul>
+<li>Read more:
+<ul>
+<li><a href="https://www.cloudflare.com/learning/privacy/what-is-pseudonymization/">What is pseudonymization?</a></li>
+<li><a href="https://cloud.google.com/sensitive-data-protection/docs/pseudonymization">Pseudonymization</a></li>
+</ul>
+</li>
+<li>Related: <a href="#privacy-enhancing-technology-pet"><em>Privacy-enhancing technology (PET)</em></a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/anon-vs-pseudon.png"/> 
+</figure>
+
+<em>via <a href="https://www.anonos.com/">Anonos</a></em></p>
+<h2 id="r">R<a hidden class="anchor" aria-hidden="true" href="#r">¶</a></h2>
+<h4 id="re-identification"><code>Re-identification</code><a hidden class="anchor" aria-hidden="true" href="#re-identification">¶</a></h4>
+<p>An attack to identify individuals in an &ldquo;anonymized&rdquo; dataset using external information and computing techniques to link individuals to their &ldquo;de-identified&rdquo; personal information.</p>
+<ul>
+<li>Read more:
+<ul>
+<li><a href="https://www.nature.com/articles/s41467-019-10933-3">Estimating the success of re-identifications in incomplete datasets using generative models</a></li>
+<li><a href="https://georgetownlawtechreview.org/wp-content/uploads/2017/04/Lubarsky-1-GEO.-L.-TECH.-REV.-202.pdf">Re-identification of &ldquo;anonymized data&rdquo;</a></li>
+<li><a href="https://pursuit.unimelb.edu.au/articles/the-simple-process-of-re-identifying-patients-in-public-health-records">The simple process of re-identifying patients in public health records</a></li>
+<li><a href="https://www.wired.com/2007/12/why-anonymous-data-sometimes-isnt/">Why &lsquo;Anonymous&rsquo; Data Sometimes Isn&rsquo;t</a></li>
+</ul>
+</li>
+<li>Related: <a href="#aggregation"><em>Aggregation</em></a></li>
+</ul>
+<h2 id="s">S<a hidden class="anchor" aria-hidden="true" href="#s">¶</a></h2>
+<h4 id="secure-multi-party-computation-smpc"><code>Secure multi-party computation (S/MPC)</code><a hidden class="anchor" aria-hidden="true" href="#secure-multi-party-computation-smpc">¶</a></h4>
+<p>Also known as <strong>&ldquo;privacy-preserving computation&rdquo;</strong>. [Any] &ldquo;cryptographic protocol that distributes a computation across multiple parties where no individual party can see the other parties’ data.&rdquo;</p>
+<ul>
+<li>Read more: <a href="https://inpher.io/technology/what-is-secure-multiparty-computation/">What is Secure Multiparty Computation</a></li>
+<li>Related: <a href="#privacy-enhancing-technology-pet"><em>Privacy-enhancing technology (PET)</em></a>, <a href="#private-set-intersection-psi"><em>Private set intersection (PSI)</em></a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/smpc.png"/> 
+</figure>
+
+<em>via <a href="https://inpher.io/technology/what-is-secure-multiparty-computation/">inpher.io</a></em></p>
+<h4 id="scream-test"><code>Scream test</code><a hidden class="anchor" aria-hidden="true" href="#scream-test">¶</a></h4>
+<ul>
+<li>A test to determine if access to a resource (like personal information, a server, etc.) is still necessary by shutting off access to the resource entirely; if nobody screams bloody murder, then they didn&rsquo;t really need that resource; this can be applied to enforce data minimization</li>
+<li>Read more: <a href="https://www.microsoft.com/insidetrack/blog/microsoft-uses-a-scream-test-to-silence-its-unused-servers/">Microsoft uses a scream test to silence its unused servers</a></li>
+</ul>
+<h4 id="software-development-lifecycle-sdlc"><code>Software development lifecycle (SDLC)</code><a hidden class="anchor" aria-hidden="true" href="#software-development-lifecycle-sdlc">¶</a></h4>
+<p>The process that an organization follows to design, develop, test, deploy, and maintain software.
+<a href="https://www.forbes.com/sites/garydrenik/2023/01/18/how-a-companys-philosophy-to-shift-left-is-making-headway-in-the-data-privacy-world/">&ldquo;Shifting privacy left&rdquo;</a> is the idea to engrain privacy into earlier into product ideation and requirements drafting in order to achieve
+<a href="https://cloudsecurityalliance.org/blog/2023/06/09/privacy-by-design-and-privacy-by-default-in-the-cloud">privacy by design</a>.</p>
+<ul>
+<li>Read more: <a href="https://www.privado.ai/post/integrating-privacy-practices-in-software-development-lifecycle-sdlc">Integrating Privacy Practices in Software Development Lifecycle</a></li>
+<li>Related: <a href="#privacy-by-design"><em>Privacy by design</em></a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/privacy-sdlc.jpg"/> 
+</figure>
+
+<em>via <a href="https://www.privado.ai/post/integrating-privacy-practices-in-software-development-lifecycle-sdlc">Privado</a></em></p>
+<h4 id="structured-data"><code>Structured data</code><a hidden class="anchor" aria-hidden="true" href="#structured-data">¶</a></h4>
+<ul>
+<li>Organized and machine-readable data that can be queried programatically, such as a relational (SQL) database</li>
+<li>Read more: <a href="https://www.ibm.com/blog/structured-vs-unstructured-data/">Structured vs. Unstructured Data: What’s the Difference?</a></li>
+<li>Related: <a href="#unstructured-data"><em>Unstructured data</em></a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/structured-vs-unstructured-data.png"/> 
+</figure>
+
+<em>via <a href="https://hevodata.com/learn/understanding-structured-data/">Hevo Data</a></em></p>
+<h4 id="static-code-analysis"><code>Static code analysis</code><a hidden class="anchor" aria-hidden="true" href="#static-code-analysis">¶</a></h4>
+<p>A process to scan the source code of a product to identify personal data to understand how and where it is collected and processed throughout systems.</p>
+<ul>
+<li>Read more:
+<ul>
+<li><a href="https://iapp.org/news/a/the-case-for-static-code-analysis-for-privacy?ref=marcusolsson.dev">The case for static code analysis for privacy</a></li>
+<li><a href="https://www.privado.ai/post/privacy-code-scanning-guide?ref=marcusolsson.dev">Privacy code scanning: How to sync privacy compliance with software development</a></li>
+</ul>
+</li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/privacy-code-scanning-infographic.png"/> 
+</figure>
+
+<em>via <a href="https://www.privado.ai/post/privacy-code-scanning-guide">Privado</a></em></p>
+<h4 id="synthetic-data"><code>Synthetic data</code><a hidden class="anchor" aria-hidden="true" href="#synthetic-data">¶</a></h4>
+<ul>
+<li>Data, generated by artificial intelligence, that mathematically imitates real-world personal data, which enables orgs to use &ldquo;privacy-compliant, production-like, and long-retention&rdquo; data for analytics</li>
+<li>Read more: <a href="https://aws.amazon.com/what-is/synthetic-data/">What is Synthetic Data?</a></li>
+<li>Watch: <a href="https://www.youtube.com/watch?v=X2c8KambXKg&amp;list=PLbRoZ5Rrl5ldxIsGMFjwixoLxQ1iMq_BH&amp;index=12">PEPR &lsquo;24 - Compute Engine Testing with Synthetic Data Generation</a></li>
+</ul>
+<h2 id="t">T<a hidden class="anchor" aria-hidden="true" href="#t">¶</a></h2>
+<h4 id="threat-modeling"><code>Threat modeling</code><a hidden class="anchor" aria-hidden="true" href="#threat-modeling">¶</a></h4>
+<p>A process (originally from cybersecurity) to identify and understand threats to a system and their mitigations. In the context of privacy, this relates to threats to personal information in a system and those data subjects.</p>
+<ul>
+<li>Read more: <a href="https://www.crowdstrike.com/en-us/cybersecurity-101/threat-intelligence/threat-model/">What is privacy threat modeling?</a></li>
+<li>Watch:
+<ul>
+<li><a href="https://www.youtube.com/watch?v=AB8re8inlPw">Privacy Threat Modeling: Learn all about it from two experts in the field!</a></li>
+<li><a href="https://www.youtube.com/watch?v=NEjPZrfK460">PEPR &lsquo;23 - How to Utilize Your Red Team for Privacy</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="trusted-execution-environment-tee"><code>Trusted execution environment (TEE)</code><a hidden class="anchor" aria-hidden="true" href="#trusted-execution-environment-tee">¶</a></h4>
+<p>A segregated safe zone within a CPU where only signed code within the environment can be loaded, and all code is &ldquo;processed in the clear but is only visible in encrypted form when anything outside tries to access it.&rdquo; This ensures that &ldquo;even if a system is compromised, the data within the TEE remains secure.&rdquo;</p>
+<ul>
+<li>Read more: <a href="https://confidentialcomputing.io/2024/03/13/basics-of-trusted-execution-environments-tees-the-heart-of-confidential-computing/">Basics of Trusted Execution Environments (TEEs): The Heart of Confidential Computing</a></li>
+<li>Watch: <a href="https://www.youtube.com/watch?v=MTM0SqHNJR4">ISCA'23 - Lightning Talks - Session1C - TEESec: Pre-Silicon Vulnerability Discovery for Trusted Exec</a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/tee-thumbnail.jpg"/> 
+</figure>
+
+<em>via <a href="https://www.youtube.com/watch?v=MTM0SqHNJR4">Moein Ghaniyoun</a></em></p>
+<h2 id="u">U<a hidden class="anchor" aria-hidden="true" href="#u">¶</a></h2>
+<h4 id="unstructured-data"><code>Unstructured data</code><a hidden class="anchor" aria-hidden="true" href="#unstructured-data">¶</a></h4>
+<ul>
+<li>Unorganized data that has no pre-defined structure or pattern that makes it difficult(but not impossible) to reliably process and analyze programatically. &ldquo;More than 80%&rdquo; of data on the internet is unstructured.</li>
+<li>Read more: <a href="https://www.ibm.com/blog/structured-vs-unstructured-data/">Structured vs. Unstructured Data: What’s the Difference?</a></li>
+<li>Related: <a href="#structured-data"><em>Structured data</em></a></li>
+</ul>
+<h2 id="z">Z<a hidden class="anchor" aria-hidden="true" href="#z">¶</a></h2>
+<h4 id="zero-knowledge-proof"><code>Zero knowledge proof</code><a hidden class="anchor" aria-hidden="true" href="#zero-knowledge-proof">¶</a></h4>
+<p>A &ldquo;cryptographic mechanism that allows anyone to prove the truth of a statement without having to share the information in a statement.&rdquo;</p>
+<ul>
+<li>Read more:
+<ul>
+<li><a href="https://www.wired.com/story/zero-knowledge-proofs/">Hacker Lexicon: What Are Zero-Knowledge Proofs?</a></li>
+<li><a href="https://oasisprotocol.org/blog/comparing-zkp-tee-privacy">4 Ways to Compare Trusted Execution Environments and Zero-Knowledge Proofs</a></li>
+</ul>
+</li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/tee-vs-zkp.png"/> 
+</figure>
+
+<em>via <a href="https://oasisprotocol.org/blog/comparing-zkp-tee-privacy">Oasis Protocol</a></em></p>
+<h4 id="zk-snark"><code>zk-SNARK</code><a hidden class="anchor" aria-hidden="true" href="#zk-snark">¶</a></h4>
+<ul>
+<li>Zero-Knowledge Succinct Non-Interactive Argument of Knowledge</li>
+<li>Allows a Prover &ldquo;[to create] a unique fingerprint for each proof [&hellip;] making it impossible to reverse-engineer the original statement. Essentially, these polynomial equations are solvable only by the Prover but verifiable by anyone. They&rsquo;re a puzzle to which only the Prover knows the answer, yet anyone can confirm the answer is correct without knowing what it is.&rdquo;</li>
+<li>Read more:
+<ul>
+<li><a href="https://aleo.org/post/what-is-a-zk-snark/">What is a zk-SNARK?</a></li>
+<li><a href="https://z.cash/learn/what-are-zk-snarks/">What are zk-SNARKs?</a></li>
+</ul>
+</li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/zksnark.webp"/> 
+</figure>
+
+<em>via <a href="https://aleo.org/post/what-is-a-zk-snark/">Aleo</a></em></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/traveling-privately/">
+    <span class="title">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left" style="user-select: text;"><line x1="19" y1="12" x2="5" y2="12" style="user-select: text;"></line><polyline points="12 19 5 12 12 5" style="user-select: text;"></polyline></svg>&nbsp;Prev Page</span>
+    <br>
+    <span>Traveling with privacy and security in mind</span>
+  </a>
+  <a class="next" href="http://localhost:1313/posts/privacy-career-resources/">
+    <span class="title">Next Page&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right" style="user-select: text;"><line x1="5" y1="12" x2="19" y2="12" style="user-select: text;"></line><polyline points="12 5 19 12 12 19" style="user-select: text;"></polyline></svg>
+    </span>
+    <br>
+    <span>Privacy career resources</span>
+  </a>
+</nav>
+
+  </footer>
+    <div class="comments-separator"></div>
+</article>
+    </main>
+    
+<footer class="footer">
+  <span>&copy; 2024 <a href="http://localhost:1313/">Corey Stone</a></span><span style="display: inline-block; margin-left: 1em;">
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>
+  </span>
+  <span style="display: inline-block; margin-left: 1em;">
+    Powered by
+    <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+    <a href="https://github.com/reorx/hugo-PaperModX/" rel="noopener" target="_blank">PaperModX</a>
+  </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+    <path d="M12 6H0l6-6z" />
+  </svg>
+</a>
+
+<script>
+  (function() {
+     
+    const disableThemeToggle = '' == '1';
+    if (disableThemeToggle) {
+      return;
+    }
+
+    let button = document.getElementById("theme-toggle")
+    
+    button.removeEventListener('click', toggleThemeListener)
+    
+    button.addEventListener('click', toggleThemeListener)
+  })();
+</script>
+
+<script>
+  (function () {
+    let menu = document.getElementById('menu')
+    if (menu) {
+      menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+      menu.onscroll = function () {
+        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+      }
+    }
+
+    const disableSmoothScroll = '' == '1';
+    const enableInstantClick = '' == '1';
+    
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || disableSmoothScroll || enableInstantClick) {
+      return;
+    }
+    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        var id = this.getAttribute("href").substr(1);
+        document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+          behavior: "smooth"
+        });
+        if (id === "top") {
+          history.replaceState(null, null, " ");
+        } else {
+          history.pushState(null, null, `#${id}`);
+        }
+      });
+    });
+  })();
+</script>
+<script>
+  var mybutton = document.getElementById("top-link");
+  window.onscroll = function () {
+    if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+      mybutton.style.visibility = "visible";
+      mybutton.style.opacity = "1";
+    } else {
+      mybutton.style.visibility = "hidden";
+      mybutton.style.opacity = "0";
+    }
+  };
+</script>
+<script>
+  if (window.scrollListeners) {
+    
+    for (const listener of scrollListeners) {
+      window.removeEventListener('scroll', listener)
+    }
+  }
+  window.scrollListeners = []
+</script>
+
+
+
+<script src="/js/medium-zoom.min.js" data-no-instant
+></script>
+<script>
+  document.querySelectorAll('pre > code').forEach((codeblock) => {
+    const container = codeblock.parentNode.parentNode;
+
+    const copybutton = document.createElement('button');
+    copybutton.classList.add('copy-code');
+    copybutton.innerText = 'copy';
+
+    function copyingDone() {
+      copybutton.innerText = 'copied!';
+      setTimeout(() => {
+        copybutton.innerText = 'copy';
+      }, 2000);
+    }
+
+    copybutton.addEventListener('click', (cb) => {
+      if ('clipboard' in navigator) {
+        navigator.clipboard.writeText(codeblock.textContent);
+        copyingDone();
+        return;
+      }
+
+      const range = document.createRange();
+      range.selectNodeContents(codeblock);
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      try {
+        document.execCommand('copy');
+        copyingDone();
+      } catch (e) { };
+      selection.removeRange(range);
+    });
+
+    if (container.classList.contains("highlight")) {
+      container.appendChild(copybutton);
+    } else if (container.parentNode.firstChild == container) {
+      
+    } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+      
+      codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+    } else {
+      
+      codeblock.parentNode.appendChild(copybutton);
+    }
+  });
+</script>
+
+
+
+
+<script>
+  
+  
+  (function() {
+    const enableTocScroll = '1' == '1'
+    if (!enableTocScroll) {
+      return
+    }
+    if (!document.querySelector('.toc')) {
+      console.log('no toc found, ignore toc scroll')
+      return
+    }
+    
+
+    
+    const scrollListeners = window.scrollListeners
+    const headings = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id]');
+    const activeClass = 'active';
+
+    
+    let activeHeading = headings[0];
+    getLinkByHeading(activeHeading).classList.add(activeClass);
+
+    const onScroll = () => {
+      const passedHeadings = [];
+      for (const h of headings) {
+        
+        if (getOffsetTop(h) < 5) {
+          passedHeadings.push(h)
+        } else {
+          break;
+        }
+      }
+      if (passedHeadings.length > 0) {
+        newActiveHeading = passedHeadings[passedHeadings.length - 1];
+      } else {
+        newActiveHeading = headings[0];
+      }
+      if (activeHeading != newActiveHeading) {
+        getLinkByHeading(activeHeading).classList.remove(activeClass);
+        activeHeading = newActiveHeading;
+        getLinkByHeading(activeHeading).classList.add(activeClass);
+      }
+    }
+
+    let timer = null;
+    const scrollListener = () => {
+      if (timer !== null) {
+        clearTimeout(timer)
+      }
+      timer = setTimeout(onScroll, 50)
+    }
+    window.addEventListener('scroll', scrollListener, false);
+    scrollListeners.push(scrollListener)
+
+    function getLinkByHeading(heading) {
+      const id = encodeURI(heading.getAttribute('id')).toLowerCase();
+      return document.querySelector(`.toc ul li a[href="#${id}"]`);
+    }
+
+    function getOffsetTop(heading) {
+      if (!heading.getClientRects().length) {
+        return 0;
+      }
+      let rect = heading.getBoundingClientRect();
+      return rect.top
+    }
+  })();
+  </script>
+
+</body>
+
+</html>

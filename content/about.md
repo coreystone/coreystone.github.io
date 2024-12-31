@@ -23,7 +23,7 @@ To see some of my work, check out my [**Projects**](https://coreyst.one/projects
 ### PGP key
 You can also reach me via my PGP public key.
 
-* Fingerprint: `EEB6 0CEF F02D 06E4 EBC6 6922 37D5 2354 C4bA 1DB9`
+* Fingerprint: `EEB6 0CEF F02D 06E4 EBC6 6922 37D5 2354 C4BA 1DB9`
 * Key block:
 ```
   -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -41,11 +41,16 @@ kqz/1u0z8LSyXtfKBg==
 -----END PGP PUBLIC KEY BLOCK-----
 ```
 
+## RSS feed
+Here is a feed of some of the sites and blogs I read to keep up to date with general privacy, security, and techology news.
+{{< gist coreystone 93e669c0d5e4666055329135989852b9 >}}
 
 
 ## About this site
-This site is **statically generated** at runtime via [Hugo](https://gohugo.io/), meaning what you see is exactly what you get. 
+Everything here serves me as an outlet to muse and to learn more about techology and privacy.
+
+This site is [**statically generated**](https://www.cloudflare.com/learning/performance/static-site-generator/) at runtime via [Hugo](https://gohugo.io/), meaning what you see is exactly what you get. 
 There are no cookies, no trackers, and no nonsense to worry about.
 
-This site also implements privacy-respecting [YouTube embeds](https://discourse.gohugo.io/t/embedding-youtube-in-a-privacy-friendly-way/35784/5), meaning you won't load any content
+This site also implements privacy-respecting [YouTube "embeds"](https://discourse.gohugo.io/t/embedding-youtube-in-a-privacy-friendly-way/35784/5), meaning you won't load any content
 from YouTube's servers until you decide to click on a video, as thumbnails and preview information are hosted by the site. Thanks to [Joost van Der Schee](https://discourse.gohugo.io/u/jhvanderschee/summary).

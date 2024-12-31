@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>PrivacyEngineering on Corey Stone</title>
+    <link>http://localhost:1313/tags/privacyengineering/</link>
+    <description>Recent content in PrivacyEngineering on Corey Stone</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 27 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/privacyengineering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A privacy engineering glossary</title>
+      <link>http://localhost:1313/posts/privacy-engineering-glossary/</link>
+      <pubDate>Sun, 03 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/privacy-engineering-glossary/</guid>
+      <description> </description>
+      <content:encoded><![CDATA[<h2 id="a">A</h2>
+<h4 id="aggregation"><code>Aggregation</code></h4>
+<p>A statistical method to combine a collection of raw data and output it as a total or summary of that data.
+Useful for analytics and research. Offers a modicum of privacy protection, but still susceptible to re-identification attacks.</p>
+<ul>
+<li>Read more: <a href="https://coefficient.io/data-aggregation">What Is Data Aggregation?</a></li>
+<li>Related: <a href="#re-identification"><em>Re-identification</em></a></li>
+</ul>
+<h4 id="algorithmic-fairness"><code>Algorithmic fairness</code></h4>
+<p>The notion that algorithms should make decisions without &ldquo;bias&rdquo;, ensuring equitable treatment across different demographic groups in a dataset.</p>
+<ul>
+<li>Read more: <a href="https://towardsdatascience.com/what-is-algorithm-fairness-3182e161cf9f">What is Algorithm Fairness?</a></li>
+</ul>
+<h4 id="anonymization"><code>Anonymization</code></h4>
+<p>The &ldquo;process by which personal data is altered in such a way that a data subject can no longer be identified directly or indirectly,
+either by the data controller alone or in collaboration with any other party&rdquo; (<a href="https://www.iso.org/standard/63553.html">ISO 25237:2017</a>).</p>
+<ul>
+<li>Data is erased or overwritten absolutely in an attempt to delink it from an individual.</li>
+<li>Related: <a href="#data-classification"><em>De-identification</em></a>, <a href="#pseudonymization-tokenization"><em>Pseudonymization</em></a></li>
+</ul>
+<h4 id="authorization-authz"><code>Authorization (AuthZ)</code></h4>
+<p>A set of permissions for an authenticated user.</p>
+<ul>
+<li>Mechanisms include: Role-based access control (RBAC), Policy-based access control (PBAC)</li>
+<li>Read more: <a href="https://www.cloudflare.com/learning/access-management/authn-vs-authz/">Authn vs. authz: How are they different?</a></li>
+<li>Related: <a href="#authenticaton-authn"><em>Authentication (AuthN)</em></a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/authn-vs-authz.png"/> 
+</figure>
+
+<em>via <a href="https://heimdalsecurity.com/blog/authentication-vs-authorization/">Heimdal Security</a></em></p>
+<h4 id="authenticaton-authn"><code>Authenticaton (AuthN)</code></h4>
+<p>Ensuring a person (or system) is who they claim they are by verifying their identity.</p>
+<ul>
+<li>Mechanisms include: Asymmetric/public-key cryptography (certificate exchange), username/password login, biometrics, et. al</li>
+<li>Related: <a href="#authorization-authz"><em>Authorization (AuthZ)</em></a></li>
+</ul>
+<h4 id="availability"><code>Availability</code></h4>
+<ul>
+<li>Data is readily served upon request without delay or downtime.</li>
+<li>Read more: <a href="https://www.fortinet.com/resources/cyberglossary/cia-triad">What is the CIA Triad and Why is it important?</a></li>
+<li>Related: <a href="#confidentiality"><em>Confidentiality</em></a>, <a href="#integrity"><em>Integrity</em></a>, <a href="#cia-triad"><em>CIA triad</em></a></li>
+</ul>
+<h2 id="b">B</h2>
+<h4 id="background-knowledge-attack"><code>Background knowledge attack</code></h4>
+<p>A type of attack against <a href="#k-anonymity">k-anonymity</a> where an adversary uses external information to infer sensitive data about individuals from anonymized datasets.</p>
+<ul>
+<li>Read more:
+<ul>
+<li><a href="https://www.researchgate.net/publication/220724905_Background_Knowledge_Attacks_in_Privacy">Background Knowledge Attacks in Privacy</a></li>
+<li><a href="https://www.cs.rochester.edu/u/muthuv/ldiversity-TKDD.pdf">ℓ-Diversity: Privacy Beyond k-Anonymity</a></li>
+</ul>
+</li>
+<li>Related: <a href="#k-anonymity"><em>K-anonymity</em></a>, <a href="#re-identification"><em>Re-identification</em></a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/bg-knowledge-attack.png"/> 
+</figure>
+
+<em>via <a href="https://www.slideserve.com/paytah/l-diversity-privacy-beyond-k-anonymity">CS 295 Data privacy and confidentiality</a></em></p>
+<h2 id="c">C</h2>
+<h4 id="cia-triad"><code>CIA triad</code></h4>
+<p>Confidentiality, Integrity, Availability. An archetype of cybersecurity.</p>
+<ul>
+<li>Read more: <a href="https://www.fortinet.com/resources/cyberglossary/cia-triad">What is the CIA Triad and Why is it important?</a></li>
+<li>Related: <a href="#confidentiality"><em>Confidentiality</em></a>, <a href="#integrity"><em>Integrity</em></a>, <a href="#availability"><em>Availability</em></a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/cia-triad.png"/> 
+</figure>
+
+<em>via <a href="https://thingscouplesdo.com/what-is-cia-triad-and-how-does-it-work/">thingscoupledo.com</a></em></p>
+<h4 id="confidentiality"><code>Confidentiality</code></h4>
+<p>Data is protected as to prevent any unauthorized access, &ldquo;whether intentional or accidental&rdquo;.</p>
+<ul>
+<li>Read more: <a href="https://www.fortinet.com/resources/cyberglossary/cia-triad">What is the CIA Triad and Why is it important?</a></li>
+<li>Related: <a href="#cia-triad"><em>CIA triad</em></a>, <a href="#integrity"><em>Integrity</em></a>, <a href="#availability"><em>Availability</em></a></li>
+</ul>
+<h4 id="consent-management-platform-cmp"><code>Consent management platform (CMP)</code></h4>
+<p>A data governance tool to obtain, record, map, and manage user consent for data collection and processing in compliance with privacy regulations.</p>
+<ul>
+<li>Read more: <a href="https://securiti.ai/what-is-consent-management-platform-cmp/">What is Consent Management Platform (CMP) &amp; Why Do You Need It?</a></li>
+</ul>
+<h2 id="d">D</h2>
+<h4 id="data-classification"><code>Data classification</code></h4>
+<p>A hierarchy or class system used to assign risk or sensitivity levels to data, where higher levels indicate higher risk or sensitivity (and potentially prescribe stricter controls). The most popular example is the <a href="https://en.wikipedia.org/wiki/Classified_information_in_the_United_States">US government&rsquo;s information classification system</a>, which includes &ldquo;Top Secret&rdquo; and &ldquo;Classified&rdquo;.</p>
+<ul>
+<li>Read more:
+<ul>
+<li><a href="https://www.history.com/news/top-secret-classification-documents">How Are US Government Documents Classified?</a></li>
+<li><a href="https://www.imperva.com/learn/data-security/data-classification/">Data Classification</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="data-lineage"><code>Data lineage</code></h4>
+<p>A complete history of the lifecycle of a data point, from beginning to end. This includes all transformations, movement, and other operations performed on the data.</p>
+<blockquote>
+<p><a href="https://www.wordnik.com/words/lineage">Lineage (n)</a>: Descent in a line from a common progenitor</p>
+</blockquote>
+<ul>
+<li>Read more:
+<ul>
+<li><a href="https://www.graphable.ai/blog/what-is-data-lineage-data-provenance/">What is Data Lineage and Data Provenance? Quick Overview</a></li>
+<li><a href="https://www.xenonstack.com/blog/data-lineage-tools">Data Lineage tools and its Best Practice | Complete Guide</a></li>
+</ul>
+</li>
+<li>Related: <a href="#data-provenance"><em>Data provenance</em></a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/data-lineage.png"/> 
+</figure>
+
+<em>via <a href="https://www.xenonstack.com/blog/data-lineage-tools">xenonstack.com</a></em></p>
+<h4 id="data-minimization"><code>Data minimization</code></h4>
+<p>The principle of limiting data collection to only what is necessary for a specific purpose, reducing privacy &ldquo;attack surface&rdquo;.</p>
+<ul>
+<li>Read more: <a href="https://iapp.org/news/a/data-minimization-an-increasingly-global-concept/">Data minimization: An increasingly global concept</a></li>
+</ul>
+<h4 id="data-provenance"><code>Data provenance</code></h4>
+<p>A high-level overview of &ldquo;where the data comes from.&rdquo;</p>
+<blockquote>
+<p><a href="https://www.wordnik.com/words/provenance">Provenance (n)</a>: Place of origin; derivation.</p>
+</blockquote>
+<ul>
+<li>Read more:
+<ul>
+<li><a href="https://www.ibm.com/think/topics/data-provenance">What is Data Provenance?</a></li>
+<li><a href="https://www.graphable.ai/blog/what-is-data-lineage-data-provenance/">What is Data Lineage and Data Provenance? Quick Overview</a></li>
+</ul>
+</li>
+<li>Related: <a href="#data-lineage"><em>Data lineage</em></a></li>
+</ul>
+<h4 id="data-quality"><code>Data quality</code></h4>
+<p>The relative accuracy, completeness, reliability, and relevance of data which is important for compliance and relevant analytical efforts.
+It is important to avoid storing &ldquo;stale&rdquo; data.</p>
+<ul>
+<li>Read more: <a href="https://www.dataversity.net/understanding-data-quality/">Understanding Data Quality</a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/data-quality.png"/> 
+</figure>
+
+<em>via <a href="https://gaine.com/blog/mdm/data-quality-checks-your-key-to-reliable-and-accurate-information/">gaine.com</a></em></p>
+<h4 id="data-tagging"><code>Data tagging</code></h4>
+<p>The process of labeling data with metadata to enhance its organization, retrieval, and compliance with privacy regulations.</p>
+<ul>
+<li>Distinct, machine-readable inputs used to filter data across systems</li>
+<li>Usually represented as or similar to a regular expression</li>
+<li>Read more: <a href="https://www.dataversity.net/data-tagging-what-you-need-to-know/">Data Tagging: What You Need to Know</a></li>
+</ul>
+<h4 id="de-identification"><code>De-identification</code></h4>
+<p>The general process of removing or altering personal information from a dataset to prevent the identification of individuals, while still allowing for useful data analysis.</p>
+<ul>
+<li>Read more: <a href="https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html">De-identification: A Primer</a></li>
+<li>Related: <a href="#anonymization"><em>Anonymization</em></a></li>
+</ul>
+<h4 id="delta-δ-presence"><code>Delta (δ) presence</code></h4>
+<p>A mathematical concept that refers to the ability to determine whether a specific individual is present in a dataset based on the changes in data over time.</p>
+<ul>
+<li>&ldquo;This is slightly different than re-identification risk in that the goal is not to find which exact record corresponds which individual, only to know whether an individual is part of the dataset.&rdquo;</li>
+<li>Read more: <a href="https://cloud.google.com/sensitive-data-protection/docs/concepts-risk-analysis#about-delta-presence">About δ-presence</a></li>
+</ul>
+<h4 id="deterministic-algorithm"><code>Deterministic algorithm</code></h4>
+<p>An algorithm that &ldquo;always returns the same result given the same input parameters in the same state&rdquo; of a dataset.</p>
+<ul>
+<li>Read more:
+<ul>
+<li><a href="https://stackoverflow.com/questions/7946553/deterministic-function-in-mysql">Deterministic function in MySQL</a></li>
+<li><a href="https://www.tutorialspoint.com/difference-between-deterministic-and-non-deterministic-algorithms">Difference between Deterministic and Non-deterministic Algorithms</a></li>
+</ul>
+</li>
+<li>Related: <a href="#non-deterministic-algorithm"><em>Non-deterministic algorithm</em></a></li>
+</ul>
+<h4 id="differential-privacy"><code>Differential privacy</code></h4>
+<p>A privacy-preserving mathematical framework to maximize the accuracy of queries from statistical databases while minimizing the chances of identifying individual entries in the dataset by introducing <strong>noise</strong>.</p>
+<ul>
+<li>Read: <a href="https://blog.openmined.org/a-survey-of-differential-privacy-frameworks/">A Survey of Differential Privacy Frameworks</a></li>
+<li>Watch: <a href="https://www.youtube.com/watch?v=-JRURYTfBXQ">What is Differential Privacy?</a></li>
+<li>Related: <a href="#privacy-enhancing-technology-pet"><em>Privacy-enhancing technology (PET)</em></a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/differential-privacy-models.png"/> 
+</figure>
+
+<em>via <a href="https://blog.openmined.org/a-survey-of-differential-privacy-frameworks/">OpenMined</a></em></p>
+<h4 id="downcoding-attack"><code>Downcoding attack</code></h4>
+<p>An attack against &ldquo;quasi-identifier-based deidentification techniques (QI-deidentification)[,] including k-anonymity, l-diversity, and t-closeness.&rdquo;</p>
+<ul>
+<li>Read more:
+<ul>
+<li><a href="https://techxplore.com/news/2022-10-kind-downcoding-flaws-anonymizing.html">New kind of attack called &lsquo;downcoding&rsquo; demonstrates flaws in anonymizing data</a></li>
+<li><a href="https://www.semanticscholar.org/paper/Attacks-on-Deidentification's-Defenses-Cohen/784de911b3cc582776a0dc26501a0e440ba11851">Attacks on Deidentificaton&rsquo;s Defenses</a></li>
+</ul>
+</li>
+<li>Watch: <a href="https://www.youtube.com/watch?v=lB516bLBO7s">USENIX Security &lsquo;22 - Attacks on Deidentification&rsquo;s Defenses</a></li>
+</ul>
+<h2 id="f">F</h2>
+<h4 id="federated-learning"><code>Federated learning</code></h4>
+<p>A decentralized machine learning approach that enables disparate data sources (nodes) to collaboratively train a central model,
+without having training data ever leave any data source or be sent to the central (federated) server.</p>
+<ul>
+<li>Read more:
+<ul>
+<li><a href="https://www.techopedia.com/definition/federated-learning">Federated Learning</a></li>
+<li><a href="https://blogs.nvidia.com/blog/what-is-federated-learning/">What Is Federated Learning?</a></li>
+<li><a href="https://research.google/blog/federated-learning-collaborative-machine-learning-without-centralized-training-data/">Federated Learning: Collaborative Machine Learning without Centralized Training Data</a></li>
+</ul>
+</li>
+<li>Related: <a href="#privacy-enhancing-technology-pet"><em>Privacy-enhancing technology (PET)</em></a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/federated-learning.png"/> 
+</figure>
+
+<em>via <a href="https://blogs.nvidia.com/blog/what-is-federated-learning/">NVIDIA</a></em></p>
+<h2 id="h">H</h2>
+<h4 id="homogeneity-attack"><code>Homogeneity attack</code></h4>
+<p>An attack on a k-anonymous dataset where the  attacker exploits &ldquo;groups that leak information due to lack of diversity in the sensitive attribute.&rdquo; To address this,
+a sanitized table should be “diverse”, where &ldquo;all tuples that share the same values of their quasi-identifiers should have diverse values for their sensitive attributes.&rdquo;</p>
+<ul>
+<li>Read more: <a href="https://www.cs.rochester.edu/u/muthuv/ldiversity-TKDD.pdf">ℓ-Diversity: Privacy Beyond k-Anonymity</a></li>
+<li>Related: <a href="#k-anonymity"><em>K-anonymity</em></a>, <a href="#background-knowledge-attack"><em>Background knowledge attack</em></a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/homogeneity-attack.png"/> 
+</figure>
+
+<em>via <a href="https://www.slideserve.com/paytah/l-diversity-privacy-beyond-k-anonymity">CS 295 Data privacy and confidentiality</a></em></p>
+<h4 id="homomorphic-encryption"><code>Homomorphic encryption</code></h4>
+<p>A &ldquo;method to encrypt data and perform operations on it&rdquo; without having to decrypt the data. Particular use cases include financial, health, and other environments with highly sensitive data.</p>
+<ul>
+<li>There are several <a href="https://digitalprivacy.ieee.org/publications/topics/types-of-homomorphic-encryption">types of homomorphic encryption</a></li>
+<li>A popular example is the asymetric algorithm <a href="https://www.splunk.com/en_us/blog/learn/rsa-algorithm-cryptography.html">RSA</a>, which is <em>partially homomorphic</em></li>
+<li>Read more:
+<ul>
+<li><a href="https://blog.openmined.org/what-is-homomorphic-encryption/">What is Homomorphic Encryption?</a></li>
+<li><a href="https://www.splunk.com/en_us/blog/learn/homomorphic-encryption.html">Homomorphic Encryption: How It Works</a></li>
+</ul>
+</li>
+<li>Related: <a href="#privacy-enhancing-technology-pet"><em>Privacy-enhancing technology (PET)</em></a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/homomorphic-encryption.png"/> 
+</figure>
+
+<em>via <a href="https://heimdalsecurity.com/blog/authentication-vs-authorization/">OpenMined</a></em></p>
+<h2 id="i">I</h2>
+<h4 id="insecure-direct-object-reference-idor"><code>Insecure direct object reference (IDOR)</code></h4>
+<p>A &ldquo;vulnerability that arises when attackers can access or modify objects by manipulating identifiers used in a web application&rsquo;s URLs or parameters.&rdquo; Poor access controls fail to verify if a user is authorized to access data (such as that of another user).</p>
+<ul>
+<li>Read more: <a href="https://cheatsheetseries.owasp.org/cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html">Insecure Direct Object Reference Prevention Cheat Sheet</a></li>
+<li>Related: <a href="#cia-triad"><em>CIA triad</em></a>, <a href="#integrity"><em>Integrity</em></a>, <a href="#availability"><em>Availability</em></a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/idor.png"/> 
+</figure>
+
+<em>via <a href="https://medium.com/@Steiner254/insecure-direct-object-references-idor-16bf0b981b90">@Steiner254 on Medium</a></em></p>
+<h4 id="integrity"><code>Integrity</code></h4>
+<p>Data is free from corruption, manipulation, or other unknown modifications. Data is &ldquo;authentic, accurate, and reliable&rdquo;.</p>
+<ul>
+<li>Read more: <a href="https://www.fortinet.com/resources/cyberglossary/cia-triad">What is the CIA Triad and Why is it important?</a></li>
+<li>Related: <a href="#availability"><em>Availability</em></a>, <a href="#cia-triad"><em>CIA triad</em></a>, <a href="#confidentiality"><em>Confidentiality</em></a></li>
+</ul>
+<h2 id="k">K</h2>
+<h4 id="k-anonymity"><code>K-anonymity</code></h4>
+<p>&ldquo;A property of anonymized data&rdquo; with &ldquo;scientific guarantees that the individuals who are the subjects of the data cannot be re-identified while the data remain practically useful.&rdquo;</p>
+<ul>
+<li>Read more:
+<ul>
+<li><a href="https://epic.org/wp-content/uploads/privacy/reidentification/Sweeney_Article.pdf?utm_source=Data+Protocol+Docs&amp;utm_medium=referral&amp;utm_campaign=Data+Sharing:+A+Guide+to+Anonymization&amp;utm_id=DP">k-Anonymity: A Model for Protecting Privacy</a></li>
+<li><a href="https://cloud.google.com/sensitive-data-protection/docs/concepts-risk-analysis#about-k-anonymity">About k-anonymity</a></li>
+<li><a href="https://docs.dataprotocol.com/guides/data-sharing-a-guide-to-anonymization">Data Sharing: A Guide to Anonymization</a></li>
+</ul>
+</li>
+<li>Related: <a href="#privacy-enhancing-technology-pet"><em>Privacy-enhancing technology (PET)</em></a></li>
+</ul>
+<h4 id="k-map"><code>K-map</code></h4>
+<p>A similar approach to k-anonymity, &ldquo;except that it assumes that the attacker most likely doesn&rsquo;t know who is in the dataset.&rdquo;</p>
+<ul>
+<li>Read more:
+<ul>
+<li><a href="https://cloud.google.com/sensitive-data-protection/docs/compute-k-map">Computing k-map for a dataset</a></li>
+<li><a href="https://desfontain.es/blog/k-map.html">k-map, the weird cousin of k-anonymity</a></li>
+<li><a href="https://cloud.google.com/sensitive-data-protection/docs/concepts-risk-analysis#about-k-map">About k-map</a></li>
+</ul>
+</li>
+<li>Related: <a href="#privacy-enhancing-technology-pet"><em>Privacy-enhancing technology (PET)</em></a></li>
+</ul>
+<h2 id="l">L</h2>
+<h4 id="ℓ-diversity"><code>ℓ-diversity</code></h4>
+<p>An attempt to address k-anonymity attacks (such as homogeneity and background knowledge attacks), which &ldquo;attempts to measure how much an attacker can learn about people in terms of k-anonymity and equivalence classes&rdquo;.</p>
+<ul>
+<li>Read more:
+<ul>
+<li><a href="https://cloud.google.com/sensitive-data-protection/docs/concepts-risk-analysis#about-l-diversity">About l-diversity</a></li>
+<li><a href="https://www.cs.cornell.edu/johannes/papers/2006/2006-icde-publishing.pdf?utm_source=Data+Protocol+Docs&amp;utm_medium=referral&amp;utm_campaign=Data+Sharing:+A+Guide+to+Anonymization&amp;utm_id=DP">ℓ-Diversity: Privacy Beyond k-Anonymity</a></li>
+</ul>
+</li>
+<li>Related: <a href="#privacy-enhancing-technology-pet"><em>Privacy-enhancing technology (PET)</em></a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/l-diversity.png"/> 
+</figure>
+
+<em>via <a href="https://www.researchgate.net/figure/An-illustration-of-l-Diversity-for-sensitive-attribute-values_fig3_266740295">Kato Mivule</a></em></p>
+<h2 id="n">N</h2>
+<h4 id="non-deterministic-algorithm"><code>Non-deterministic algorithm</code></h4>
+<p>An algorithm that &ldquo;does not necessarily always return the same result given the same input parameters in the same state&rdquo; of a dataset. <a href="https://stackoverflow.com/questions/7946553/deterministic-function-in-mysql">(Stack Overflow)</a></p>
+<ul>
+<li>Read more: <a href="https://www.tutorialspoint.com/difference-between-deterministic-and-non-deterministic-algorithms">Difference between Deterministic and Non-deterministic Algorithms</a></li>
+<li>Related: <a href="#deterministic-algorithm"><em>Deterministic algorithm</em></a></li>
+</ul>
+<h2 id="p">P</h2>
+<h4 id="privacy-by-design"><code>Privacy by design</code></h4>
+<p>A collection of data privacy principles proposed by Dr. Ann Cavoukian to take a &ldquo;proactive approach to privacy that emphasises the need to incorporate data protection practices into projects and decisions at the outset, rather than as an afterthought.&rdquo;</p>
+<ul>
+<li>Read more: <a href="https://privacy.ucsc.edu/resources/privacy-by-design---foundational-principles.pdf">Privacy by Design The 7 Foundational Principles</a></li>
+<li>Related: <a href="#software-development-lifecycle-sdlc"><em>Software development lifecycle</em></a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/pbd-infographic.png"/> 
+</figure>
+
+<em>via <a href="https://www.cookieyes.com/blog/privacy-by-design/">CookieYes</a></em></p>
+<h4 id="privacy-enhancing-technology-pet"><code>Privacy-enhancing technology (PET)</code></h4>
+<p>An assortment of tools that that enable businesses to comply with privacy regulations while preserving the individual privacy and utility of their data sets, for purposes such as analytics, development,  sharing, etc.</p>
+<ul>
+<li>Popular PETs: Homomorphic encryption, de-identification (k-anonymity), differential privacy, federated learning, secure multiparty computation, private set intersection, synthetic data, zero knowledge proofs, trusted execution environments</li>
+<li>Read more:
+<ul>
+<li><a href="https://www.syntho.ai/what-are-privacy-enhancing-technologies-pets/">What are Privacy-Enhancing Technologies (PETs)? Types &amp; Selection Guide</a></li>
+<li><a href="https://www.cpomagazine.com/data-privacy/what-are-privacy-enhancing-technologies-pets-and-how-you-can-choose-the-right-ones/">What Are Privacy-Enhancing Technologies (PETs) And How You Can Choose the Right One(s)</a></li>
+</ul>
+</li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/pets-infographic.png"/> 
+</figure>
+
+<em>via <a href="https://www.enveil.com/privacy-enhancing-technologies/">Enveil</a></em></p>
+<h4 id="private-set-intersection-psi"><code>Private set intersection (PSI)</code></h4>
+<p>Also called <strong>&ldquo;double encryption&rdquo;</strong>. A type of secure multiparty computation &ldquo;in which each party has a set of items and the goal is to learn the intersection of those sets while revealing nothing else about those sets.&rdquo;</p>
+<ul>
+<li>Read more: <a href="https://csrc.nist.gov/presentations/2021/stppa2-psi">A Brief Overview of Private Set Intersection</a></li>
+<li>Related: <a href="#privacy-enhancing-technology-pet"><em>Privacy-enhancing technology (PET)</em></a>, <a href="#secure-multi-party-computation-smpc"><em>Secure multi-party computation</em></a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/psi-diagram.png"/> 
+</figure>
+
+<em>via <a href="https://commons.wikimedia.org/wiki/File:Example_PSI_diagram_depicting_basic_security_requirements.png">Anonos</a></em></p>
+<h4 id="pseudonymization-tokenization"><code>Pseudonymization (tokenization)</code></h4>
+<p>A form of de-identification where personal identifiers are replaced with placeholder values (or &ldquo;tokens&rdquo;). Unlike anonymization, pseudonymization does <em>not</em> alter the original data, which can still be linked to an individual, and pseudonymization is reversible.</p>
+<ul>
+<li>Read more:
+<ul>
+<li><a href="https://www.cloudflare.com/learning/privacy/what-is-pseudonymization/">What is pseudonymization?</a></li>
+<li><a href="https://cloud.google.com/sensitive-data-protection/docs/pseudonymization">Pseudonymization</a></li>
+</ul>
+</li>
+<li>Related: <a href="#privacy-enhancing-technology-pet"><em>Privacy-enhancing technology (PET)</em></a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/anon-vs-pseudon.png"/> 
+</figure>
+
+<em>via <a href="https://www.anonos.com/">Anonos</a></em></p>
+<h2 id="r">R</h2>
+<h4 id="re-identification"><code>Re-identification</code></h4>
+<p>An attack to identify individuals in an &ldquo;anonymized&rdquo; dataset using external information and computing techniques to link individuals to their &ldquo;de-identified&rdquo; personal information.</p>
+<ul>
+<li>Read more:
+<ul>
+<li><a href="https://www.nature.com/articles/s41467-019-10933-3">Estimating the success of re-identifications in incomplete datasets using generative models</a></li>
+<li><a href="https://georgetownlawtechreview.org/wp-content/uploads/2017/04/Lubarsky-1-GEO.-L.-TECH.-REV.-202.pdf">Re-identification of &ldquo;anonymized data&rdquo;</a></li>
+<li><a href="https://pursuit.unimelb.edu.au/articles/the-simple-process-of-re-identifying-patients-in-public-health-records">The simple process of re-identifying patients in public health records</a></li>
+<li><a href="https://www.wired.com/2007/12/why-anonymous-data-sometimes-isnt/">Why &lsquo;Anonymous&rsquo; Data Sometimes Isn&rsquo;t</a></li>
+</ul>
+</li>
+<li>Related: <a href="#aggregation"><em>Aggregation</em></a></li>
+</ul>
+<h2 id="s">S</h2>
+<h4 id="secure-multi-party-computation-smpc"><code>Secure multi-party computation (S/MPC)</code></h4>
+<p>Also known as <strong>&ldquo;privacy-preserving computation&rdquo;</strong>. [Any] &ldquo;cryptographic protocol that distributes a computation across multiple parties where no individual party can see the other parties’ data.&rdquo;</p>
+<ul>
+<li>Read more: <a href="https://inpher.io/technology/what-is-secure-multiparty-computation/">What is Secure Multiparty Computation</a></li>
+<li>Related: <a href="#privacy-enhancing-technology-pet"><em>Privacy-enhancing technology (PET)</em></a>, <a href="#private-set-intersection-psi"><em>Private set intersection (PSI)</em></a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/smpc.png"/> 
+</figure>
+
+<em>via <a href="https://inpher.io/technology/what-is-secure-multiparty-computation/">inpher.io</a></em></p>
+<h4 id="scream-test"><code>Scream test</code></h4>
+<ul>
+<li>A test to determine if access to a resource (like personal information, a server, etc.) is still necessary by shutting off access to the resource entirely; if nobody screams bloody murder, then they didn&rsquo;t really need that resource; this can be applied to enforce data minimization</li>
+<li>Read more: <a href="https://www.microsoft.com/insidetrack/blog/microsoft-uses-a-scream-test-to-silence-its-unused-servers/">Microsoft uses a scream test to silence its unused servers</a></li>
+</ul>
+<h4 id="software-development-lifecycle-sdlc"><code>Software development lifecycle (SDLC)</code></h4>
+<p>The process that an organization follows to design, develop, test, deploy, and maintain software.
+<a href="https://www.forbes.com/sites/garydrenik/2023/01/18/how-a-companys-philosophy-to-shift-left-is-making-headway-in-the-data-privacy-world/">&ldquo;Shifting privacy left&rdquo;</a> is the idea to engrain privacy into earlier into product ideation and requirements drafting in order to achieve
+<a href="https://cloudsecurityalliance.org/blog/2023/06/09/privacy-by-design-and-privacy-by-default-in-the-cloud">privacy by design</a>.</p>
+<ul>
+<li>Read more: <a href="https://www.privado.ai/post/integrating-privacy-practices-in-software-development-lifecycle-sdlc">Integrating Privacy Practices in Software Development Lifecycle</a></li>
+<li>Related: <a href="#privacy-by-design"><em>Privacy by design</em></a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/privacy-sdlc.jpg"/> 
+</figure>
+
+<em>via <a href="https://www.privado.ai/post/integrating-privacy-practices-in-software-development-lifecycle-sdlc">Privado</a></em></p>
+<h4 id="structured-data"><code>Structured data</code></h4>
+<ul>
+<li>Organized and machine-readable data that can be queried programatically, such as a relational (SQL) database</li>
+<li>Read more: <a href="https://www.ibm.com/blog/structured-vs-unstructured-data/">Structured vs. Unstructured Data: What’s the Difference?</a></li>
+<li>Related: <a href="#unstructured-data"><em>Unstructured data</em></a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/structured-vs-unstructured-data.png"/> 
+</figure>
+
+<em>via <a href="https://hevodata.com/learn/understanding-structured-data/">Hevo Data</a></em></p>
+<h4 id="static-code-analysis"><code>Static code analysis</code></h4>
+<p>A process to scan the source code of a product to identify personal data to understand how and where it is collected and processed throughout systems.</p>
+<ul>
+<li>Read more:
+<ul>
+<li><a href="https://iapp.org/news/a/the-case-for-static-code-analysis-for-privacy?ref=marcusolsson.dev">The case for static code analysis for privacy</a></li>
+<li><a href="https://www.privado.ai/post/privacy-code-scanning-guide?ref=marcusolsson.dev">Privacy code scanning: How to sync privacy compliance with software development</a></li>
+</ul>
+</li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/privacy-code-scanning-infographic.png"/> 
+</figure>
+
+<em>via <a href="https://www.privado.ai/post/privacy-code-scanning-guide">Privado</a></em></p>
+<h4 id="synthetic-data"><code>Synthetic data</code></h4>
+<ul>
+<li>Data, generated by artificial intelligence, that mathematically imitates real-world personal data, which enables orgs to use &ldquo;privacy-compliant, production-like, and long-retention&rdquo; data for analytics</li>
+<li>Read more: <a href="https://aws.amazon.com/what-is/synthetic-data/">What is Synthetic Data?</a></li>
+<li>Watch: <a href="https://www.youtube.com/watch?v=X2c8KambXKg&amp;list=PLbRoZ5Rrl5ldxIsGMFjwixoLxQ1iMq_BH&amp;index=12">PEPR &lsquo;24 - Compute Engine Testing with Synthetic Data Generation</a></li>
+</ul>
+<h2 id="t">T</h2>
+<h4 id="threat-modeling"><code>Threat modeling</code></h4>
+<p>A process (originally from cybersecurity) to identify and understand threats to a system and their mitigations. In the context of privacy, this relates to threats to personal information in a system and those data subjects.</p>
+<ul>
+<li>Read more: <a href="https://www.crowdstrike.com/en-us/cybersecurity-101/threat-intelligence/threat-model/">What is privacy threat modeling?</a></li>
+<li>Watch:
+<ul>
+<li><a href="https://www.youtube.com/watch?v=AB8re8inlPw">Privacy Threat Modeling: Learn all about it from two experts in the field!</a></li>
+<li><a href="https://www.youtube.com/watch?v=NEjPZrfK460">PEPR &lsquo;23 - How to Utilize Your Red Team for Privacy</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="trusted-execution-environment-tee"><code>Trusted execution environment (TEE)</code></h4>
+<p>A segregated safe zone within a CPU where only signed code within the environment can be loaded, and all code is &ldquo;processed in the clear but is only visible in encrypted form when anything outside tries to access it.&rdquo; This ensures that &ldquo;even if a system is compromised, the data within the TEE remains secure.&rdquo;</p>
+<ul>
+<li>Read more: <a href="https://confidentialcomputing.io/2024/03/13/basics-of-trusted-execution-environments-tees-the-heart-of-confidential-computing/">Basics of Trusted Execution Environments (TEEs): The Heart of Confidential Computing</a></li>
+<li>Watch: <a href="https://www.youtube.com/watch?v=MTM0SqHNJR4">ISCA'23 - Lightning Talks - Session1C - TEESec: Pre-Silicon Vulnerability Discovery for Trusted Exec</a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/tee-thumbnail.jpg"/> 
+</figure>
+
+<em>via <a href="https://www.youtube.com/watch?v=MTM0SqHNJR4">Moein Ghaniyoun</a></em></p>
+<h2 id="u">U</h2>
+<h4 id="unstructured-data"><code>Unstructured data</code></h4>
+<ul>
+<li>Unorganized data that has no pre-defined structure or pattern that makes it difficult(but not impossible) to reliably process and analyze programatically. &ldquo;More than 80%&rdquo; of data on the internet is unstructured.</li>
+<li>Read more: <a href="https://www.ibm.com/blog/structured-vs-unstructured-data/">Structured vs. Unstructured Data: What’s the Difference?</a></li>
+<li>Related: <a href="#structured-data"><em>Structured data</em></a></li>
+</ul>
+<h2 id="z">Z</h2>
+<h4 id="zero-knowledge-proof"><code>Zero knowledge proof</code></h4>
+<p>A &ldquo;cryptographic mechanism that allows anyone to prove the truth of a statement without having to share the information in a statement.&rdquo;</p>
+<ul>
+<li>Read more:
+<ul>
+<li><a href="https://www.wired.com/story/zero-knowledge-proofs/">Hacker Lexicon: What Are Zero-Knowledge Proofs?</a></li>
+<li><a href="https://oasisprotocol.org/blog/comparing-zkp-tee-privacy">4 Ways to Compare Trusted Execution Environments and Zero-Knowledge Proofs</a></li>
+</ul>
+</li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/tee-vs-zkp.png"/> 
+</figure>
+
+<em>via <a href="https://oasisprotocol.org/blog/comparing-zkp-tee-privacy">Oasis Protocol</a></em></p>
+<h4 id="zk-snark"><code>zk-SNARK</code></h4>
+<ul>
+<li>Zero-Knowledge Succinct Non-Interactive Argument of Knowledge</li>
+<li>Allows a Prover &ldquo;[to create] a unique fingerprint for each proof [&hellip;] making it impossible to reverse-engineer the original statement. Essentially, these polynomial equations are solvable only by the Prover but verifiable by anyone. They&rsquo;re a puzzle to which only the Prover knows the answer, yet anyone can confirm the answer is correct without knowing what it is.&rdquo;</li>
+<li>Read more:
+<ul>
+<li><a href="https://aleo.org/post/what-is-a-zk-snark/">What is a zk-SNARK?</a></li>
+<li><a href="https://z.cash/learn/what-are-zk-snarks/">What are zk-SNARKs?</a></li>
+</ul>
+</li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/zksnark.webp"/> 
+</figure>
+
+<em>via <a href="https://aleo.org/post/what-is-a-zk-snark/">Aleo</a></em></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Privacy career resources</title>
+      <link>http://localhost:1313/posts/privacy-career-resources/</link>
+      <pubDate>Fri, 27 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/privacy-career-resources/</guid>
+      <description>A collection of informational resources pertaining to privacy and privacy engineering.</description>
+      <content:encoded><![CDATA[<h2 id="books">Books</h2>
+<ul>
+<li><a href="https://www.oreilly.com/library/view/practical-data-privacy/9781098129453/">Practical Data Privacy: Enhancing Privacy and Security in Data</a> by <a href="https://blog.kjamistan.com/">Katharine Jarmul</a>
+<ul>
+<li><a href="https://martinfowler.com/articles/intro-pet.html">Privacy Enhancing Technologies: An Introduction for Technologists</a></li>
+<li>Accompanying <a href="https://github.com/kjam/practical-data-privacy">Jupytr Notebooks</a></li>
+</ul>
+</li>
+<li><a href="https://iapp.org/resources/article/strategic-privacy-by-design/">Stratetic Privacy by Design</a></li>
+</ul>
+<h2 id="conferences">Conferences</h2>
+<ul>
+<li><a href="https://www.usenix.org/conference/pepr24">Privacy Engineering Practice and Respect (PEPR)</a></li>
+<li><a href="https://www.usenix.org/conference/soups2024">Symposium on Usable Privacy and Security (SOUPS)</a></li>
+<li><a href="https://tpdp.journalprivacyconfidentiality.org/">Theory and Practice of Differential Privacy (TPDP)</a></li>
+</ul>
+<h2 id="courses">Courses</h2>
+<h4 id="academic">Academic</h4>
+<ul>
+<li>Carnagie Melleon University&rsquo;s <a href="https://privacy.cs.cmu.edu/">Certificate or Masters in Privacy Engineering</a></li>
+<li>Harvard&rsquo;s <a href="https://www.harvardonline.harvard.edu/course/data-privacy-technology">Data Privacy and Technology Certificate</a></li>
+</ul>
+<h4 id="professional">Professional</h4>
+<ul>
+<li>Privado&rsquo;s <a href="https://learn.privado.ai/courses/technical-privacy-masterclass">Technical Privacy Masterclass</a></li>
+<li>Data Protocol&rsquo;s <a href="https://docs.dataprotocol.com/certifications/privacy-engineering">Privacy Engineering Certification</a></li>
+<li><a href="https://courses.openmined.org/">OpenMined</a></li>
+</ul>
+<h2 id="lectures">Lectures</h2>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLmd_zeMNzSvRRNpoEWkVo6QY_6rR3SHjp">A Course on Differential Privacy</a>, University of Waterloo, Fall 2020</li>
+<li><a href="https://www.youtube.com/playlist?list=PLmd_zeMNzSvSzRRc4Q29qEcpxbhdwjMOx">Introduction to Machine Learning</a>, Unversity of Waterloo, Spring 2021</li>
+<li><a href="https://ics.uci.edu/~projects/295d/presentations.html">CS 295 D - Privacy in Data Management</a>,
+University of California, Irvine, Spring 2010?</li>
+<li><a href="https://github.com/jnear/cs211-data-privacy">CS 211 - Data Privacy</a>, University of Vermont</li>
+<li><a href="https://github.com/jnear/cs295-secure-computation">CS 295 - Secure Computation</a>, University of Vermont, Fall 2019</li>
+</ul>
+<h2 id="papers">Papers</h2>
+<ul>
+<li>Nissim, K., Steinke, T., Wood, A., Altman, M., Bembenek, A., Bun, M., Gaboardi, M., O’Brien, D. R., &amp; Vadhan, S. (2018). <a href="https://privacytools.seas.harvard.edu/files/privacytools/files/pedagogical-document-dp_new.pdf">Differential privacy: A primer for a non-technical audience.</a></li>
+<li>Sweeney, L. (2002). <a href="https://epic.org/wp-content/uploads/privacy/reidentification/Sweeney_Article.pdf">k-ANONYMITY: A model for protecting privacy.</a></li>
+<li>A. Machanavajjhala, J. Gehrke, D. Kifer and M. Venkitasubramaniam, <a href="https://www.cs.rochester.edu/u/muthuv/ldiversity-TKDD.pdf">&ldquo;L-diversity: privacy beyond k-anonymity,&rdquo;</a> 22nd International Conference on Data Engineering (ICDE'06)</li>
+</ul>
+<h2 id="podcasts">Podcasts</h2>
+<ul>
+<li><a href="https://www.skyflow.com/podcast">Partially Redacted: Data, AI, Security &amp; Privacy</a></li>
+<li><a href="https://surveillancereport.tech/">Surveillance Report</a></li>
+<li><a href="https://podtail.com/podcast/the-privacy-advisor-podcast/">IAPP&rsquo;s The Privacy Advisor Podcast</a></li>
+<li><a href="https://privacypleasepodcast.buzzsprout.com/">Privacy Please</a></li>
+</ul>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://desfontain.es/blog/friendly-intro-to-differential-privacy.html">A friendly, non-technical introduction to differential privacy</a></li>
+<li><a href="https://desfontain.es/blog/real-world-differential-privacy.html">A list of real-world uses of differential privacy</a></li>
+<li><a href="https://medium.com/dsaid-govtech/protecting-your-data-privacy-with-differential-privacy-an-introduction-abee1d7fcb63#dfc7">Differential privacy series</a></li>
+<li><a href="https://blog.openmined.org/private-machine-learning-explained/">Privacy-Preserving Data Science, Explained</a></li>
+<li><a href="https://marcusolsson.dev/k-anonymity-and-l-diversity/">Understanding privacy risk with k-anonymity and l-diversity</a></li>
+</ul>
+<h2 id="rss-feed">RSS feed</h2>
+<p>Here is a feed of some of the sites and blogs I read to keep up to date with general privacy, security, and techology news.
+<script src="https://gist.github.com/coreystone/93e669c0d5e4666055329135989852b9.js"></script>
+</p>
+<h2 id="subreddits">Subreddits</h2>
+<ul>
+<li><a href="https://www.reddit.com/r/cipp/"><code>r/cipp</code></a>: Currently the only active sub specific to privacy as a career path, which includes general posts about the field and also questions and advice for the various IAPP certifications.</li>
+<li><a href="https://www.reddit.com/r/cscareerquestions/"><code>r/cscareerquestions</code></a>: Not specifically privacy related, but a sub for tech career discussions.</li>
+<li><a href="https://www.reddit.com/r/cybersecurity/"><code>r/cybersecurity</code></a>: News and general discussions about cybersecurity-related topics.</li>
+<li><a href="https://www.reddit.com/r/netsec/"><code>r/netsec</code></a>: More technical information security content.</li>
+<li><a href="https://www.reddit.com/r/privacy"><code>r/privacy</code></a>: News and general discussions about privacy-related topics.</li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Awesome open-source privacy engineering</title>
+      <link>http://localhost:1313/posts/awesome-opensource-privacyengineering/</link>
+      <pubDate>Wed, 25 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/awesome-opensource-privacyengineering/</guid>
+      <description>A curation of tools, technologies, and frameworks made open-source for the advancement of privacy engineering.</description>
+      <content:encoded><![CDATA[<h2 id="introduction">Introduction</h2>
+<p><a href="https://github.com/pawelborkar/awesome-repos">&ldquo;Awesome&rdquo; GitHub repos</a> are curated lists of information and resources relevant to a particular subeject area. There are a plethora of awesome privacy-related repos, and here are some standouts that influenced this list:</p>
+<ul>
+<li><a href="https://github.com/Lissy93/awesome-privacy"><code>awesome-privacy</code></a></li>
+<li><a href="https://github.com/mplspunk/awesome-privacy-engineering"><code>awesome-privacy-engineering</code></a></li>
+<li><a href="https://github.com/AbductiveReason/AwesomePrivacyEngineering"><code>AwesomePrivacyEngineering</code></a></li>
+<li><a href="https://utrechtuniversity.github.io/privacy-engineering-tools/"><code>privacy-engineering-tools</code></a></li>
+</ul>
+<p>However, I wasn&rsquo;t able to find a list of exclusively open-source, currently maintained tools and resources for privacy engineering, so I wanted to one.
+This list focuses on currently updated, non-deprecated projects, and also projects that are particularly interesting to me.</p>
+<h2 id="consent-management-platform-cmp">Consent management platform (CMP)</h2>
+<h4 id="klaro-privacy-manager"><code>Klaro Privacy Manager</code></h4>
+<blockquote>
+<p>An open-source, privacy-friendly &amp; compliant consent manager for your website.</p>
+</blockquote>
+<ul>
+<li>Author: <a href="https://www.klaro.org/">Klaro!</a></li>
+<li>Repo: <a href="https://github.com/klaro-org/klaro-js">github.com/klaro-org/klaro-js</a></li>
+</ul>
+<p>A small, lightweight cookie consent solution based on JavaScript that provides notice and blocks third-party apps from executing without consent.</p>
+<h4 id="osano-cookie-consent"><code>Osano Cookie Consent</code></h4>
+<blockquote>
+<p>A free solution to the EU, GDPR, and California Cookie Laws</p>
+</blockquote>
+<ul>
+<li>Author: <a href="https://www.osano.com/cookieconsent">Osano</a></li>
+<li>Repo: <a href="https://github.com/osano/cookieconsent">github.com/osano/cookieconsent</a></li>
+</ul>
+<p>A similar lightweight JavaScript approach to a cookie consent preference center and notice mechanism.</p>
+<h4 id="open-cookie-database"><code>Open Cookie Database</code></h4>
+<blockquote>
+<p>The Open Cookie Database is an effort to describe and categorise all major cookies. All cookie descriptions are saved in a downloadable CSV file.</p>
+</blockquote>
+<ul>
+<li>Author: <a href="https://ketch.com/">Ketch</a></li>
+<li>Repo: <a href="https://github.com/ketch-com/Open-Cookie-Database">github.com/ketch-com/Open-Cookie-Database</a>
+A spreadsheet of common cookies and their associated domains, categories, and descriptions.</li>
+</ul>
+<h2 id="static-code-analysis">Static code analysis</h2>
+<h4 id="privado"><code>Privado</code></h4>
+<blockquote>
+<p>Open Source Static Scanning tool to detect data flows in your code, find data security vulnerabilities &amp; generate accurate Play Store Data Safety Report.</p>
+</blockquote>
+<ul>
+<li>Author: <a href="https://docs.privado.ai/">Privado</a></li>
+<li>Repo: <a href="https://github.com/Privado-Inc/privado">github.com/Privado-Inc/privado</a>
+Watch: <a href="https://youtu.be/S-c3l8LGfD0">Getting Started with Privacy Code Scanning</a></li>
+</ul>
+<h2 id="personal-information-scanning">Personal information scanning</h2>
+<p>Capital One DataProfiler: <a href="https://github.com/capitalone/DataProfiler">https://github.com/capitalone/DataProfiler</a>
+PII Catcher: <a href="https://github.com/tokern/piicatcher">https://github.com/tokern/piicatcher</a></p>
+<h2 id="data-subject-rights">Data subject rights</h2>
+<h4 id="fides"><code>Fides</code></h4>
+<blockquote>
+<p>[A]n open-source privacy engineering platform for managing the fulfillment of data privacy requests in your runtime environment, and the enforcement of privacy regulations in your code.</p>
+</blockquote>
+<ul>
+<li>Author: <a href="https://ethyca.com/docs">Ethyca</a></li>
+<li>Repo: <a href="https://github.com/ethyca/fides">github.com/ethyca/fides</a></li>
+</ul>
+<h4 id="data-rights-protocol"><code>Data Rights Protocol</code></h4>
+<blockquote>
+<p>The technical standard for exchanging data rights requests.</p>
+</blockquote>
+<ul>
+<li>Author: <a href="https://datarightsprotocol.org/">Consumer Reports</a></li>
+<li>Repo: <a href="https://github.com/consumer-reports-innovation-lab/data-rights-protocol">github.com/consumer-reports-innovation-lab/data-rights-protocol</a></li>
+<li>Watch: <a href="https://www.youtube.com/watch?v=CsXdr34ZotA&amp;list=PLbRoZ5Rrl5le5MLOePeumxpQfUg2Gyfui&amp;index=18">PEPR &lsquo;23 - Securing and Standardizing Data Rights Requests with a Data Rights Protocol</a></li>
+</ul>
+<h4 id="ketch-dsr-protocol"><code>Ketch DSR Protocol</code></h4>
+<blockquote>
+<p>The technical standard for exchanging data rights requests.</p>
+</blockquote>
+<ul>
+<li>Author: <a href="https://ketch.com">Ketch</a></li>
+<li>Repo: ???</li>
+<li>Watch: <a href="https://youtu.be/XotLV8JyLg0?list=PLbRoZ5Rrl5ldxIsGMFjwixoLxQ1iMq_BH">PEPR &lsquo;24 - Building a Protocol to Improve DSR Flexibility and Integration</a></li>
+</ul>
+<h2 id="frameworks">Frameworks</h2>
+<h4 id="xcompass-comcast-privacy-assistant"><code>xCOMPASS (COMcast Privacy ASSistant)</code></h4>
+<blockquote>
+<p>[A] persona based privacy threat modeling solution called Models of Applied Privacy or MAP.</p>
+</blockquote>
+<ul>
+<li><em>Previously called &ldquo;Models of Applied Privacy&rdquo; (MAP)</em></li>
+<li>Author: <a href="https://github.com/Comcast/xCompass">Comcast</a></li>
+<li>Repo: <a href="https://github.com/Comcast/xCompass">github.com/Comcast/xCOMPASS</a></li>
+</ul>
+<h4 id="privacy-adversarial-framework"><code>Privacy Adversarial Framework</code></h4>
+<blockquote>
+<p>The Privacy Adversarial Framework (PAF) is a knowledge base of privacy-focused adversarial tactics and techniques. PAF is heavily inspired by MITRE ATT&amp;CK®.</p>
+</blockquote>
+<ul>
+<li>Author: <a href="https://research.facebook.com/">Meta Research</a></li>
+<li>Repo: <a href="https://github.com/facebookresearch/privacy_adversarial_framework">github.com/facebookresearch/privacy_adversarial_framework</a></li>
+<li>Watch: <a href="https://www.youtube.com/watch?v=NEjPZrfK460&amp;list=PLbRoZ5Rrl5le5MLOePeumxpQfUg2Gyfui&amp;index=14">PEPR &lsquo;23 - How to Utilize Your Red Team for Privacy</a></li>
+</ul>
+<p>PANOPTIC™ Privacy Threat Model: <a href="https://ptmworkshop.gitlab.io/#/panoptic">https://ptmworkshop.gitlab.io/#/panoptic</a></p>
+<h2 id="privacy-enhancing-technologies-pets">Privacy enhancing technologies (PETs)</h2>
+<h4 id="petace-privacy-enhancing-technologies-via-applied-cryptography-engineering"><code>PETAce (Privacy-Enhancing Technologies via Applied Cryptography Engineering)</code></h4>
+<blockquote>
+<p>PETAce is a privacy-enhancing protocol framework based on state-of-the-art research results. It provides data processing methods such as secret sharing, homomorphic encryption, and oblivious transfer, and can perform collaborative computation and analysis of two-party data while preserving data privacy.
+<a href="https://developers.tiktok.com/blog/enhance-privacy-using-PETAce">https://developers.tiktok.com/blog/enhance-privacy-using-PETAce</a></p>
+</blockquote>
+<ul>
+<li>Author: <a href="https://privacyinnovation.io/">TikTok Privacy Innovation</a></li>
+<li>Repo: <a href="https://github.com/tiktok-privacy-innovation/PETAce">github.com/tiktok-privacy-innovation/PETAce</a>
+Reading:</li>
+</ul>
+<ol>
+<li><a href="https://developers.tiktok.com/blog/enhance-privacy-using-PETAce">PETAce: Using Applied Cryptography to Enhance Privacy</a></li>
+<li><a href="https://developers.tiktok.com/blog/tiktok-practices-in-privacy-enhancing-technologies">PETAce in Action: Enhancing privacy during Friends Matching in TikTok</a></li>
+</ol>
+<h4 id="privacygo"><code>PrivacyGo</code></h4>
+<blockquote>
+<p>PrivacyGo is the open-source synergistic fusion of various PETs, such as differential privacy, multi-party computation, homomorphic encryption, and artificial intelligence methods to enhance user privacy protection. PrivacyGo strives to carefully design approaches that harness the strengths of PETs while mitigating their individual limitations.</p>
+</blockquote>
+<ul>
+<li>Author: <a href="https://privacyinnovation.io/">TikTok Privacy Innovation</a></li>
+<li>Repo: <a href="https://github.com/tiktok-privacy-innovation/PrivacyGo">github.com/tiktok-privacy-innovation/PrivacyGo</a></li>
+<li>Watch: <a href="https://www.youtube.com/watch?v=OX4X78JRuf4&amp;list=PLbRoZ5Rrl5ldxIsGMFjwixoLxQ1iMq_BH">PEPR &lsquo;24 - Designing for User Privacy: Integrating Differential Privacy into Ad Measurement Systems in Practice</a>
+Reading:</li>
+</ul>
+<ol>
+<li><a href="https://developers.tiktok.com/blog/privacy-go">PrivacyGo: TikTok’s initiative in synergistic privacy-enhancing technologies</a></li>
+</ol>
+<h4 id="pipelinedp"><code>PipelineDP</code></h4>
+<blockquote>
+<p>PipelineDP is a Python framework for applying differentially private aggregations to large datasets using batch processing systems such as Apache Spark, Apache Beam, and more.</p>
+</blockquote>
+<ul>
+<li>Author: <a href="https://openmined.org/">OpenMined</a> &amp; <a href="https://research.google/">Google Research</a></li>
+<li>Repo: <a href="https://github.com/OpenMined/PipelineDP">github.com/OpenMined/PipelineD</a></li>
+<li>Watch: <a href="https://youtu.be/6y2kk6JPzZk?list=PLbRoZ5Rrl5ldxIsGMFjwixoLxQ1iMq_BH">PEPR &lsquo;24 - Utility Analysis for Differentially-Private Pipelines</a></li>
+</ul>
+<h4 id="shadowgraphy"><code>Shadowgraphy</code></h4>
+<blockquote>
+<p>Shadowgraphy is an open-source data pseudonymization SDK.  Shadowgraphy provides secure APIs for seamless data pseudonymization, providing enterprises a consistent data protection service with industrial standards and best practices. By prioritizing ease of use and robustness, Shadowgraphy enables developers, even those without cryptography expertise, to integrate cryptographic pseudonymization techniques effectively, fostering a culture of privacy-aware development.</p>
+</blockquote>
+<ul>
+<li>Author: <a href="https://privacyinnovation.io/">TikTok Privacy Innovation</a></li>
+<li>Repo: <a href="https://github.com/tiktok-privacy-innovation/Shadowgraphy"><code>github.com/tiktok-privacy-innovation/Shadowgraphy</code></a></li>
+</ul>
+<h4 id="manatee"><code>ManaTEE</code></h4>
+<blockquote>
+<p>[A]n open-source project for easily building and deploying data collaboration framework[s] to the cloud using trusted execution environments (TEEs).</p>
+</blockquote>
+<ul>
+<li><em>Previously called PrivacyGo-DataCleanRoom</em></li>
+<li>Author: <a href="https://confidentialcomputing.io/">Confidential Computing Consortium (CCC)</a>
+<ul>
+<li>Previously: <a href="https://privacyinnovation.io/">TikTok Privacy Innovation</a></li>
+</ul>
+</li>
+<li>Repo: <a href="https://github.com/manatee-project/manatee">github.com/manatee-project/manatee</a></li>
+</ul>
+<h4 id="private-computation-framework-pcf"><code>Private Computation Framework (PCF)</code></h4>
+<blockquote>
+<p>Private computation framework library allows developers to perform randomized controlled trials, without leaking information about who participated or what action an individual took. It uses secure multiparty computation to guarantee this privacy. It is suitable for conducting A/B testing, or measuring advertising lift and learning the aggregate.</p>
+</blockquote>
+<ul>
+<li>Author: <a href="https://research.facebook.com/">Meta Research</a></li>
+<li>Repo: <a href="https://github.com/facebookresearch/fbpcf">github.com/facebookresearch/FBPCF</a></li>
+</ul>
+<h4 id="private-computation-solutions-pcs"><code>Private Computation Solutions (PCS)</code></h4>
+<blockquote>
+<p>FBPCS (Facebook Private Computation Solutions) leverages secure multi-party computation (MPC) to output aggregated data without making unencrypted, readable data available to the other party or any third parties. Facebook provides impression &amp; opportunity data, and the advertiser provides conversion / outcome data.</p>
+</blockquote>
+<ul>
+<li>Author: <a href="https://research.facebook.com/">Meta Research</a></li>
+<li>Repo: <a href="https://github.com/facebookresearch/fbpcs">github.com/facebookresearch/FBPCS</a></li>
+</ul>
+<h4 id="private-join-and-compute"><code>Private Join and Compute</code></h4>
+<blockquote>
+<p>This project contains an implementation of the &ldquo;Private Join and Compute&rdquo; functionality [which] allows two users, each holding an input file, to privately compute the sum of associated values for records that have common identifiers.</p>
+</blockquote>
+<ul>
+<li>Author: <a href="https://research.google/">Google Research</a></li>
+<li>Repo: <a href="https://github.com/Google/private-join-and-compute">github.com/google/private-join-and-compute</a></li>
+</ul>
+<h4 id="pysyft">PySyft</h4>
+<blockquote>
+<p>Perform data science on data that remains in someone else&rsquo;s server.</p>
+</blockquote>
+<ul>
+<li>Author: <a href="https://openmined.org/">OpenMined</a></li>
+<li>Repo: <a href="https://github.com/OpenMined/PySyft">github.com/OpenMined/PySyft</a></li>
+<li>Watch: <a href="https://www.youtube.com/watch?v=69_RGhIJwMU&amp;list=PLbRoZ5Rrl5ldxIsGMFjwixoLxQ1iMq_BH&amp;index=11">PEPR &lsquo;24 - A New Model for International, Privacy-Preserving Data Science</a></li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/pysyft-data-flow.png"/> 
+</figure>
+
+<em>via xD.gov PEPR &lsquo;24 presentation</em></p>
+<h2 id="spaces">Spaces</h2>
+<p>Privacy Engineering Collaboration Space by NIST
+<a href="https://github.com/usnistgov/PrivacyEngCollabSpace">https://github.com/usnistgov/PrivacyEngCollabSpace</a></p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>
