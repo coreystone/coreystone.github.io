@@ -6,8 +6,9 @@ ShowReadingTime: false
 
 {{< figure align=left src="/images/pienso.png" >}}
 
-* Big fan of [free and open source-software (FOSS)](https://itsfoss.com/what-is-foss/)
-* Aspiring [digital minimalist](https://www.minimalismmadesimple.com/home/7-days-to-digital-minimalism-guide/) 
+* Big fan of [free and open-source software (FOSS)](https://itsfoss.com/what-is-foss/)
+* Aspiring [digital minimalist](https://calnewport.com/on-digital-minimalism/)
+* Trying to give this [digital gardening](https://armstrong.is/miscellaneous/digital-gardening) thing a go
 
 
 ## Projects
@@ -54,3 +55,5 @@ There are no cookies, no trackers, and no nonsense to worry about.
 
 This site also implements privacy-respecting [YouTube "embeds"](https://discourse.gohugo.io/t/embedding-youtube-in-a-privacy-friendly-way/35784/5), meaning you won't load any content
 from YouTube's servers until you decide to click on a video, as thumbnails and preview information are hosted by the site. Thanks to [Joost van Der Schee](https://discourse.gohugo.io/u/jhvanderschee/summary).
+
+My [robots.txt](https://coreyst.one/robots.txt) file is set to [block AI web crawlers](https://coryd.dev/posts/2024/go-ahead-and-block-ai-web-crawlers), courtesy of [Cory Dransfeldt](https://coryd.dev/posts/2024/go-ahead-and-block-ai-web-crawlers). Whether or not they will actually respect this is to be seen.

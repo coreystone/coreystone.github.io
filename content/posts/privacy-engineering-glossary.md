@@ -5,7 +5,6 @@ description: "Defining and exploring privacy computation concepts and technologi
 tags:
   - PrivacyEngineering
 ShowToc: true
-weight: 2
 ---
 
 ## A

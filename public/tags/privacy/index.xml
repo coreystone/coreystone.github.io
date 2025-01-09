@@ -6,7 +6,230 @@
     <description>Recent content in Privacy on Corey Stone</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 27 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/privacy/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/privacy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Privacy is a privilege</title>
+      <link>http://localhost:1313/posts/privacy-as-a-privilege/</link>
+      <pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/privacy-as-a-privilege/</guid>
+      <description>A look at some obstacles to ensuring privacy as a fundamental human right.</description>
+      <content:encoded><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>Most in this space are rightly quick to call privacy a <a href="https://www.ohchr.org/en/stories/2013/10/right-privacy-digital-age">&ldquo;fundamental human right&rdquo;</a>. As a <a href="https://thelaw.institute/privacy-and-data-protection/privacy-fundamental-human-right/">TheLaw.Institute article</a> discusses, the right to &ldquo;privacy&rdquo; has been recognized by international human rights treaties and guaranteed by international constitutions.</p>
+<p>Yet, many that recognize privacy as a human right will likely also concede that we haven&rsquo;t yet crossed the finish line in effecting it:</p>
+<ul>
+<li><em>Politically</em>, a significant portion of the global population is not covered by some form of privacy legislation, or is only protected by outdated and inadequate laws</li>
+<li><em>Socially</em>, some people lack the technical literacy required to understand the consequences of privacy-impacting decisions they make</li>
+<li><em>Culturally</em>, societal norms may affect the ability of one to make decisions that preserve their privacy, or enjoy the benefits of relevant legal protections</li>
+<li><em>Technologically</em>, assurances are to safeguard privacy are constantly being developed and refined (such as these <a href="https://coreyst.one/posts/awesome-opensource-privacyengineering/">awesome open source privacy engineering tools</a>),
+but organizations are hesitant (or even unequipped) to adopt them while legislators are slow to compel them to do so</li>
+</ul>
+<p>With that said, I believe privacy is a human right. I also believe that it&rsquo;s disingenuous to not recognize it is currently a privilege.</p>
+<p><a href="https://www.britannica.com/dictionary/privilege">The Britannica Dictionary</a> defines &ldquo;privilege&rdquo; as:</p>
+<blockquote>
+<p>privilege (n): a right or benefit that is given to some people and not to others</p>
+</blockquote>
+<p>Privacy is a right <em>and</em> benefit not currently universally available to or enjoyed by everyone, and in the rest of this article I&rsquo;ll discuss some of the factors that I believe contribute to this.</p>
+<h2 id="defining-privacy">Defining privacy</h2>
+<p>But first: what even is &ldquo;privacy&rdquo;? It depends on who you ask. We can start by clarifying what it is <em>not</em>: the mere act of hiding information from someone or something, akin to the common <a href="https://en.wikipedia.org/wiki/Nothing_to_hide_argument">&ldquo;nothing to hide argument&rdquo;</a>.</p>
+<p>Privacy is vague: it can mean different things to different people, socieities, and governments. Defining it goes way beyond the scope of this post, and really smart people have already done a way better job at it than I could. Professor <a href="https://faculty.washington.edu/moore2/moore.htm">Adam Moore</a> spends over 15 pages doing so in <a href="https://faculty.washington.edu/moore2/DP.pdf">Defining Privacy</a>. I like to think of privacy as your ability to control what information you share with others. &ldquo;Others&rdquo; in this case can be people, companies, governments, your social media page, etc.; this sharing could be an active decision you make, or be the collection of your information by someone else.</p>
+<p>As R. Jason Cronk astutely notes in his blog post <a href="https://privacymaverick.com/a-privacy-engineers-thoughts-on-criticism-of-the-solove-taxonomy/">A Privacy Engineer’s Thoughts on Criticism of the Solove Taxonomy</a>, privacy is &ldquo;philosophical construct&rdquo; before a legal, political, or technical one, making prescriptive action to effect and defend this right a significant challenge.</p>
+<h2 id="obstacles">Obstacles</h2>
+<h3 id="tech-literacy">Tech literacy</h3>
+<p>In the <a href="https://www.goodreads.com/quotes/331586-but-the-worst-enemy-you-can-meet-will-always-be">words of Neitzche</a>: <em>&ldquo;the worst enemy you can meet will always be yourself&rdquo;</em>. This is especially true with regards to privacy, where we are constantly making conscious and inconscious decisions to share or withold information from others.</p>
+<p>Something that influences how we make those decisions is our understanding of the technologies we use and how they affect us, which we can call &ldquo;tech literacy&rdquo;.
+Generally speaking, tech literacy can be something as simple as knowing how to: send an email, share a .gif with a group chat, or download a mobile app.
+In the context of privacy, we are frequently presented with challenges to this literacy as we use technology which often results in the (needless and neglegibly beneficial) disclosure of our personal information:</p>
+<ul>
+<li>Clicking on the &ldquo;Accept All&rdquo; button in cookie banners (when the option to block non-necessary trackers exists)</li>
+<li>Checking the optional box to consent to marketing when signing up for something</li>
+<li>Accepting additional diagnostics or data sharing with third parties (when the option to opt-out exists)</li>
+<li>Not using built-in privacy tools or settings (such as certain account settings, or browser-level protections)</li>
+<li>Not using external, third-party software or tools (such as adblockers, VPNs, private web browsers, etc.)</li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/firefox-strict-settings.png"/> 
+</figure>
+
+<em>Firefox&rsquo;s Privacy &amp; Security settings page</em></p>
+<p>These are all common instances where an individual might unknowingly fail to protect their privacy, possibly because they are not aware of the consequences of their decisions,
+or because they just don&rsquo;t know they have a choice to begin with.</p>
+<p>Of course - privacy is all about tradeoffs. We sacrifice our privacy for convenience all the time, and I would be a huge hypocrite to rebuke anyone that does so.</p>
+<p>However, there are also people who just &ldquo;don&rsquo;t care&rdquo; about their privacy, and they are well within their rights to do so. However, I believe that much of this indifference
+ultimately stems from technological illiteracy, whether these people would admit it or not.</p>
+<p>As a result of tech illiteracy, people:</p>
+<ul>
+<li>Are more likely to give away data when they dont understand the consequences of doing so</li>
+<li>May not be familiar with how to use privacy settings in an app, or even what rights are available to them</li>
+<li>May also not be familiar with tools or things they can use to protect themselves</li>
+</ul>
+<p>If our greatest threat to our privacy is indeed ourselves, then no amount of technological or legislative measures to preserve our privacy will solve the root of the issue.
+I think a great first step is working to better educate ourselves, and those less technologically-inclined users, about the consequences of our actions as they pertain to our privacy.</p>
+<h3 id="social-economics">Social economics</h3>
+<p>A lack of technical literacy is a real issue, but it is not the only issue, nor is it an excuse to victim blame or ignore invasive privacy violations and government or corporate surveillance.</p>
+<p>It is also important to look beyond this literacy at face value and instead look at the <em>why</em>: why are things this way, and who is predominately affected?</p>
+<p>The <a href="https://nationalskillscoalition.org/">National Skills Coalition</a> does exactly this in <a href="https://nationalskillscoalition.org/wp-content/uploads/2020/12/Digital-Skills-Racial-Equity-Final.pdf">Applying a racial equity lens to digital literacy</a>, where they examine the &ldquo;digital literacy&rdquo; of American workers, noting that &ldquo;workers of color are disproportionately affected by digital skill
+gaps compared to their white peers, in large part due to structural
+factors that are the product of longstanding inequities in American
+society, such as income and wealth gaps and uneven access to
+high-quality K-12 education.&rdquo;</p>
+<p>In other words, <a href="https://www.investopedia.com/terms/s/social-economics.asp">socioeconomic factors</a> directly affect our technical literacy, in the exact same way that they <a href="https://sites.lsa.umich.edu/mje/2023/01/05/the-relationship-between-socioeconomic-status-and-literacy-how-literacy-is-influenced-by-and-influences-ses/">affect reading literacy</a>, where &ldquo;higher income [is] linked to higher literacy.&rdquo;</p>
+<p>They also affect the options that people have with regards to privacy-preserving tools they can use. Take instant messaging, for example. WhatsApp is a free end-to-end encrypted messenger with over 2 billion daily active users. It checks a lot of privacy boxes,
+but it <a href="https://www.techradar.com/computing/cyber-security/whatsapp-encryption-isnt-the-problem-metadata-is">still collects user metadata</a>. All is well, though, right? What do you have to worry about if Meta can&rsquo;t actually read your messages?</p>
+<p>A <a href="https://x.com/mysk_co/status/1795210609153163374/photo/1">pertintent Tweet</a> by user <a href="https://x.com/mysk_co">@mysk_co</a> points out that &ldquo;user data is not only about messages.&rdquo; The metadata collected by WhatsApp can be used to gather plenty of sensitive information about you like location data (whether explicitly shared by you or inferred by them),
+communication and activity patterns, and ultimately use all this to market to you across Meta platforms, or even <a href="https://faq.whatsapp.com/808280033839222/">provide this information to law enforcement and governments</a> upon request.</p>
+<p>A 2021 <a href="https://www.forbes.com/sites/zakdoffman/2021/01/03/whatsapp-beaten-by-apples-new-imessage-update-for-iphone-users/">Forbes article</a> shows the comparison between Apple&rsquo;s privacy labels for Signal, iMessage, WhatsApp, and Facebook Messenger.</p>
+<p><figure>
+    <img loading="lazy" src="/images/data-linked-to-you-comparison.webp"/> 
+</figure>
+
+<em>via <a href="https://www.forbes.com/sites/zakdoffman/2021/01/03/whatsapp-beaten-by-apples-new-imessage-update-for-iphone-users/">Forbes</a></em></p>
+<p>You may ask, what does this have to do with socioeconomic factors? What am I on about if WhatsApp is <em>free</em>? Well, the reason that WhatsApp is able to maintain an active end-to-end encrypted platform with 2 billion users is that it is able to monetize it. No, they&rsquo;re not reading your messages, because <em>they don&rsquo;t need to</em> in order to use all the other information they already collect for advertising.</p>
+<p>Privacy-superior alternatives exist, such as <a href="https://signal.org/">Signal</a>, which collects no metadata except for a phone number, and <a href="https://signal.org/bigbrother/">has repeatedly proven</a> that it is literally unable to provide subpoenaed information. However, it has a problem: it is not financially sustainable at a competing scale because it has no data to monetize. Additionally, Signal is a <a href="https://signalfoundation.org/en/">non-profit</a> and relies entirely on donations and charity.</p>
+<blockquote>
+<p>Signal still knows nothing about you, but the government still continues to ask us if we do.</p>
+</blockquote>
+<p>A November 2023 blog post by Signal titled <a href="https://signal.org/blog/signal-is-expensive/"><em>&ldquo;Privacy is Priceless, but Signal is Expensive&rdquo;</em></a> reveals that infrastructure costs for the platform are at over 14 million dollars a year. This is for a free service with 40 million users as of 2022 (source?) against WhatsApp&rsquo;s <a href="https://www.statista.com/statistics/258749/most-popular-global-mobile-messenger-apps/">2 billion</a>. Clearly, this model, while supremely private and respectful to the user,
+could not operate in the real world with a much larger user base. This means that a hypothetically much more popular Signal would be forced to switch to a paid model to offset its costs. As nice as it would be for
+the whole world to use Signal, reality makes this just a pipe dream for now.</p>
+<p>Although I personally would pay for Signal in a heartbeat (and have already donated), that is exactly the point I am trying to make: not everyone is able to make sacrifices for their privacy, finacial or otherwise. Looking at WhatsApp&rsquo;s <a href="https://www.verint.com/blog/what-countries-are-the-biggest-whatsapp-users/">market penetration by country</a>, populations across the world are heavily dependent on the service, and many of these populations with low GDP per capita, such as Kenya, where 97% of people are WhatsApp users, would struggle to find alternative services with a modicum of privacy if WhatsApp were to switch to a paid model.</p>
+<p>Ultimately, users would just move on to the next best thing that works, because most don&rsquo;t have the privilege of having the time or money to worry about their privacy. And with modern business models, when people don&rsquo;t have the means to pay for something, they pay with their personal information.</p>
+<p>Am I saying that the people who rely on WhatsApp should stop using it for the sake of their privacy? <em>Of course not</em>. It is still offers E2EE messaging, which is extremely important. I use WhatsApp occasionally. But it needs to be recognized that some people don&rsquo;t have the choice to use anything else, and that constitutes a privilege. This is the case for WhatsApp, and it&rsquo;s the case for so much of our technology today, where nothing is ever <em>really</em> free.</p>
+<p>This can be seen in lots of low-cost hardware and freeware (note: <em><a href="https://www.lifewire.com/freeware-definition-4154271">not FOSS</a></em>) where the business model usually revolves around taking an initial loss for the sake of customer acquisition, and later recouping revenue with shady strategies like advertising.</p>
+<ul>
+<li>Low-cost media boxes like <a href="https://www.fool.com/investing/2023/12/24/roku-hopes-youll-buy-a-shiny-new-roku-smart-tv-thi/">Roku</a> that deliver <a href="https://www.trustedreviews.com/news/roku-learns-sneaky-way-to-show-tv-ads-and-we-hate-the-idea-4514809">&ldquo;sneaky ads&rdquo;</a>, while <a href="https://www.nytimes.com/2024/03/20/technology/personaltech/roku-data-breach-companies.html">making it increasingly difficult</a> to own your device</li>
+<li>Affordable Chinese Android devices that are <a href="https://gizmodo.com/android-xiamoi-oneplus-phones-personal-info-study-1850082989">&ldquo;packed with spyware&rdquo;</a></li>
+<li>&ldquo;Free&rdquo; VPNs that <a href="https://nordvpn.com/blog/free-vpn-vs-paid-vpn/">sell your browsing data and inject ads</a></li>
+</ul>
+<p>It really goes back to the adage: <em>if you&rsquo;re not paying for a product,</em> <a href="https://www.forbes.com/sites/marketshare/2012/03/05/if-youre-not-paying-for-it-you-become-the-product/"><em>then you are the product</em></a>.</p>
+<blockquote>
+<p>If you&rsquo;re not paying for a product, then you are the product.</p>
+</blockquote>
+<p>Privacy requires time and sometimes money, something lots of people do not have. It is a privilege to consider this, let alone be aware of it. People need money to feed themselves and their families before they
+can start worrying about a corporation building an advertising profile of them. Obviously different threat models and <a href="https://coreyst.one/posts/privacy-harms/">privacy harms</a> exist, but this is just an example.
+This harkens back to Maslow&rsquo;s <em>hierarchy of needs</em>, where I would place privacy within &ldquo;self-esteem&rdquo;. The idea of <a href="https://www.privateinternetaccess.com/blog/understanding-the-different-maslow-need-levels-for-privacy/">different Maslow need levels for privacy</a> definitely merits more attention in the future.</p>
+<p><figure>
+    <img loading="lazy" src="/images/maslows-hierarchy.jpg"/> 
+</figure>
+
+<em>via <a href="https://vectorstock.com/">vectorstock.com</a></em></p>
+<p>Something else: <a href="https://www.weforum.org/stories/2021/07/ai-machine-learning-bias-discrimination/">technology is biased</a>. Artificial intelligence suffers from the very biases of its creators, which results in flawed systems like facial recognition that <a href="https://www.latimes.com/opinion/story/2022-09-29/facial-recognition-technology">&ldquo;victimizes people of color&rdquo;</a>.</p>
+<p>This is the focus of 2020 documentary <a href="https://www.nytimes.com/2020/11/11/movies/coded-bias-review.html"><em>Coded Bias</em></a>, which &ldquo;explores how machine-learning algorithms can perpetuate society’s existing class-, race- and gender-based inequities.&rdquo;</p>
+<p>One subplot in the documentary looks at a low-income, predominantly black housing complex in Brooklyn, where owners deployed facial recognition scanners to building entrances to supplement existing lock-and-key access. Residents express concerns that they feel like guinea pigs for an already discriminatory technology that is not in use in other wealthier housing complexes or apartments in the area. In the documentary Professor Virginia Eubanks quotes that &ldquo;the future is already here, it&rsquo;s just not evenly distributed&rdquo;, describing this as a predatory trend where punitive and invasive surveillance technologies are first introduced into poor, working-class communities where there are fewer expectations to meet legal resistance or scrutiny.</p>
+<p>This even extends to the prison system, as described by the paper <a href="https://compass.onlinelibrary.wiley.com/doi/abs/10.1111/soc4.12847">Privacy violations and procedural justice in the United States prisons and jails</a>, which describes a deficit in privacy protections for incarcerated individuals. They note that &ldquo;although it is expected that incarcerated individuals have fewer privacy rights than nonincarcerated citizens, some privacy violations may be perceived as procedurally unjust due to their severity and infringement upon incarcerated individuals&rsquo; rights to dignity and respect.&rdquo; This is further explored by a 2024 paper by Stephen Raher who describes modern carceral settings as the <a href="https://northwesternlawreview.org/articles/data-privacy-in-carceral-settings-the-digital-panopticon-returns-to-its-roots/">&ldquo;digital panopticon [returning] to its roots&rdquo;</a>.</p>
+<h3 id="geographic-jurisdictions">Geographic jurisdictions</h3>
+<p>According to the IAPP&rsquo;s <a href="https://iapp.org/resources/global-privacy-directory/">Global Privacy Law and DPA Directory</a>, as of March 2024, over 137 countries, or 70% of all nations, have national data privacy laws. A complementary <a href="https://iapp.org/news/a/identifying-global-privacy-laws-relevant-dpas/">IAPP article</a> reads that &ldquo;79.3% of the world&rsquo;s population is covered by some form of national data privacy law&rdquo;.</p>
+<p>That&rsquo;s great, and those numbers are growing year by year. But don&rsquo;t let it distract you from the reality that there are still people who <em>aren&rsquo;t</em> protected by these guarantees.
+There are also cases where these laws might provide different, or weaker, protections than legislation of other states or nations.</p>
+<p>The US&rsquo;s state-based approach is a token example, as the IAPP&rsquo;s <a href="https://iapp.org/resources/article/us-state-privacy-legislation-tracker/">US State Privacy Legislation Tracker</a>
+illustrates, where independent states develop their own privacy regulations which afford rights to their citizens which those of another state might not enjoy. For example,<br>
+California is currently the only state that affords citizens the right to a private right of action in certain cases. Someone from Kentucky may have the right to opt in for sensitive data processing, but not in Iowa. A resident of Virginia can reject to a company using automated decision-making, but not Utah.</p>
+<p>Take a look at the IAPP&rsquo;s <a href="https://iapp.org/resources/article/us-state-privacy-laws-overview/">US State Comprehensive Privacy Laws Report</a>. Only 19 states have any comprehensive protections to begin with. This problem is not exclusive to the US, as a remaining 30% of nations still lack any comprehensive protections.</p>
+<p><figure>
+    <img loading="lazy" src="/images/iapp-state-tracker-jan2025.png"/> 
+</figure>
+
+<em>via <a href="https://iapp.org/resources/article/us-state-privacy-legislation-tracker/">IAPP</a></em></p>
+<h3 id="corporate-influence">Corporate influence</h3>
+<p>Personal data has value: to the data subjects it belongs to, but even more so to the companies collecting it.
+Companies know this value, because they have been <a href="https://showmethedata.blog/how-to-measure-the-value-of-data">measuring it</a> for years. This value drives corporations to collect
+as much <a href="https://www.ibm.com/products/tutorials/6-pillars-of-data-quality-and-how-to-improve-your-data">high-quality data</a> as they can, through whatever means necessary.</p>
+<p>One of the ways they can do this is by by offering some sort of financial incentive to consumers at the cost of their personal information.
+This practice is actually very common today and most people have likely participated in one or more of these incentives. The business usually solicits some amount of personal information,
+like a name, phone number, and/or email address, in exchange for something of &ldquo;value&rdquo;.</p>
+<p>In the marketing industry, this is simply known as <a href="https://www.tremendous.com/blog/what-is-incentive-marketing/">&ldquo;incentive marketing&rdquo;</a> and it&rsquo;s a (gross) popular tactic to increase customer retention and spending.
+According to a martech company, here are some common examples that <a href="https://www.kennect.io/post/incentive-marketing#6-marketing-incentives-customers-cant-resist">&ldquo;customers can&rsquo;t resist&rdquo;</a>:</p>
+<ul>
+<li>Referral bonuses</li>
+<li>Discounts and coupons</li>
+<li>Free trials and samples</li>
+<li>Loyalty programs</li>
+<li>Contests and giveaways</li>
+<li>Early access</li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/incentive-marketing.png"/> 
+</figure>
+
+<em>via <a href="https://www.kennect.io/post/incentive-marketing">kennect.io</a></em></p>
+<p>Aside: I emphasized the quotes around <em>value</em> because this value is really in the hands of the business. There is a reason they offer you these incentives,
+and it&rsquo;s because it makes them more money. They wouldn&rsquo;t do it if it was losing them money.
+I do not participate in these incentives because I do not appreciate corporations that <a href="https://blog.growthpanels.com/why-loyalty-programs-work-the-psychology-behind-reward-schemes/">manipulate psychology</a> to try to take my money.</p>
+<p>This incentivization is actually expressly allowed by the <a href="https://www.oag.ca.gov/privacy/ccpa">California Consumer Privacy Protection Act</a> and some other comprehensive state regulations across the US.
+The CCPA tucks this into the <a href="https://www.kelleydrye.com/viewpoints/blogs/ad-law-access/the-ccpa-non-discrimination-right-explained"><em>right to non-discrimination</em></a>, which means that &ldquo;businesses cannot deny goods or services, charge you a different price, or provide a different level or
+quality of goods or services just because you exercised your rights under the CCPA.&rdquo;</p>
+<p>However, remember how personal data has value? The CCPA recognizes this, and even provides <a href="https://www.privacysecurityacademy.com/wp-content/uploads/2019/10/Third-Parties-and-the-CCPA.pdf">guidelines for calculating that value</a> so that businesses can &ldquo;offer you promotions,
+discounts and other deals in exchange for collecting, keeping, or selling your personal information.
+But they can only do this if the financial incentive offered is reasonably related to the value of your personal information.&rdquo;</p>
+<p>This is not to bash on the CCPA. California has historically been the most progresive state for consumer privacy in the nation. Yet, regardless of what you think about this practice, you cannot deny that these incentives create an inherent imbalance that might hook<br>
+some individuals, like a poor single mother, for example, and not others purely for economic reasons.  Although these incentives are <em>available</em> to everyone, they might only be <em>interesting</em> or <em>appealing</em> to those in challenging financial situations. And that imbalance predicates privilege.</p>
+<h3 id="cultural-attitudes">Cultural attitudes</h3>
+<p>We are all human, but our culture significantly influences our thoughts and behaviors.
+This influence extends to our perceptions of privacy and our willingness to share our personal information with people, companies, and the internet at large.</p>
+<p>In <a href="https://link.springer.com/chapter/10.1007/978-3-031-09070-7_61?fromPaywallRec=false">The Role of Gender, Age and Cultural Differences in Online Information Disclosure and Privacy: A Systematic Review</a>, William Malatji demonstrates &ldquo;clear relationships between cultural variables and self-disclosure choices&rdquo;, affirming that &ldquo;culture was found to be one of the influential factors towards users’ information disclosure behaviour in online platforms.&rdquo; Essentially, you may be more willing to share details about your personal life on the internet, depending on your culture.</p>
+<p>A 2022 paper titled <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4068964">Cultural Influences on Personal Data Disclosure Decisions</a> by Lena Kessel investigates various sociocultural beliefs about privacy. The study, while focused specifically on participants in the
+United States, examines some of the following ideas about privacy that may impact how it is perceived, practiced, or legislated in any society:</p>
+<ul>
+<li>The trustworthiness of other people</li>
+<li>The general value of informational privacy</li>
+<li>Perceptions of workplace and governmental surveillance</li>
+<li>Trust in businesses and institutions</li>
+<li>Benefits associated with data disclosure</li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/data-sharing-risk.png"/> 
+</figure>
+
+<em>via <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4068964">Cultural Influences on Personal Data Disclosure Decisions</a></em></p>
+<p>In <a href="https://judgmentcallpodcast.com/2024/08/the-anthropology-of-privacy-how-cultural-shifts-are-reshaping-data-protection-policies/">The Anthropology of Privacy How Cultural Shifts Are Reshaping Data Protection Policies</a>, the author discusses
+how cultural norms reflect in the public perception and legislation around data privacy, and goes into much more detail than I can for this post. However, I have to note that this article provides
+zero sources anywhere, and one could assume that it was generated by AI, but I still think it makes for an excellent thought experiment.</p>
+<p>For example, the author considers the differences between collectivist and individualistic cultures and how they perceive privacy. The article reads: &ldquo;individuals from collectivist cultures, such as those in East Asia, tend to have a lower expectation of digital privacy compared to those from more individualistic societies in the West.&rdquo;</p>
+<p>This is supported by Malatji&rsquo;s study, who writes that &ldquo;collectivism relating to society and power distancing influence the strength of the association between privacy concerns and surveillance acceptance significantly, as well as the adoption of privacy protections.&rdquo;</p>
+<p>In a similar study, <a href="https://link.springer.com/chapter/10.1007/978-3-030-82786-1_12">Cross-Cultural Privacy Differences</a> by Yao Li, Li dives deep into these cross-cultural differences, comparing participants from various &ldquo;individualistic&rdquo; countries like the US, Australia, Germany, et. al, and &ldquo;collectivistic&rdquo; countries like India and China.</p>
+<p>Privacy perceptions can also be influenced by the role technology plays in a society. Where a society readily embraces technological innovation, individuals might be more willing to share their
+personal information, often to enjoy the resulting conveniences and benefits afforded by this technology. However, for less technologically advanced societies, the opposite might be true.</p>
+<p>This can be seen in 2021 <a href="https://www.dw.com/">DW</a> documentary <a href="https://www.youtube.com/watch?v=7gSU_Xes3GQ"><em>China - Surveillance state or way of the future?</em></a>, which explores
+China&rsquo;s technological advancements (specifically, in facial recognition), government surveillance, social credit system, and its public&rsquo;s perception of all of this less than two years into the COVID-19 pandemic.</p>
+<a class="shortcode-youtube" href="https://www.youtube.com/watch?v=7gSU_Xes3GQ" title="Play Youtube video" target="_blank">
+    <img src="/youtube/dw-china-documentary-thumbnail.jpg" alt="Youtube video 7gSU_Xes3GQ" />
+</a>
+
+<style>
+.shortcode-youtube {
+    position: relative; display: inline-block;
+}
+.shortcode-youtube::before, .shortcode-youtube::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+} 
+.shortcode-youtube::before {
+    background: url(/youtube/youtube_button.svg) center center / auto 4rem no-repeat;
+}
+.shortcode-youtube:hover::before {
+    background: url(/youtube/youtube_button_hover.svg) center center / auto 4rem no-repeat;
+}
+.shortcode-youtube::after {
+    background: url(/youtube/youtube.svg) calc(100% - 1rem) calc(100% - 1rem) / auto 2rem no-repeat;
+}
+.shortcode-youtube img {
+    display: block;
+}
+</style>
+<p>We see how deeply engrained technology is into the lives of everyday people in China, so much so that it is possible to pay for a taxi or buy a snack only with a biometric facial scan.
+The documentary shares the story of Deng Yufeng, a Chinese artist who created a <a href="https://www.sixthtone.com/news/1006432">&ldquo;performance art project&rdquo;</a> featuring a video of people comically trying to walk around the streets of Beijing without being recorded by a vast network of public cameras. For any Monty Python fans, it is like a Chinese homage to the <a href="https://www.youtube.com/watch?v=iV2ViNJFZC8">Ministry of Silly Walks</a>. The project was intended to highlight the &ldquo;country&rsquo;s rapidly expanding surveillance network&rdquo;, but was promptly censored by the Chinese government, who ordered Yufeng to cease distribution of the video.</p>
+<p>Yufeng, curiously, however, goes on to express support for China&rsquo;s proliferating data collection and surveillance practices, specifically to combat the pandemic, claiming that it is an &ldquo;ethical tradeoff&rdquo; that he is willing to make for technology that offers to save lives. &ldquo;Is privacy or human life more important? [&hellip;] In this case, I think everyone makes the decision that life is more important.&rdquo;</p>
+<blockquote>
+<p>Is privacy or human life more important?</p>
+</blockquote>
+<p>A completely valid point, but not the topic for this post. My point is that someone in a collectivistic society that might be more privacy-conscious, preferring not to transact with or participate in social programs like these, might literally not have the choice. What happens when vendors stop accepting cash? Or when we have to scan our faces to enter the subway? Again, any social merit that might result from these technologies does not invalidate the imbalance that it creates.</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Traveling with privacy and security in mind</title>
       <link>http://localhost:1313/posts/traveling-privately/</link>
@@ -400,6 +623,8 @@ University of California, Irvine, Spring 2010?</li>
 <li>Nissim, K., Steinke, T., Wood, A., Altman, M., Bembenek, A., Bun, M., Gaboardi, M., O’Brien, D. R., &amp; Vadhan, S. (2018). <a href="https://privacytools.seas.harvard.edu/files/privacytools/files/pedagogical-document-dp_new.pdf">Differential privacy: A primer for a non-technical audience.</a></li>
 <li>Sweeney, L. (2002). <a href="https://epic.org/wp-content/uploads/privacy/reidentification/Sweeney_Article.pdf">k-ANONYMITY: A model for protecting privacy.</a></li>
 <li>A. Machanavajjhala, J. Gehrke, D. Kifer and M. Venkitasubramaniam, <a href="https://www.cs.rochester.edu/u/muthuv/ldiversity-TKDD.pdf">&ldquo;L-diversity: privacy beyond k-anonymity,&rdquo;</a> 22nd International Conference on Data Engineering (ICDE'06)</li>
+<li>Nidhi Desai, Manik Lal Das, Payal Chaudhari, Naveen Kumar,
+<a href="https://www.sciencedirect.com/science/article/abs/pii/S0167404822002681?via%3Dihub">Background knowledge attacks in privacy-preserving data publishing models</a>, (2022)</li>
 </ul>
 <h2 id="podcasts">Podcasts</h2>
 <ul>
@@ -426,6 +651,7 @@ University of California, Irvine, Spring 2010?</li>
 <li><a href="https://www.reddit.com/r/cscareerquestions/"><code>r/cscareerquestions</code></a>: Not specifically privacy related, but a sub for tech career discussions.</li>
 <li><a href="https://www.reddit.com/r/cybersecurity/"><code>r/cybersecurity</code></a>: News and general discussions about cybersecurity-related topics.</li>
 <li><a href="https://www.reddit.com/r/netsec/"><code>r/netsec</code></a>: More technical information security content.</li>
+<li><a href="https://www.reddit.com/r/OSINT/"><code>r/OSINT</code></a>: Open source intelligence. A super interesting field in cybersecurity that intersects with privacy.</li>
 <li><a href="https://www.reddit.com/r/privacy"><code>r/privacy</code></a>: News and general discussions about privacy-related topics.</li>
 </ul>
 ]]></content:encoded>

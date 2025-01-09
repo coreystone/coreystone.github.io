@@ -6,9 +6,8 @@ tags:
   - privacy
   - travel
 ShowToc: true
-weight: 1
+weight: 2
 ---
-
 
 
 ## Introduction
@@ -30,6 +29,8 @@ Be ready to present identification to government officials (and businesses depen
 Do NOT lie or provide falsified documents to any government with the goal of retaining your privacy. That is a horrible idea.
 
 This blog post is not about hiding from those governments or disappearing. It is about recognizing how your privacy can be negatively affected while traveling and what you can realistically do about it. This includes protecting yourself from companies and public networks, whether incompetent or malicious, while maintaining full functionality of all the digital devices and services you need to go about and enjoy your trip. 
+
+
 ## Establish your threat model
 Before doing anything, you need to first ask yourself a few questions to guide yourself through this process. I'm going to provide the basic questions loosely based on those in [this EFF article](https://www.eff.org/keeping-your-site-alive/evaluating-your-threat-model) that help define your "threat model": a framework used to identify, evaluate, and prioritize potential risks to your personal information and online security. This archetype actually [originated in information security](https://www.iriusrisk.com/resources-blog/history-of-threat-modeling) but can be applied to your personal privacy to help stay on track and focus on what really matters to you.
 * What personal information are you protecting?
@@ -39,6 +40,7 @@ Before doing anything, you need to first ask yourself a few questions to guide y
 * How much time and money are you willing to invest into protecting this information?
 
 Answering these questions will help you better understand your goals with protecting your privacy and ultimately save you time and headaches in the future.
+
 
 ## Secure, encrypt, & backup devices
 Anything can happen while traveling, and that includes losing your phone or other devices. You need to be prepared for this *before* it happens to avoid turning an inconvenience into an absolute nightmare because you don't have a backup of your data, your phone didn't have a passcode, or a thief can see all of your unencrypted files on your laptop.
@@ -60,6 +62,7 @@ Anything can happen while traveling, and that includes losing your phone or othe
 
 For brownie points, you can even encrypt your backups before uploading them to an encrypted cloud storage provider to mitigate any risk of your data being exfiltrated if that provider and their encryption keys were to be compromised.
 [Yo dawg...](https://knowyourmeme.com/memes/xzibit-yo-dawg) I heard you like encrypted backups.
+
 
 ## Freeze your credit
 This section is for my US readers, but you should take whatever equivalent steps you can in your country. 
@@ -97,6 +100,7 @@ Now that you have a cell plan and phone number, I also recommend looking into a 
 
 But what if you rely on your phone number to text friends and family back home? I recommend letting people know when you will be leaving and how they can reach you, which should be through a secure instant messenger app, as I'll discuss in a moment.
 
+
 ### eSIMs
 An [embedded SIM card](https://www.digitaltrends.com/mobile/esim-explainer/#dt-heading-when-can-i-start-using-an-esim) (eSIM) removes the physical card from your phone and allows you to purchase SIM cards digitally through a dedicated service. Similar to SIM cards, eSIMs may also be subject to ["eKYC"](https://www.airalo.com/blog/whats-an-ekyc-and-why-do-some-esims-require-it) requirements which you will need to check with first.
 
@@ -106,6 +110,7 @@ Although I don't have any experience with eSIMs yet, I understand them to be [mo
 
 {{< figure align=left src="/images/sim-vs-esim.png" >}}
 *via [mintmobile.com](https://www.mintmobile.com/blog/esim-vs-physical-sim-cards-what-you-need-to-know/)*
+
 
 ## Messaging & texting
 Believe it or not, outside of the United States not everyone has an iPhone. In fact, here is a sobering [tweet by World of Statistics](https://x.com/stats_feed/status/1671378198477643777) that shows the percentage of annual salary, by country, required to buy a new iPhone 14 Pro, which explains the proliferation of different phone brands across across the world, as seen below.
@@ -154,6 +159,7 @@ I am a Signal fanboy, but in my case in Mexico I had to bite the bullet and inst
 
 The compromise I made was to purchase a SIM card at a 7-Eleven (in cash) then use that phone number to create a new WhatsApp account, which I would only use in Mexico. It's not perfect--nothing is when you travel-- but I can at least relax knowing that all messages are E2EE and my activity is siloed to the country that I'm in.
 
+
 ## Public Wi-Fi
 Times have changed, and the reality is that public Wi-Fi networks aren't inherently dangerous like they used to be thanks to security improvements in web browsers (with [HTTPS-only mode](https://support.mozilla.org/en-US/kb/https-only-prefs)), [personal firewalls](https://en.wikipedia.org/wiki/Personal_firewall), and [networking standards](https://en.wikipedia.org/wiki/Wi-Fi_Protected_Access). This means that your browser is no longer making plaintext HTTP requests to servers, your computer likely has a competent firewall and anti-virus, and the network you're connected to is encrypted. 
 
@@ -173,6 +179,7 @@ To re-iterate, the danger isn't the Wi-Fi network itself, it's the fact that it'
 
 {{< figure align=left src="/images/travel-router.png" >}}
 *via [vpnuniversity.com](https://www.vpnuniversity.com/routers/setup-two-routers-with-dedicated-vpn-router)*
+
 
 ## Bluetooth connections
 During your travels, there's lots of foreign devices that you might connect to via Bluetooth, such as the radio in your rental car or the entertainment system in the airplane or bus ride, for example. You might think that such a cut-and-dry, single function technology would be harmless for your privacy, and that is where you would be *technically* right, but not really.
@@ -202,6 +209,7 @@ So what should you do?
 * When you are done, go to the settings of the head unit or console that you are connected to and deliberately "Forget" your phone or device that you connected. Do this *before* forgetting the device on your phone
 * If you see other peoples' devices that they forgot to disconnect, do the right thing and Forget those devices as well
 
+
 ## "Burner" phones
 Depending on your threat model and concerns about safety in the place that you are visiting, "burner" phones may be an option to consider. I emphasize, with quotations around "burner", that I am *not* talking about those dummy flip phones that bad guys use in the movies and then destroy after taking a phone call. Buying something like this is likely counterproductive for your needs as a traveler and overkill for your threat model; I'm sure you probably get added to some kind of list for buying one now too.
 
@@ -214,6 +222,7 @@ A caveat worth mentioning: many cheap smart phones that you may come across are 
 I factory reset the phone and threw it into a sock drawer, and I'm going to exchange it for an unlocked phone compatible with LineageOS the next time I go back.
 
 Any unlocked phone that is supported by a privacy-friendly custom ROM such as [LineageOS](https://wiki.lineageos.org/devices/), [DivestOS](https://divestos.org/pages/devices) (a privacy-focused fork of Lineage), and [GrapheneOS](https://grapheneos.org/faq#device-support) would be sufficient. However, Graphene is exclusive to Pixel devices which are pricier and harder to come by depending on the country.
+
 
 ## Payments
 ### Cash
@@ -231,7 +240,6 @@ What you might not have known is that behind the scenes, these digital wallets a
 
 Physical cards are less ideal. Only swipe or insert your card if there is no contactless option available, and in such a case, be cognizant of skimmers.
 
-
 #### Virtual cards
 Where contactless payment services like Apply Pay hide your payment information by generating temporary tokens for each transaction, [virtual cards](https://www.cnet.com/personal-finance/credit-cards/advice/what-is-a-virtual-card-and-how-do-you-use-it/) remove that payment information from the equation by generating disposable 16-digit cards funded by your bank account. Virtual cards also offer budgetary benefits like being able to set spend limits for specific cards, lock cards to specific vendors, and block recurring payments from expensive subscriptions. The largest consumer virtual card provider (which is only available in the U.S.) is [Privacy.com](https://privacy.com/).
 
@@ -248,6 +256,7 @@ To re-iterate:
 * Where cash is not an option, use a virtual card within a digital wallet 
 * Where cash is not an option and no contactless pay is available, check for card skimmers
 * For online purchases, use a virtual card
+
 
 ## Email aliases
 We're already asked for our email address pretty often at home, now just imagine while traveling. Here are some common occasions where you'll be solicited for your email address (and probably your phone number too):
@@ -273,6 +282,7 @@ There are a few popular services out there (including built-in aliases for Outlo
 
 Pro tip: email aliases are also not just for receiving email. You can to send outgoing mail addressed from your alias so you don't expose your original address.
 
+
 ## Handling identity documents and passports
 To start, as a general rule, you should have a paper and digital copy of:
 * Your primary identification (such as a driver's license)
@@ -294,6 +304,7 @@ So what can be done about this?
    
    For this reason, I recommend U.S. citizens elect to use their passport as a form of identification whenever possible, and even consider getting a [passport card](https://en.wikipedia.org/wiki/United_States_Passport_Card) for $30.
 3. If solicited for any other information, for example, at a hotel: provide a burner phone number and a PO box. 
+
 
 ## Navigating border crossings and airports
 Some previous points apply here:
@@ -332,6 +343,7 @@ As a U.S. citizen, you have the right to decline biometric checks at airports, a
 Usually you will also see signage before going up to the agent that explains your rights and whether or not you may refuse a biometric scan, as shown in the picture above.
 
 *Why bother refusing a biometric scan?* What's the point of having rights if nobody is willing to exercise them?
+
 
 ## Conclusion
 Travel is incredibly rewarding, and a privilege. Enjoy it as much as you can. All of this information serves me to be able to enjoy my time abroad more thoroughly and uninterrupted, with a greater peace of mind free from distractions and doubt.

@@ -6,14 +6,14 @@
     <description>Recent content in PrivacyEngineering on Corey Stone</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 27 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/privacyengineering/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 31 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/privacyengineering/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A privacy engineering glossary</title>
       <link>http://localhost:1313/posts/privacy-engineering-glossary/</link>
-      <pubDate>Sun, 03 Mar 2024 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 31 Dec 2024 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/posts/privacy-engineering-glossary/</guid>
-      <description> </description>
+      <description>Defining and exploring privacy computation concepts and technologies.</description>
       <content:encoded><![CDATA[<h2 id="a">A</h2>
 <h4 id="aggregation"><code>Aggregation</code></h4>
 <p>A statistical method to combine a collection of raw data and output it as a total or summary of that data.
@@ -64,7 +64,7 @@ either by the data controller alone or in collaboration with any other party&rdq
 <ul>
 <li>Read more:
 <ul>
-<li><a href="https://www.researchgate.net/publication/220724905_Background_Knowledge_Attacks_in_Privacy">Background Knowledge Attacks in Privacy</a></li>
+<li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0167404822002681?via%3Dihub">Background knowledge attacks in privacy-preserving data publishing models</a></li>
 <li><a href="https://www.cs.rochester.edu/u/muthuv/ldiversity-TKDD.pdf">ℓ-Diversity: Privacy Beyond k-Anonymity</a></li>
 </ul>
 </li>
@@ -573,6 +573,8 @@ University of California, Irvine, Spring 2010?</li>
 <li>Nissim, K., Steinke, T., Wood, A., Altman, M., Bembenek, A., Bun, M., Gaboardi, M., O’Brien, D. R., &amp; Vadhan, S. (2018). <a href="https://privacytools.seas.harvard.edu/files/privacytools/files/pedagogical-document-dp_new.pdf">Differential privacy: A primer for a non-technical audience.</a></li>
 <li>Sweeney, L. (2002). <a href="https://epic.org/wp-content/uploads/privacy/reidentification/Sweeney_Article.pdf">k-ANONYMITY: A model for protecting privacy.</a></li>
 <li>A. Machanavajjhala, J. Gehrke, D. Kifer and M. Venkitasubramaniam, <a href="https://www.cs.rochester.edu/u/muthuv/ldiversity-TKDD.pdf">&ldquo;L-diversity: privacy beyond k-anonymity,&rdquo;</a> 22nd International Conference on Data Engineering (ICDE'06)</li>
+<li>Nidhi Desai, Manik Lal Das, Payal Chaudhari, Naveen Kumar,
+<a href="https://www.sciencedirect.com/science/article/abs/pii/S0167404822002681?via%3Dihub">Background knowledge attacks in privacy-preserving data publishing models</a>, (2022)</li>
 </ul>
 <h2 id="podcasts">Podcasts</h2>
 <ul>
@@ -599,6 +601,7 @@ University of California, Irvine, Spring 2010?</li>
 <li><a href="https://www.reddit.com/r/cscareerquestions/"><code>r/cscareerquestions</code></a>: Not specifically privacy related, but a sub for tech career discussions.</li>
 <li><a href="https://www.reddit.com/r/cybersecurity/"><code>r/cybersecurity</code></a>: News and general discussions about cybersecurity-related topics.</li>
 <li><a href="https://www.reddit.com/r/netsec/"><code>r/netsec</code></a>: More technical information security content.</li>
+<li><a href="https://www.reddit.com/r/OSINT/"><code>r/OSINT</code></a>: Open source intelligence. A super interesting field in cybersecurity that intersects with privacy.</li>
 <li><a href="https://www.reddit.com/r/privacy"><code>r/privacy</code></a>: News and general discussions about privacy-related topics.</li>
 </ul>
 ]]></content:encoded>
@@ -607,10 +610,10 @@ University of California, Irvine, Spring 2010?</li>
     <item>
       <title>Awesome open-source privacy engineering</title>
       <link>http://localhost:1313/posts/awesome-opensource-privacyengineering/</link>
-      <pubDate>Wed, 25 Dec 2024 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 24 Dec 2024 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/posts/awesome-opensource-privacyengineering/</guid>
-      <description>A curation of tools, technologies, and frameworks made open-source for the advancement of privacy engineering.</description>
+      <description>A curation of tools, technologies, and frameworks open sourced for the advancement of the field.</description>
       <content:encoded><![CDATA[<h2 id="introduction">Introduction</h2>
 <p><a href="https://github.com/pawelborkar/awesome-repos">&ldquo;Awesome&rdquo; GitHub repos</a> are curated lists of information and resources relevant to a particular subeject area. There are a plethora of awesome privacy-related repos, and here are some standouts that influenced this list:</p>
 <ul>
@@ -619,8 +622,8 @@ University of California, Irvine, Spring 2010?</li>
 <li><a href="https://github.com/AbductiveReason/AwesomePrivacyEngineering"><code>AwesomePrivacyEngineering</code></a></li>
 <li><a href="https://utrechtuniversity.github.io/privacy-engineering-tools/"><code>privacy-engineering-tools</code></a></li>
 </ul>
-<p>However, I wasn&rsquo;t able to find a list of exclusively open-source, currently maintained tools and resources for privacy engineering, so I wanted to one.
-This list focuses on currently updated, non-deprecated projects, and also projects that are particularly interesting to me.</p>
+<p>However, I wasn&rsquo;t able to find a list of exclusively open-source, currently maintained tools and resources for privacy engineering, so I wanted to there to be one.
+This list focuses on currently updated, non-deprecated projects which are particularly interesting to me.</p>
 <h2 id="consent-management-platform-cmp">Consent management platform (CMP)</h2>
 <h4 id="klaro-privacy-manager"><code>Klaro Privacy Manager</code></h4>
 <blockquote>
@@ -646,9 +649,9 @@ This list focuses on currently updated, non-deprecated projects, and also projec
 </blockquote>
 <ul>
 <li>Author: <a href="https://ketch.com/">Ketch</a></li>
-<li>Repo: <a href="https://github.com/ketch-com/Open-Cookie-Database">github.com/ketch-com/Open-Cookie-Database</a>
-A spreadsheet of common cookies and their associated domains, categories, and descriptions.</li>
+<li>Repo: <a href="https://github.com/ketch-com/Open-Cookie-Database">github.com/ketch-com/Open-Cookie-Database</a></li>
 </ul>
+<p>A spreadsheet of common cookies and their associated domains, categories, and descriptions.</p>
 <h2 id="static-code-analysis">Static code analysis</h2>
 <h4 id="privado"><code>Privado</code></h4>
 <blockquote>
@@ -656,12 +659,9 @@ A spreadsheet of common cookies and their associated domains, categories, and de
 </blockquote>
 <ul>
 <li>Author: <a href="https://docs.privado.ai/">Privado</a></li>
-<li>Repo: <a href="https://github.com/Privado-Inc/privado">github.com/Privado-Inc/privado</a>
-Watch: <a href="https://youtu.be/S-c3l8LGfD0">Getting Started with Privacy Code Scanning</a></li>
+<li>Repo: <a href="https://github.com/Privado-Inc/privado">github.com/Privado-Inc/privado</a></li>
+<li>Watch: <a href="https://youtu.be/S-c3l8LGfD0">Getting Started with Privacy Code Scanning</a></li>
 </ul>
-<h2 id="personal-information-scanning">Personal information scanning</h2>
-<p>Capital One DataProfiler: <a href="https://github.com/capitalone/DataProfiler">https://github.com/capitalone/DataProfiler</a>
-PII Catcher: <a href="https://github.com/tokern/piicatcher">https://github.com/tokern/piicatcher</a></p>
 <h2 id="data-subject-rights">Data subject rights</h2>
 <h4 id="fides"><code>Fides</code></h4>
 <blockquote>
@@ -681,14 +681,12 @@ PII Catcher: <a href="https://github.com/tokern/piicatcher">https://github.com/t
 <li>Watch: <a href="https://www.youtube.com/watch?v=CsXdr34ZotA&amp;list=PLbRoZ5Rrl5le5MLOePeumxpQfUg2Gyfui&amp;index=18">PEPR &lsquo;23 - Securing and Standardizing Data Rights Requests with a Data Rights Protocol</a></li>
 </ul>
 <h4 id="ketch-dsr-protocol"><code>Ketch DSR Protocol</code></h4>
-<blockquote>
-<p>The technical standard for exchanging data rights requests.</p>
-</blockquote>
 <ul>
 <li>Author: <a href="https://ketch.com">Ketch</a></li>
 <li>Repo: ???</li>
 <li>Watch: <a href="https://youtu.be/XotLV8JyLg0?list=PLbRoZ5Rrl5ldxIsGMFjwixoLxQ1iMq_BH">PEPR &lsquo;24 - Building a Protocol to Improve DSR Flexibility and Integration</a></li>
 </ul>
+<p>This is Ketch&rsquo;s iteration of Consumer Reports&rsquo;s DRP. However, I was not able to find the source repo.</p>
 <h2 id="frameworks">Frameworks</h2>
 <h4 id="xcompass-comcast-privacy-assistant"><code>xCOMPASS (COMcast Privacy ASSistant)</code></h4>
 <blockquote>
@@ -708,22 +706,37 @@ PII Catcher: <a href="https://github.com/tokern/piicatcher">https://github.com/t
 <li>Repo: <a href="https://github.com/facebookresearch/privacy_adversarial_framework">github.com/facebookresearch/privacy_adversarial_framework</a></li>
 <li>Watch: <a href="https://www.youtube.com/watch?v=NEjPZrfK460&amp;list=PLbRoZ5Rrl5le5MLOePeumxpQfUg2Gyfui&amp;index=14">PEPR &lsquo;23 - How to Utilize Your Red Team for Privacy</a></li>
 </ul>
-<p>PANOPTIC™ Privacy Threat Model: <a href="https://ptmworkshop.gitlab.io/#/panoptic">https://ptmworkshop.gitlab.io/#/panoptic</a></p>
+<h4 id="panoptic-privacy-threat-model"><code>PANOPTIC Privacy Threat Model</code></h4>
+<blockquote>
+<p>Publicly available privacy threat taxonomy for breaking down and describing privacy attacks against individuals and groups of individuals.</p>
+</blockquote>
+<ul>
+<li><em>Pattern and Action Nomenclature Of Privacy Threats In Context</em></li>
+<li>Author: <a href="https://www.mitre.org/">MITRE</a></li>
+<li>Repo: <a href="https://ptmworkshop.gitlab.io/#/panoptic">ptmworkshop.gitlab.io/#/panoptic</a></li>
+</ul>
+<p>The authors of MITRE ATT&amp;CK® in the cybersecurity space created a spiritual equivalent in the privacy space for &ldquo;system and environmental privacy threat assessment, holistic privacy risk modeling, and privacy red teaming.&rdquo;</p>
 <h2 id="privacy-enhancing-technologies-pets">Privacy enhancing technologies (PETs)</h2>
-<h4 id="petace-privacy-enhancing-technologies-via-applied-cryptography-engineering"><code>PETAce (Privacy-Enhancing Technologies via Applied Cryptography Engineering)</code></h4>
+<h4 id="petace"><code>PETAce</code></h4>
 <blockquote>
 <p>PETAce is a privacy-enhancing protocol framework based on state-of-the-art research results. It provides data processing methods such as secret sharing, homomorphic encryption, and oblivious transfer, and can perform collaborative computation and analysis of two-party data while preserving data privacy.
 <a href="https://developers.tiktok.com/blog/enhance-privacy-using-PETAce">https://developers.tiktok.com/blog/enhance-privacy-using-PETAce</a></p>
 </blockquote>
 <ul>
+<li><em>Privacy-Enhancing Technologies via Applied Cryptography Engineering</em></li>
 <li>Author: <a href="https://privacyinnovation.io/">TikTok Privacy Innovation</a></li>
-<li>Repo: <a href="https://github.com/tiktok-privacy-innovation/PETAce">github.com/tiktok-privacy-innovation/PETAce</a>
-Reading:</li>
-</ul>
+<li>Repo: <a href="https://github.com/tiktok-privacy-innovation/PETAce">github.com/tiktok-privacy-innovation/PETAce</a></li>
+<li>Reading:
 <ol>
-<li><a href="https://developers.tiktok.com/blog/enhance-privacy-using-PETAce">PETAce: Using Applied Cryptography to Enhance Privacy</a></li>
-<li><a href="https://developers.tiktok.com/blog/tiktok-practices-in-privacy-enhancing-technologies">PETAce in Action: Enhancing privacy during Friends Matching in TikTok</a></li>
+<li>
+<p><a href="https://developers.tiktok.com/blog/enhance-privacy-using-PETAce">PETAce: Using Applied Cryptography to Enhance Privacy</a></p>
+</li>
+<li>
+<p><a href="https://developers.tiktok.com/blog/tiktok-practices-in-privacy-enhancing-technologies">PETAce in Action: Enhancing privacy during Friends Matching in TikTok</a></p>
+</li>
 </ol>
+</li>
+</ul>
 <h4 id="privacygo"><code>PrivacyGo</code></h4>
 <blockquote>
 <p>PrivacyGo is the open-source synergistic fusion of various PETs, such as differential privacy, multi-party computation, homomorphic encryption, and artificial intelligence methods to enhance user privacy protection. PrivacyGo strives to carefully design approaches that harness the strengths of PETs while mitigating their individual limitations.</p>
@@ -731,12 +744,13 @@ Reading:</li>
 <ul>
 <li>Author: <a href="https://privacyinnovation.io/">TikTok Privacy Innovation</a></li>
 <li>Repo: <a href="https://github.com/tiktok-privacy-innovation/PrivacyGo">github.com/tiktok-privacy-innovation/PrivacyGo</a></li>
-<li>Watch: <a href="https://www.youtube.com/watch?v=OX4X78JRuf4&amp;list=PLbRoZ5Rrl5ldxIsGMFjwixoLxQ1iMq_BH">PEPR &lsquo;24 - Designing for User Privacy: Integrating Differential Privacy into Ad Measurement Systems in Practice</a>
-Reading:</li>
-</ul>
+<li>Watch: <a href="https://www.youtube.com/watch?v=OX4X78JRuf4&amp;list=PLbRoZ5Rrl5ldxIsGMFjwixoLxQ1iMq_BH">PEPR &lsquo;24 - Designing for User Privacy: Integrating Differential Privacy into Ad Measurement Systems in Practice</a></li>
+<li>Reading:
 <ol>
 <li><a href="https://developers.tiktok.com/blog/privacy-go">PrivacyGo: TikTok’s initiative in synergistic privacy-enhancing technologies</a></li>
 </ol>
+</li>
+</ul>
 <h4 id="pipelinedp"><code>PipelineDP</code></h4>
 <blockquote>
 <p>PipelineDP is a Python framework for applying differentially private aggregations to large datasets using batch processing systems such as Apache Spark, Apache Beam, and more.</p>
@@ -752,7 +766,7 @@ Reading:</li>
 </blockquote>
 <ul>
 <li>Author: <a href="https://privacyinnovation.io/">TikTok Privacy Innovation</a></li>
-<li>Repo: <a href="https://github.com/tiktok-privacy-innovation/Shadowgraphy"><code>github.com/tiktok-privacy-innovation/Shadowgraphy</code></a></li>
+<li>Repo: <a href="https://github.com/tiktok-privacy-innovation/Shadowgraphy">github.com/tiktok-privacy-innovation/Shadowgraphy</a></li>
 </ul>
 <h4 id="manatee"><code>ManaTEE</code></h4>
 <blockquote>
@@ -791,7 +805,7 @@ Reading:</li>
 <li>Author: <a href="https://research.google/">Google Research</a></li>
 <li>Repo: <a href="https://github.com/Google/private-join-and-compute">github.com/google/private-join-and-compute</a></li>
 </ul>
-<h4 id="pysyft">PySyft</h4>
+<h4 id="pysyft"><code>PySyft</code></h4>
 <blockquote>
 <p>Perform data science on data that remains in someone else&rsquo;s server.</p>
 </blockquote>
@@ -805,9 +819,6 @@ Reading:</li>
 </figure>
 
 <em>via xD.gov PEPR &lsquo;24 presentation</em></p>
-<h2 id="spaces">Spaces</h2>
-<p>Privacy Engineering Collaboration Space by NIST
-<a href="https://github.com/usnistgov/PrivacyEngCollabSpace">https://github.com/usnistgov/PrivacyEngCollabSpace</a></p>
 ]]></content:encoded>
     </item>
     

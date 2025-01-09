@@ -4,7 +4,7 @@ date: "2024-02-17"
 description: "A look at the dangers that result when privacy protections don't protect."
 tags:
   - privacy
-  - theory
+  - social
 ShowToc: true
 ---
 
