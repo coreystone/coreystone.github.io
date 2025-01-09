@@ -1,2 +1,6 @@
+# Ignore
 /public
 /i18n
+
+# Except
+!/public/robots.txt
