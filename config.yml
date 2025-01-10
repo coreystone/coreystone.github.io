@@ -59,7 +59,7 @@ params:
 
           - I like to write about privacy and digital security; you can read below or by clicking [**here**](https://coreyst.one/posts/).
           - You can see some of my other work by clicking on [**Projects**](https://coreyst.one/projects/).
-          - Contact me via any of the methods below, or see [**About Me**](https://coreyst.one/about/#how-to-contact-me).
+          - Contact me via any of the methods below, or see [**About Me**](https://coreyst.one/about/#contact-me).
 
     socialIcons:
         - name: github-simple
@@ -67,7 +67,7 @@ params:
         - name: linkedin-simple
           url: "https://linkedin.com/in/coreyjs"
         - name: pgpkey
-          url: "https://coreyst.one/about/#pgp-key"
+          url: "https://coreyst.one/pgp.txt"
 
     cover:
         hidden: true # hide everywhere but not in structured data
@@ -83,6 +83,10 @@ menu:
         - identifier: blog
           name: Blog
           url: /posts/
+          weight: 20
+        - identifier: notes
+          name: Notes
+          url: /notes/
           weight: 20
         - identifier: projects
           name: Projects

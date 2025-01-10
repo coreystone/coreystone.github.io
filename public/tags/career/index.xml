@@ -9,10 +9,10 @@
     <lastBuildDate>Fri, 27 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/career/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Privacy career resources</title>
-      <link>http://localhost:1313/posts/privacy-career-resources/</link>
+      <link>http://localhost:1313/notes/privacy-career-resources/</link>
       <pubDate>Fri, 27 Dec 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/privacy-career-resources/</guid>
+      <guid>http://localhost:1313/notes/privacy-career-resources/</guid>
       <description>A collection of informational resources pertaining to privacy and privacy engineering.</description>
       <content:encoded><![CDATA[<h2 id="books">Books</h2>
 <ul>
@@ -87,6 +87,102 @@ University of California, Irvine, Spring 2010?</li>
 <li><a href="https://www.reddit.com/r/OSINT/"><code>r/OSINT</code></a>: Open source intelligence. A super interesting field in cybersecurity that intersects with privacy.</li>
 <li><a href="https://www.reddit.com/r/privacy"><code>r/privacy</code></a>: News and general discussions about privacy-related topics.</li>
 </ul>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>P.S.R. &#39;23: a recap</title>
+      <link>http://localhost:1313/notes/psr-23-recap/</link>
+      <pubDate>Thu, 12 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/notes/psr-23-recap/</guid>
+      <description>What I learned and saw at Privacy. Security. Respect. 2023.</description>
+      <content:encoded><![CDATA[<h2 id="arriving-in-san-diego">Arriving in San Diego</h2>
+<p>On October 3, I arrived in San Diego to attend IAPP&rsquo;s Privacy. Security. Risk. conference for the next few days, right along the Marina in Downtown.</p>
+<p>The first day I tourist-ed around Coronado Island and the historical Gaslamp Quarter.</p>
+<p>Any trip to San Diego is remiss without trying local craft beer (there is a ton of it) and Baja-style fish tacos. And that&rsquo;s exactly what I did at <a href="https://coronadobrewing.com/">Coronado Brewing Co.</a></p>
+<figure>
+    <img loading="lazy" src="/images/baja-fish-tacos.jpg"/> 
+</figure>
+
+<p>Across from the conference, there&rsquo;s also the iconic <a href="https://www.yelp.com/biz/kansas-city-barbeque-san-diego">Kansas City Barbeque</a>, which is known as the  &ldquo;Top Gun Bar&rdquo; where the dive bar scene in the movie was filmed. Here&rsquo;s a <a href="https://youtu.be/7T4mk3Uhzyc?t=781">YouTube video</a> that walks through all of the locations in San Diego which were featured in Top Gun.</p>
+<figure>
+    <img loading="lazy" src="/images/kansas-city-bbq.jpg"/> 
+</figure>
+
+<h2 id="privacy-engineering-forum">Privacy engineering forum</h2>
+<p>I attended the Privacy Engineering Section Forum which featured talks and workshops throughout the day. Some topics included:</p>
+<ul>
+<li>Data clean rooms
+<ul>
+<li>Becoming increasingly popular and necessary as third-party cookies approach deprecation and Mobile Advertising IDs (MAIDs) are being blocked by new  tools like iOS 14.5&rsquo;s <a href="https://www.theverge.com/22403523/ios-14-5-tracking-consent-app-transparency-how-to">App Tracking Transparency</a></li>
+</ul>
+</li>
+<li>Privacy-enhancing technologies (PETs), such as:
+<ul>
+<li>Private set intersection (PSI) (A.K.A, double encryption), multi-party computation (MPC)</li>
+<li>Pseudonymization and anonymization techniques like K-anonymity, differential privacy</li>
+<li>Synthetic data</li>
+</ul>
+</li>
+<li>Re-identification risks and attacks against anonymization</li>
+<li>Consent beyond cookies</li>
+<li>Generative AI</li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/location-data-challenges.png"/> 
+</figure>
+
+<em>Courtesy of <a href="https://www.linkedin.com/posts/enginbozdag_can-location-data-truly-be-anonymized-activity-7092555543701073921-LGSj?utm_source=share&amp;utm_medium=member_desktop">Engin Bozdag, &lsquo;IWE23</a></em></p>
+<p>It was really validating to see so many people that are also interested in this stuff, and are actually using these things in their day-to-day to build out real privacy programs, and not just compliance programs.</p>
+<p>Privacy can also get really technical and academic, really fast. Differential privacy and k-anonymity, for example, are rooted in mathematical proofs that come from academia. There were definitely some points were I noticed I wasn&rsquo;t the only one in the room that felt overwhelmed or even lost. But that&rsquo;s an important part of the learning process, and should serve to motivate, not discourage.</p>
+<p>This forum was easily my favorite part of the conference because of its content and the more intimate, tableside setting compared to the general talks with hundreds of people in a room.</p>
+<h2 id="the-rest-of-the-conference">The rest of the conference</h2>
+<p>This was my first privacy conference and I loved it. I learned a lot, but more importantly, learned how much I <em>don&rsquo;t</em> know.</p>
+<p>Here are some of my general takeaways:</p>
+<ul>
+<li>It seems like all anybody can talk about is gen AI&ndash; it was the theme of the conference for this year, to be fair, but it was too much at times</li>
+<li>When people aren&rsquo;t talking about AI, they&rsquo;re talking about PETs
+<ul>
+<li>One panel even&ndash; ironically&ndash; introduced themselves with their favorite PETs</li>
+</ul>
+</li>
+<li>People love getting free swag for their kids (Minecraft swords were a common sight)</li>
+<li>Everyone is there for the same reason - and generally very open to chatting with new people (I believe this is what they call&hellip; <em>networking</em>)</li>
+<li>You&rsquo;re never going to be able to see <em>all</em> the talks that you want to, which is more incentive to meet more people who can fill you in on what you missed</li>
+</ul>
+<p>Intesresting discussions:</p>
+<ul>
+<li>Google&rsquo;s <a href="https://en.wikipedia.org/wiki/Privacy_Sandbox">Privacy Sandbox</a>
+<ul>
+<li>The deprecated Federated Learning of Cohorts (FLoC), replaced by Topics API, which is still &ldquo;<a href="https://brave.com/web-standards-at-brave/7-googles-topics-api/">unambiguously harmful</a>&rdquo;</li>
+</ul>
+</li>
+<li>Decentralized finance (DeFi) protocols are <em>so private</em> that adhering to regulation becomes difficult
+<ul>
+<li><a href="https://z.cash/learn/what-are-zk-snarks/">zk-SNARKs</a></li>
+<li><a href="https://docs.pantherprotocol.io/docs/start-here/what-is-panther">Panther Protocol</a></li>
+</ul>
+</li>
+</ul>
+<p>See the official agenda and past talks/slides for the conference <a href="https://iapp.org/conference/past-conferences/PSR23/">here</a>.</p>
+<h2 id="next-time">Next time</h2>
+<p>What would I do differently next conference? First of all: no ragrets, <a href="https://www.youtube.com/watch?v=rjkLKKgOMRY">not even a single letter</a>.</p>
+<ul>
+<li>Talk to more people, ask what they&rsquo;re doing and what challenges they&rsquo;re facing at work</li>
+<li>Take <em>fewer</em> notes, <em>listen</em> more; write down interesting ideas/terms to research later</li>
+<li>Dress more casual; even business casual was too much (<em>business casual</em> and fashion standards in the workplace are becoming so helplessly nebulous that I don&rsquo;t even know what they mean anymore)</li>
+</ul>
+<p>In the future, I&rsquo;d also love to attend either of the <a href="https://www.usenix.org/">USENIX</a> privacy conferences:</p>
+<ul>
+<li><a href="https://www.usenix.org/conference/pepr23">Privacy Engineering Practice and Respect</a> (PEPR)</li>
+<li><a href="https://www.usenix.org/conference/soups2023">Symposium on Usable Privacy and Security</a> (SOUPS)</li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/sd-fog.jpg"/> 
+</figure>
+
+<em>A brisk, foggy night in Downtown San Diego to end the conference.</em></p>
 ]]></content:encoded>
     </item>
     

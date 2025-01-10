@@ -15,32 +15,14 @@ ShowReadingTime: false
 To see some of my work, check out my [**Projects**](https://coreyst.one/projects).
 
 
-## How to contact me
-* Email — contact @ [thisdomain]
-* GitHub — [coreystone](https://github.com/coreystone)
-* LinkedIn — [coreyjs](https://linkedin.com/in/coreyjs)
+## Contact me
+| where    | how      |
+|----------|----------|
+| Email    | [hi@coreyst.one](mailto:hi@coreyst.one)    |
+| GitHub   | [coreystone](https://github.com/coreystone) |
+| LinkedIn | [coreyjs](https://linkedin.com/in/coreyjs) |
+| PGP      | [`FB0A 1C64 00DE 136D 50A7 02FD BB25 04AF FC23 ED35`](https://coreyst.one/pgp.txt) |
 
-
-### PGP key
-You can also reach me via my PGP public key.
-
-* Fingerprint: `EEB6 0CEF F02D 06E4 EBC6 6922 37D5 2354 C4BA 1DB9`
-* Key block:
-```
-  -----BEGIN PGP PUBLIC KEY BLOCK-----
-xjMEZPeNsxYJKwYBBAHaRw8BAQdAx9+QBvonQv3Xrq5gVV7vrRkAJ5ZUTbtS
-sEzcgyfoCavNKWNvbnRhY3RAY29yZXlzdC5vbmUgPGNvbnRhY3RAY29yZXlz
-dC5vbmU+wowEEBYKAD4FgmT3jbMECwkHCAmQN9UjVMS6HbkDFQgKBBYAAgEC
-GQECmwMCHgEWIQTutgzv8C0G5OvGaSI31SNUxLoduQAAqtoA/2npfvxDQ/qM
-Gtg4+X1xjX9YdLQTDBo0hhxwayFRB52TAQDkCx2Ag6uTZv6l7CRHvGbJ6EsP
-LIBOD2ZhmSRnaglKDs44BGT3jbMSCisGAQQBl1UBBQEBB0A1hvaAUBWWrPAl
-t2EkxF1v2KOjvUVCUGQ4YsNGSrW2cAMBCAfCeAQYFggAKgWCZPeNswmQN9Uj
-VMS6HbkCmwwWIQTutgzv8C0G5OvGaSI31SNUxLoduQAAs5EA/3+KwzPfITVp
-vA1wikKin1xWesMtkFL+LPqZ8eGW0Ma+AP0SX4HH5AdOzELvW9lzIYgAPu0Q
-kqz/1u0z8LSyXtfKBg==
-=hpEU
------END PGP PUBLIC KEY BLOCK-----
-```
 
 ## RSS feed
 Here is a feed of some of the sites and blogs I read to keep up to date with general privacy, security, and techology news.
@@ -48,12 +30,4 @@ Here is a feed of some of the sites and blogs I read to keep up to date with gen
 
 
 ## About this site
-Everything here serves me as an outlet to muse and to learn more about techology and privacy.
-
-This site is [**statically generated**](https://www.cloudflare.com/learning/performance/static-site-generator/) at runtime via [Hugo](https://gohugo.io/), meaning what you see is exactly what you get. 
-There are no cookies, no trackers, and no nonsense to worry about.
-
-This site also implements privacy-respecting [YouTube "embeds"](https://discourse.gohugo.io/t/embedding-youtube-in-a-privacy-friendly-way/35784/5), meaning you won't load any content
-from YouTube's servers until you decide to click on a video, as thumbnails and preview information are hosted by the site. Thanks to [Joost van Der Schee](https://discourse.gohugo.io/u/jhvanderschee/summary).
-
-My [robots.txt](https://coreyst.one/robots.txt) file is set to [block AI web crawlers](https://coryd.dev/posts/2024/go-ahead-and-block-ai-web-crawlers), courtesy of [Cory Dransfeldt](https://coryd.dev/posts/2024/go-ahead-and-block-ai-web-crawlers). Whether or not they will actually respect this is to be seen.
+See [Colophon](http://localhost:1313/colophon).

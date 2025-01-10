@@ -1,4 +1,4 @@
-Sitemap: http://localhost:1313/sitemap.xml
+Sitemap: https://coreyst.one/sitemap.xml
 
 User-agent: *
 Disallow:

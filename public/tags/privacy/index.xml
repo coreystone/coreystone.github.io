@@ -36,7 +36,7 @@ but organizations are hesitant (or even unequipped) to adopt them while legislat
 <p>As R. Jason Cronk astutely notes in his blog post <a href="https://privacymaverick.com/a-privacy-engineers-thoughts-on-criticism-of-the-solove-taxonomy/">A Privacy Engineer’s Thoughts on Criticism of the Solove Taxonomy</a>, privacy is &ldquo;philosophical construct&rdquo; before a legal, political, or technical one, making prescriptive action to effect and defend this right a significant challenge.</p>
 <h2 id="obstacles">Obstacles</h2>
 <h3 id="tech-literacy">Tech literacy</h3>
-<p>In the <a href="https://www.goodreads.com/quotes/331586-but-the-worst-enemy-you-can-meet-will-always-be">words of Neitzche</a>: <em>&ldquo;the worst enemy you can meet will always be yourself&rdquo;</em>. This is especially true with regards to privacy, where we are constantly making conscious and inconscious decisions to share or withold information from others.</p>
+<p>In the <a href="https://www.goodreads.com/quotes/331586-but-the-worst-enemy-you-can-meet-will-always-be">words of Neitzche</a>: <em>&ldquo;the worst enemy you can meet will always be yourself&rdquo;</em>. This is especially true with regards to privacy, where we are constantly making decisions&ndash; conscious and inconscious&ndash; to share or withold information from others.</p>
 <p>Something that influences how we make those decisions is our understanding of the technologies we use and how they affect us, which we can call &ldquo;tech literacy&rdquo;.
 Generally speaking, tech literacy can be something as simple as knowing how to: send an email, share a .gif with a group chat, or download a mobile app.
 In the context of privacy, we are frequently presented with challenges to this literacy as we use technology which often results in the (needless and neglegibly beneficial) disclosure of our personal information:</p>
@@ -77,7 +77,7 @@ high-quality K-12 education.&rdquo;</p>
 <p>They also affect the options that people have with regards to privacy-preserving tools they can use. Take instant messaging, for example. WhatsApp is a free end-to-end encrypted messenger with over 2 billion daily active users. It checks a lot of privacy boxes,
 but it <a href="https://www.techradar.com/computing/cyber-security/whatsapp-encryption-isnt-the-problem-metadata-is">still collects user metadata</a>. All is well, though, right? What do you have to worry about if Meta can&rsquo;t actually read your messages?</p>
 <p>A <a href="https://x.com/mysk_co/status/1795210609153163374/photo/1">pertintent Tweet</a> by user <a href="https://x.com/mysk_co">@mysk_co</a> points out that &ldquo;user data is not only about messages.&rdquo; The metadata collected by WhatsApp can be used to gather plenty of sensitive information about you like location data (whether explicitly shared by you or inferred by them),
-communication and activity patterns, and ultimately use all this to market to you across Meta platforms, or even <a href="https://faq.whatsapp.com/808280033839222/">provide this information to law enforcement and governments</a> upon request.</p>
+communication and activity patterns, and ultimately use all this to market to you across Meta platforms, or even <a href="https://faq.whatsapp.com/808280033839222/">provide this information to law enforcement and governments</a> upon request. Here is <a href="https://www.whatsapp.com/legal/privacy-policy">WhatsApp&rsquo;s privacy policy</a> if you&rsquo;d like to see for yourself.</p>
 <p>A 2021 <a href="https://www.forbes.com/sites/zakdoffman/2021/01/03/whatsapp-beaten-by-apples-new-imessage-update-for-iphone-users/">Forbes article</a> shows the comparison between Apple&rsquo;s privacy labels for Signal, iMessage, WhatsApp, and Facebook Messenger.</p>
 <p><figure>
     <img loading="lazy" src="/images/data-linked-to-you-comparison.webp"/> 
@@ -94,7 +94,7 @@ could not operate in the real world with a much larger user base. This means tha
 the whole world to use Signal, reality makes this just a pipe dream for now.</p>
 <p>Although I personally would pay for Signal in a heartbeat (and have already donated), that is exactly the point I am trying to make: not everyone is able to make sacrifices for their privacy, finacial or otherwise. Looking at WhatsApp&rsquo;s <a href="https://www.verint.com/blog/what-countries-are-the-biggest-whatsapp-users/">market penetration by country</a>, populations across the world are heavily dependent on the service, and many of these populations with low GDP per capita, such as Kenya, where 97% of people are WhatsApp users, would struggle to find alternative services with a modicum of privacy if WhatsApp were to switch to a paid model.</p>
 <p>Ultimately, users would just move on to the next best thing that works, because most don&rsquo;t have the privilege of having the time or money to worry about their privacy. And with modern business models, when people don&rsquo;t have the means to pay for something, they pay with their personal information.</p>
-<p>Am I saying that the people who rely on WhatsApp should stop using it for the sake of their privacy? <em>Of course not</em>. It is still offers E2EE messaging, which is extremely important. I use WhatsApp occasionally. But it needs to be recognized that some people don&rsquo;t have the choice to use anything else, and that constitutes a privilege. This is the case for WhatsApp, and it&rsquo;s the case for so much of our technology today, where nothing is ever <em>really</em> free.</p>
+<p>Am I saying that the people who rely on WhatsApp should stop using it for the sake of their privacy? <em>Of course not</em>. It is still offers E2EE messaging, which is extremely important. Giving 2 billion people E2EE messaging is <em>good</em>. I use WhatsApp occasionally. But it needs to be recognized that some people don&rsquo;t have the choice to use anything else, and that constitutes a privilege. This is the case for WhatsApp, and it&rsquo;s the case for so much of our technology today, where nothing is ever <em>really</em> free.</p>
 <p>This can be seen in lots of low-cost hardware and freeware (note: <em><a href="https://www.lifewire.com/freeware-definition-4154271">not FOSS</a></em>) where the business model usually revolves around taking an initial loss for the sake of customer acquisition, and later recouping revenue with shady strategies like advertising.</p>
 <ul>
 <li>Low-cost media boxes like <a href="https://www.fool.com/investing/2023/12/24/roku-hopes-youll-buy-a-shiny-new-roku-smart-tv-thi/">Roku</a> that deliver <a href="https://www.trustedreviews.com/news/roku-learns-sneaky-way-to-show-tv-ads-and-we-hate-the-idea-4514809">&ldquo;sneaky ads&rdquo;</a>, while <a href="https://www.nytimes.com/2024/03/20/technology/personaltech/roku-data-breach-companies.html">making it increasingly difficult</a> to own your device</li>
@@ -161,8 +161,7 @@ quality of goods or services just because you exercised your rights under the CC
 <p>However, remember how personal data has value? The CCPA recognizes this, and even provides <a href="https://www.privacysecurityacademy.com/wp-content/uploads/2019/10/Third-Parties-and-the-CCPA.pdf">guidelines for calculating that value</a> so that businesses can &ldquo;offer you promotions,
 discounts and other deals in exchange for collecting, keeping, or selling your personal information.
 But they can only do this if the financial incentive offered is reasonably related to the value of your personal information.&rdquo;</p>
-<p>This is not to bash on the CCPA. California has historically been the most progresive state for consumer privacy in the nation. Yet, regardless of what you think about this practice, you cannot deny that these incentives create an inherent imbalance that might hook<br>
-some individuals, like a poor single mother, for example, and not others purely for economic reasons.  Although these incentives are <em>available</em> to everyone, they might only be <em>interesting</em> or <em>appealing</em> to those in challenging financial situations. And that imbalance predicates privilege.</p>
+<p>This is not to bash on the <a href="https://cppa.ca.gov/">CPPA</a> or demonize the CCPA. California has historically been the most progresive state for consumer privacy in the nation. Yet, regardless of what you think about this practice, you cannot deny that these incentives create an inherent imbalance that might hook  some individuals, like a poor single mother, for example, and not others purely for economic reasons.  Although these incentives are <em>available</em> to everyone, they might only be <em>interesting</em> or <em>appealing</em> to those in challenging financial situations. And that imbalance predicates privilege.</p>
 <h3 id="cultural-attitudes">Cultural attitudes</h3>
 <p>We are all human, but our culture significantly influences our thoughts and behaviors.
 This influence extends to our perceptions of privacy and our willingness to share our personal information with people, companies, and the internet at large.</p>
@@ -576,10 +575,10 @@ during my time in Mexico, multiple hotels and hostels took a photocopy of my ID-
     
     <item>
       <title>Privacy career resources</title>
-      <link>http://localhost:1313/posts/privacy-career-resources/</link>
+      <link>http://localhost:1313/notes/privacy-career-resources/</link>
       <pubDate>Fri, 27 Dec 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/privacy-career-resources/</guid>
+      <guid>http://localhost:1313/notes/privacy-career-resources/</guid>
       <description>A collection of informational resources pertaining to privacy and privacy engineering.</description>
       <content:encoded><![CDATA[<h2 id="books">Books</h2>
 <ul>
@@ -939,6 +938,102 @@ influencing of people’s choices.&rdquo; This may entail preventing a user from
 <p>I believe taking these harms into account is a critical starting point for implementing an effective and empathetic privacy program across any organization that humanizes the user and safeguards privacy as a fundamental human right.</p>
 <h2 id="references">References</h2>
 <p>Citron, Danielle Keats and Solove, Daniel J., Privacy Harms (February 9, 2021). GWU Legal Studies Research Paper No. 2021-11, GWU Law School Public Law Research Paper No. 2021-11, 102 Boston University Law Review 793 (2022), Available at SSRN: <a href="https://ssrn.com/abstract=3782222">https://ssrn.com/abstract=3782222</a> or <a href="http://dx.doi.org/10.2139/ssrn.3782222">http://dx.doi.org/10.2139/ssrn.3782222</a></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>P.S.R. &#39;23: a recap</title>
+      <link>http://localhost:1313/notes/psr-23-recap/</link>
+      <pubDate>Thu, 12 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/notes/psr-23-recap/</guid>
+      <description>What I learned and saw at Privacy. Security. Respect. 2023.</description>
+      <content:encoded><![CDATA[<h2 id="arriving-in-san-diego">Arriving in San Diego</h2>
+<p>On October 3, I arrived in San Diego to attend IAPP&rsquo;s Privacy. Security. Risk. conference for the next few days, right along the Marina in Downtown.</p>
+<p>The first day I tourist-ed around Coronado Island and the historical Gaslamp Quarter.</p>
+<p>Any trip to San Diego is remiss without trying local craft beer (there is a ton of it) and Baja-style fish tacos. And that&rsquo;s exactly what I did at <a href="https://coronadobrewing.com/">Coronado Brewing Co.</a></p>
+<figure>
+    <img loading="lazy" src="/images/baja-fish-tacos.jpg"/> 
+</figure>
+
+<p>Across from the conference, there&rsquo;s also the iconic <a href="https://www.yelp.com/biz/kansas-city-barbeque-san-diego">Kansas City Barbeque</a>, which is known as the  &ldquo;Top Gun Bar&rdquo; where the dive bar scene in the movie was filmed. Here&rsquo;s a <a href="https://youtu.be/7T4mk3Uhzyc?t=781">YouTube video</a> that walks through all of the locations in San Diego which were featured in Top Gun.</p>
+<figure>
+    <img loading="lazy" src="/images/kansas-city-bbq.jpg"/> 
+</figure>
+
+<h2 id="privacy-engineering-forum">Privacy engineering forum</h2>
+<p>I attended the Privacy Engineering Section Forum which featured talks and workshops throughout the day. Some topics included:</p>
+<ul>
+<li>Data clean rooms
+<ul>
+<li>Becoming increasingly popular and necessary as third-party cookies approach deprecation and Mobile Advertising IDs (MAIDs) are being blocked by new  tools like iOS 14.5&rsquo;s <a href="https://www.theverge.com/22403523/ios-14-5-tracking-consent-app-transparency-how-to">App Tracking Transparency</a></li>
+</ul>
+</li>
+<li>Privacy-enhancing technologies (PETs), such as:
+<ul>
+<li>Private set intersection (PSI) (A.K.A, double encryption), multi-party computation (MPC)</li>
+<li>Pseudonymization and anonymization techniques like K-anonymity, differential privacy</li>
+<li>Synthetic data</li>
+</ul>
+</li>
+<li>Re-identification risks and attacks against anonymization</li>
+<li>Consent beyond cookies</li>
+<li>Generative AI</li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/location-data-challenges.png"/> 
+</figure>
+
+<em>Courtesy of <a href="https://www.linkedin.com/posts/enginbozdag_can-location-data-truly-be-anonymized-activity-7092555543701073921-LGSj?utm_source=share&amp;utm_medium=member_desktop">Engin Bozdag, &lsquo;IWE23</a></em></p>
+<p>It was really validating to see so many people that are also interested in this stuff, and are actually using these things in their day-to-day to build out real privacy programs, and not just compliance programs.</p>
+<p>Privacy can also get really technical and academic, really fast. Differential privacy and k-anonymity, for example, are rooted in mathematical proofs that come from academia. There were definitely some points were I noticed I wasn&rsquo;t the only one in the room that felt overwhelmed or even lost. But that&rsquo;s an important part of the learning process, and should serve to motivate, not discourage.</p>
+<p>This forum was easily my favorite part of the conference because of its content and the more intimate, tableside setting compared to the general talks with hundreds of people in a room.</p>
+<h2 id="the-rest-of-the-conference">The rest of the conference</h2>
+<p>This was my first privacy conference and I loved it. I learned a lot, but more importantly, learned how much I <em>don&rsquo;t</em> know.</p>
+<p>Here are some of my general takeaways:</p>
+<ul>
+<li>It seems like all anybody can talk about is gen AI&ndash; it was the theme of the conference for this year, to be fair, but it was too much at times</li>
+<li>When people aren&rsquo;t talking about AI, they&rsquo;re talking about PETs
+<ul>
+<li>One panel even&ndash; ironically&ndash; introduced themselves with their favorite PETs</li>
+</ul>
+</li>
+<li>People love getting free swag for their kids (Minecraft swords were a common sight)</li>
+<li>Everyone is there for the same reason - and generally very open to chatting with new people (I believe this is what they call&hellip; <em>networking</em>)</li>
+<li>You&rsquo;re never going to be able to see <em>all</em> the talks that you want to, which is more incentive to meet more people who can fill you in on what you missed</li>
+</ul>
+<p>Intesresting discussions:</p>
+<ul>
+<li>Google&rsquo;s <a href="https://en.wikipedia.org/wiki/Privacy_Sandbox">Privacy Sandbox</a>
+<ul>
+<li>The deprecated Federated Learning of Cohorts (FLoC), replaced by Topics API, which is still &ldquo;<a href="https://brave.com/web-standards-at-brave/7-googles-topics-api/">unambiguously harmful</a>&rdquo;</li>
+</ul>
+</li>
+<li>Decentralized finance (DeFi) protocols are <em>so private</em> that adhering to regulation becomes difficult
+<ul>
+<li><a href="https://z.cash/learn/what-are-zk-snarks/">zk-SNARKs</a></li>
+<li><a href="https://docs.pantherprotocol.io/docs/start-here/what-is-panther">Panther Protocol</a></li>
+</ul>
+</li>
+</ul>
+<p>See the official agenda and past talks/slides for the conference <a href="https://iapp.org/conference/past-conferences/PSR23/">here</a>.</p>
+<h2 id="next-time">Next time</h2>
+<p>What would I do differently next conference? First of all: no ragrets, <a href="https://www.youtube.com/watch?v=rjkLKKgOMRY">not even a single letter</a>.</p>
+<ul>
+<li>Talk to more people, ask what they&rsquo;re doing and what challenges they&rsquo;re facing at work</li>
+<li>Take <em>fewer</em> notes, <em>listen</em> more; write down interesting ideas/terms to research later</li>
+<li>Dress more casual; even business casual was too much (<em>business casual</em> and fashion standards in the workplace are becoming so helplessly nebulous that I don&rsquo;t even know what they mean anymore)</li>
+</ul>
+<p>In the future, I&rsquo;d also love to attend either of the <a href="https://www.usenix.org/">USENIX</a> privacy conferences:</p>
+<ul>
+<li><a href="https://www.usenix.org/conference/pepr23">Privacy Engineering Practice and Respect</a> (PEPR)</li>
+<li><a href="https://www.usenix.org/conference/soups2023">Symposium on Usable Privacy and Security</a> (SOUPS)</li>
+</ul>
+<p><figure>
+    <img loading="lazy" src="/images/sd-fog.jpg"/> 
+</figure>
+
+<em>A brisk, foggy night in Downtown San Diego to end the conference.</em></p>
 ]]></content:encoded>
     </item>
     

@@ -9,10 +9,10 @@
     <lastBuildDate>Tue, 31 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/privacyengineering/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A privacy engineering glossary</title>
-      <link>http://localhost:1313/posts/privacy-engineering-glossary/</link>
+      <link>http://localhost:1313/projects/privacy-engineering-glossary/</link>
       <pubDate>Tue, 31 Dec 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/privacy-engineering-glossary/</guid>
+      <guid>http://localhost:1313/projects/privacy-engineering-glossary/</guid>
       <description>Defining and exploring privacy computation concepts and technologies.</description>
       <content:encoded><![CDATA[<h2 id="a">A</h2>
 <h4 id="aggregation"><code>Aggregation</code></h4>
@@ -526,10 +526,10 @@ a sanitized table should be “diverse”, where &ldquo;all tuples that share th
     
     <item>
       <title>Privacy career resources</title>
-      <link>http://localhost:1313/posts/privacy-career-resources/</link>
+      <link>http://localhost:1313/notes/privacy-career-resources/</link>
       <pubDate>Fri, 27 Dec 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/privacy-career-resources/</guid>
+      <guid>http://localhost:1313/notes/privacy-career-resources/</guid>
       <description>A collection of informational resources pertaining to privacy and privacy engineering.</description>
       <content:encoded><![CDATA[<h2 id="books">Books</h2>
 <ul>
@@ -609,10 +609,10 @@ University of California, Irvine, Spring 2010?</li>
     
     <item>
       <title>Awesome open-source privacy engineering</title>
-      <link>http://localhost:1313/posts/awesome-opensource-privacyengineering/</link>
+      <link>http://localhost:1313/projects/awesome-opensource-privacyengineering/</link>
       <pubDate>Tue, 24 Dec 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/awesome-opensource-privacyengineering/</guid>
+      <guid>http://localhost:1313/projects/awesome-opensource-privacyengineering/</guid>
       <description>A curation of tools, technologies, and frameworks open sourced for the advancement of the field.</description>
       <content:encoded><![CDATA[<h2 id="introduction">Introduction</h2>
 <p><a href="https://github.com/pawelborkar/awesome-repos">&ldquo;Awesome&rdquo; GitHub repos</a> are curated lists of information and resources relevant to a particular subeject area. There are a plethora of awesome privacy-related repos, and here are some standouts that influenced this list:</p>
