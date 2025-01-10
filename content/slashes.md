@@ -10,3 +10,4 @@ ShowReadingTime: false
 * [`/colophon`](/colophon)
 * [`/privacy`](/privacy)
 * [`/styleguide`](/styleguide)
+* [`/uses`](/uses)
