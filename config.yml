@@ -33,12 +33,6 @@ params:
     showtoc: false
     tocopen: false
 
-    assets:
-        # disableFingerprinting: true
-        #favicon16x16: "/favicon-16.png"
-        #favicon32x32: "/favicon-32.png"
-        #apple_touch_icon: "/apple-touch-icon.png"
-
     label:
         #text: "Home"
         #icon: /apple-touch-icon.png
@@ -49,7 +43,7 @@ params:
         Title: "Welcome! \U0001F44B"
         Content: |
           ## {{< figure align=center src="/images/sup.png" >}}
-          ## *I'm* [*Corey*](https://coreyst.one/about/).
+          ## *I'm* [*Corey*](/about/).
 
           - I'm passionate about digital privacy and believe that protecting personal information is not only a right,
             but a crucial part of the fight to defend our freedoms and autonomy in the digital age.
@@ -57,17 +51,17 @@ params:
             while living without fear of surveillance or manipulation by corporations or governments; it is a [foundation of democracy](https://www.ned.org/big-question-how-does-digital-privacy-matter-for-democracy-and-its-advocates/).
             And it can be fun.
 
-          - I like to write about privacy and digital security; you can read below or by clicking [**here**](https://coreyst.one/posts/).
-          - You can see some of my other work by clicking on [**Projects**](https://coreyst.one/projects/).
-          - Contact me via any of the methods below, or see [**About Me**](https://coreyst.one/about/#contact-me).
+          - I like to write about privacy and digital security; you can read below or by clicking [**here**](/posts/).
+          - You can see some of my other work by clicking on [**Projects**](/projects/).
+          - Contact me via any of the methods below, or see [**About Me**](/about/#contact-me).
 
     socialIcons:
-        - name: github-simple
-          url: "https://github.com/coreystone"
         - name: linkedin-simple
           url: "https://linkedin.com/in/coreyjs"
+        - name: github-simple
+          url: "https://github.com/coreystone"
         - name: pgpkey
-          url: "https://coreyst.one/pgp.txt"
+          url: "/pgp.txt"
 
     cover:
         hidden: true # hide everywhere but not in structured data
@@ -92,3 +86,17 @@ menu:
           name: Projects
           url: /projects/
           weight: 30
+
+privacy:
+  disqus:
+    disable: true
+  googleAnalytics:
+    disable: true
+  instagram:
+    disable: true
+  twitter:
+    disable: true
+  vimeo:
+    disable: true
+  youtube:
+    disable: true

@@ -1,6 +1,7 @@
 ---
 title: "Privacy is a privilege"
 date: "2025-01-09"
+lastmod: "2025-01-12"
 description: "A look at some obstacles to ensuring privacy as a fundamental human right."
 tags:
   - privacy
@@ -18,7 +19,7 @@ Yet, many that recognize privacy as a human right will likely also concede that 
 * *Politically*, a significant portion of the global population is not covered by some form of privacy legislation, or is only protected by outdated and inadequate laws
 * *Socially*, some people lack the technical literacy required to understand the consequences of privacy-impacting decisions they make
 * *Culturally*, societal norms may affect the ability of one to make decisions that preserve their privacy, or enjoy the benefits of relevant legal protections
-* *Technologically*, assurances are to safeguard privacy are constantly being developed and refined (such as these [awesome open source privacy engineering tools](https://coreyst.one/posts/awesome-opensource-privacyengineering/)),
+* *Technologically*, assurances are to safeguard privacy are constantly being developed and refined (such as these [awesome open source privacy engineering tools](/posts/awesome-opensource-privacyengineering/)),
 but organizations are hesitant (or even unequipped) to adopt them while legislators are slow to compel them to do so
 
 With that said, I believe privacy is a human right. I also believe that it's disingenuous to not recognize it is currently a privilege.

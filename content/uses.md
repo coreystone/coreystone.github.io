@@ -1,7 +1,8 @@
 ---
 title: "/uses"
 date: "2025-01-10"
-ShowToc: true
+lastmod: "2025-01-12"
+ShowToc: false
 ShowReadingTime: false
 ---
 
@@ -27,6 +28,8 @@ Dark Mode everywhere.
 See: [FOSSdroid](https://github.com/stars/coreystone/lists/fossdroid)
 * [AntennaPod](https://github.com/AntennaPod/AntennaPod): podcast manager
 * [Breezy Weather](https://github.com/breezy-weather/breezy-weather): libre weather with material design
+* [LocalSend](https://localsend.org/): a local file-sharing alternative to AirDrop
+    * Signal's [Note to self feature](https://support.signal.org/hc/en-us/articles/360043272451-Note-to-Self) is also very convenient for quick sharing
 * [NewPipe](https://github.com/TeamNewPipe/NewPipe): YouTube front-end client
 * [Openreads](https://github.com/mateusz-bak/openreads): book tracking
 * [OpenTracks](https://github.com/OpenTracksApp/OpenTracks): fitness tracking

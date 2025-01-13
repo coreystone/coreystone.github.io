@@ -1,6 +1,7 @@
 ---
 title: "On digital gardening"
 date: "2025-01-10"
+lastmod: "2025-01-12"
 ShowToc: true
 ShowReadingTime: true
 description: " "
@@ -11,7 +12,7 @@ Yet, until recently I've always been hesitant to share with anyone except my clo
 My mind tricks me into thinking things aren't "ready", which I realized is just insecurity disguised as a vain attempt at chasing "perfection". 
 
 Only having accepted this a few weeks ago, it's still something I'm working on. That's why an idea I recently stumbled upon resonated with me so much:
-[digital gardening](https://www.genei.io/blog/a-beginners-guide-to-digital-gardens), which is "newly revived philosophy for publishing personal knowledge on the web."  It's been developing over the last few years which challenges how we think about the typical "blog website", and focusing on cultivating and capturing progress and knowledge rather than displaying a final product, 
+[digital gardening](https://www.genei.io/blog/a-beginners-guide-to-digital-gardens), which is a "newly revived philosophy for publishing personal knowledge on the web."  It's been developing over the last few years which challenges how we think about the typical "blog website", focusing on cultivating and capturing progress and knowledge rather than displaying a final product, 
 as is typical with blogs that show posts in a static, reverse-chronological order.
 
 The first stop and required reading on this topic is Maggie Appleton's [brief history & ethos](https://maggieappleton.com/garden-history) of digital gardening.
