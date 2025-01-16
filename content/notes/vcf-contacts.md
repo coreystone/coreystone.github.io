@@ -1,6 +1,7 @@
 ---
 title: "An exercise in triviality: .vcf files and vCards"
 date: "2025-01-11"
+lastmod: "2025-01-15"
 ShowToc: true
 ShowReadingTime: true
 description: " "
@@ -13,9 +14,6 @@ I also figure that the more contacts I have in my phone, the more likely it is t
 I'll accidentally buttdial someone that I don't want to talk to or don't remember - so I'd like to avoid that.
 
 For years, I was not doing my future self any favors by saving contacts on a first name only basis; if I'm lucky, I saved the initial of the person's last name. Wow that was dumb.
-
-{{< figure align=left src="/images/random-contact.jpeg" >}}
-*A totally real contact I found.*
 
 Also, I realized that I haven't been taking advantage of any other contact fields, so I'd like to start enriching each contact where possible with things like email address, physical address, any extra phone numbers, and any other notes that might be useful in the future.
 You never know when you'll need to remember someone's birthday, or their address for when they invite you to the birthday party that you forgot about.
