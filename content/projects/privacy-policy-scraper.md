@@ -8,7 +8,7 @@ ShowToc: true
 * Read more about the result: [click here](https://coreyst.one/projects/privacy-policy-directory/)
 
 ## Demo
-{{< figure align=left src="/images/pp-scraper-demo-palette-compr.gif" >}}
+{{< figure align=left src="/images/scraper-demo.gif" >}}
 
 
 ## How it works
